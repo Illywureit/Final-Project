@@ -244,8 +244,32 @@ namespace hontashvili_family.UI
 
         private void ListBox_Orders_DoubleClick(object sender, EventArgs e)
         {
-            //ResetForm();
-            OrderToForm(listBox_Orders.SelectedItem as Order);
+            Order order = listBox_Orders.SelectedItem as Order;
+
+            //הצגת חלקי ההזמנה בלשוניות השונות
+            //לשונית פרטי הזמנה
+
+            OrderToForm(order);
+
+            ClientToForm(order.Client);
+            listBox_Clients.SelectedValue = order.Client.Id;
+
+            //לשונית פריטים להזמנה
+            //תיבת רשימה - פריטים בהזמנה
+            //מוצאים את הפריטים בהזמנה הנוכחית
+            //כל הזוגות פריט-הזמנה
+
+            OrderProductArr orderProductArr = new OrderProductArr();
+            orderProductArr.Fill();
+
+            //סינון לפי הזמנה נוכחית
+
+            orderProductArr = orderProductArr.FilterByOrder(order);
+
+            //רק אוסף הפריטים מתוך אוסף הזוגות פריט-הזמנה
+
+            ProductArr productArrInOrder = orderProductArr.GetProductArr();
+            ProductArrToForm(listBox_ProductsInOrder, productArrInOrder);
         }
 
         private void Button_clear_Click(object sender, EventArgs e)
@@ -341,7 +365,8 @@ namespace hontashvili_family.UI
             {
                 clientArr.Fill();
                 listBox_Clients.DataSource = clientArr;
-
+                listBox_Clients.ValueMember = "ID";
+                listBox_Clients.DisplayMember = "";
             }
             else
             {

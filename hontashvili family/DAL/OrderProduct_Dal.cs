@@ -45,7 +45,7 @@ namespace hontashvili_family.DAL
             
             
             
-            Company_Dal.FillDataSet(dataSet);
+            Order_Dal.FillDataSet(dataSet);
             dataRelation = new DataRelation(
 
             //שם קשר הגומלין
@@ -64,7 +64,7 @@ namespace hontashvili_family.DAL
 
             dataSet.Relations.Add(dataRelation);
 
-            Category_Dal.FillDataSet(dataSet);
+            Product_Dal.FillDataSet(dataSet);
             dataRelation = new DataRelation(
 
             //שם קשר הגומלין

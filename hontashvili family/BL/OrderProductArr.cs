@@ -46,7 +46,7 @@ namespace hontashvili_family.BL
 
                
                 //סינון לפי הזמנה
-                 (order == null || order.Id == -1 || orderProduct.Order.Id == order.Id)
+                 (orderProduct.Order.Id == order.Id)
                 
                
                 )
@@ -69,7 +69,7 @@ namespace hontashvili_family.BL
                 OrderProduct orderProduct = (this[i] as OrderProduct);
                 if(
                  //סינון לפי מוצר
-                 (product == null || product.Id == -1 || orderProduct.Product.Id == product.Id)
+                 (orderProduct.Product.Id == product.Id)
                 )
 
 
@@ -119,6 +119,17 @@ namespace hontashvili_family.BL
                     return false;
             }
             return true;
+        }
+
+        public ProductArr GetProductArr()
+        {
+
+            //מחזירה את אוסף הפריטים מתוך אוסף הזוגות פריט-הזמנה
+
+            ProductArr productArr = new ProductArr();
+            for (int i = 0; i < this.Count; i++)
+                productArr.Add((this[i] as OrderProduct).Product);
+            return productArr;
         }
     }
 
