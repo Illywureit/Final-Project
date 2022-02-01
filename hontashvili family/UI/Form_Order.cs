@@ -319,7 +319,7 @@ namespace hontashvili_family.UI
                 from = DateTime.MinValue;
 
             if (dateTimePicker_To.Checked)
-                to = dateTimePicker_From.Value;
+                to = dateTimePicker_To.Value;
             else
                 to = DateTime.MinValue;
 

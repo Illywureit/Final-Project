@@ -31,7 +31,7 @@ namespace hontashvili_family.BL
                 this.Add(curOrderProduct);
             }
         }
-        public OrderProductArr Filter(Order order, Product product)
+        public OrderProductArr FilterByOrder(Order order)
         {
             OrderProductArr orderProductArr = new OrderProductArr();
 
@@ -45,16 +45,39 @@ namespace hontashvili_family.BL
                 (
 
                
-                //סינון לפי החברה
+                //סינון לפי הזמנה
                  (order == null || order.Id == -1 || orderProduct.Order.Id == order.Id)
-                //סינון לפי קטגוריה
-                && (product == null || product.Id == -1 || orderProduct.Product.Id == product.Id)
+                
+               
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר
 
                     orderProductArr.Add(orderProduct);
             }
+            return orderProductArr;
+        }
+        public OrderProductArr FilterByProduct(Product product)
+        {
+            OrderProductArr orderProductArr = new OrderProductArr();
+
+            for (int i = 0; i < this.Count; i++)
+            {
+
+                //הצבת המוצר הנוכחי במשתנה עזר - מוצר
+
+                OrderProduct orderProduct = (this[i] as OrderProduct);
+                if(
+                 //סינון לפי מוצר
+                 (product == null || product.Id == -1 || orderProduct.Product.Id == product.Id)
+                )
+
+
+                    //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר
+
+                    orderProductArr.Add(orderProduct);
+            }
+        
             return orderProductArr;
         }
 
