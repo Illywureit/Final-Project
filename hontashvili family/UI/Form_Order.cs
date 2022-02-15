@@ -270,6 +270,16 @@ namespace hontashvili_family.UI
 
             ProductArr productArrInOrder = orderProductArr.GetProductArr();
             ProductArrToForm(listBox_ProductsInOrder, productArrInOrder);
+            //תיבת רשימה - פריטים פוטנציאלים
+            //כל הפריטים - פחות אלו שכבר נבחרו
+
+            ProductArr productArrNotInOrder = new ProductArr();
+            productArrNotInOrder.Fill();
+
+            //הורדת הפריטים שכבר קיימים בהזמנה
+
+            productArrNotInOrder.Remove(productArrInOrder);
+            ProductArrToForm(listBox_PotentialsProducts, productArrNotInOrder);
         }
 
         private void Button_clear_Click(object sender, EventArgs e)
@@ -418,7 +428,7 @@ namespace hontashvili_family.UI
 
             //מוצאים את הפריט הנבחר
 
-            object selectedItem = listBox_From.SelectedItem;
+            Product selectedItem = listBox_From.SelectedItem as Product;
 
             //מוסיפים את הפריט הנבחר לרשימת הפריטים הפוטנציאליים
             //אם כבר יש פריטים ברשימת הפוטנציאליים
@@ -429,6 +439,11 @@ namespace hontashvili_family.UI
                 arrList = new ProductArr();
             arrList.Add(selectedItem);
             ProductArrToForm(listBox_To, arrList);
+            ///הסרת הפריט הנבחר מרשימת הפריטים הנבחרים
+
+            arrList = listBox_From.DataSource as ProductArr;
+            arrList.Remove(selectedItem);
+            ProductArrToForm(listBox_From, arrList);
         }
         private void ProductArrToForm(ListBox listBox, ProductArr productArr = null)
         {
@@ -473,7 +488,7 @@ namespace hontashvili_family.UI
             return orderProductArr;
         }
 
-        private void listBox_PotentialsProducts_DoubleClick(object sender, EventArgs e)
+            private void listBox_PotentialsProducts_DoubleClick(object sender, EventArgs e)
         {
             MoveSelectedItemBetweenListBox(listBox_PotentialsProducts, listBox_ProductsInOrder);
         }
@@ -502,6 +517,11 @@ namespace hontashvili_family.UI
 
             //מציבים בתיבת הרשימה את אוסף המוצרים
             listBox_PotentialsProducts.DataSource = productArr;
+
+            if (listBox_ProductsInOrder.DataSource != null)
+                productArr.Remove(listBox_ProductsInOrder.DataSource as ProductArr);
+            //מציבים בתיבת הרשימה
+            ProductArrToForm(listBox_PotentialsProducts, productArr);
         }
 
         public void CompanyArrToForm(ComboBox comboBox, bool isMustChoose, Company curCompany = null)

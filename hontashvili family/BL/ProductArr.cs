@@ -60,7 +60,25 @@ namespace hontashvili_family.BL
             }
             return productArr;
         }
+        public void Remove(ProductArr productArr)
+        {
 
+            //מסירה מהאוסף הנוכחי את האוסף המתקבל
+
+            for (int i = 0; i < productArr.Count; i++)
+                this.Remove(productArr[i] as Product);
+        }
+        public void Remove(Product product)
+        {
+
+            //מסירה מהאוסף הנוכחי את הפריט המתקבל
+
+            for (int i = 0; i < this.Count; i++)
+                if ((this[i] as Product).Id == product.Id)
+                {
+                    this.RemoveAt(i); return;
+                }
+        }
 
         public bool DoesCompanyExist(Company curCompany)
         {

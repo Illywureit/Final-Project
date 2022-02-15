@@ -31,7 +31,7 @@ namespace hontashvili_family.BL
                     this.Add(curClient);
                 }
             }
-        public ClientArr Filter(string firstName, string lastName)
+            public ClientArr Filter(string firstName, string lastName)
         {
             ClientArr clientArr = new ClientArr();
             Client client;
@@ -57,7 +57,7 @@ namespace hontashvili_family.BL
             }
             return clientArr;
         }
-        public bool DoesExist(City curCity)
+            public bool DoesExist(City curCity)
         {
 
             //מחזירה האם לפחות לאחד מהלקוחות יש את היישוב
@@ -68,6 +68,6 @@ namespace hontashvili_family.BL
 
             return false;
         }
-    }
+        }
 
 }

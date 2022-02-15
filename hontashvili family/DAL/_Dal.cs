@@ -73,6 +73,7 @@ class Dal
 
         cString.DataSource = @"(localdb)\.";
         cString.AttachDBFilename = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + @"\DBHontashvili.mdf";
+        //cString.AttachDBFilename = @"C:\Users\User\source\repos\hontashvili family\hontashvili family\DBHontashvili.mdf"
 
 
         return cString.ToString();

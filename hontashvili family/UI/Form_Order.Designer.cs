@@ -70,6 +70,13 @@ namespace hontashvili_family.UI
             this.label_LastName = new System.Windows.Forms.Label();
             this.listBox_Clients = new System.Windows.Forms.ListBox();
             this.Order_items = new System.Windows.Forms.TabPage();
+            this.groupBox_chosenProduct = new System.Windows.Forms.GroupBox();
+            this.labelCat = new System.Windows.Forms.Label();
+            this.pCategory = new System.Windows.Forms.Label();
+            this.labelCom = new System.Windows.Forms.Label();
+            this.pCompany = new System.Windows.Forms.Label();
+            this.labelN = new System.Windows.Forms.Label();
+            this.pName = new System.Windows.Forms.Label();
             this.ProductsInOrder = new System.Windows.Forms.Label();
             this.PotentialsProducts = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -83,13 +90,6 @@ namespace hontashvili_family.UI
             this.listBox_PotentialsProducts = new System.Windows.Forms.ListBox();
             this.button_clear = new System.Windows.Forms.Button();
             this.save_button = new System.Windows.Forms.Button();
-            this.groupBox_chosenProduct = new System.Windows.Forms.GroupBox();
-            this.labelCat = new System.Windows.Forms.Label();
-            this.pCategory = new System.Windows.Forms.Label();
-            this.labelCom = new System.Windows.Forms.Label();
-            this.pCompany = new System.Windows.Forms.Label();
-            this.labelN = new System.Windows.Forms.Label();
-            this.pName = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Order_details.SuspendLayout();
             this.groupBox_Filter.SuspendLayout();
@@ -97,8 +97,8 @@ namespace hontashvili_family.UI
             this.groupBox_details.SuspendLayout();
             this.groupBox_clientFilter.SuspendLayout();
             this.Order_items.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox_chosenProduct.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -550,6 +550,76 @@ namespace hontashvili_family.UI
             this.Order_items.TabIndex = 2;
             this.Order_items.Text = "Order items";
             // 
+            // groupBox_chosenProduct
+            // 
+            this.groupBox_chosenProduct.Controls.Add(this.labelCat);
+            this.groupBox_chosenProduct.Controls.Add(this.pCategory);
+            this.groupBox_chosenProduct.Controls.Add(this.labelCom);
+            this.groupBox_chosenProduct.Controls.Add(this.pCompany);
+            this.groupBox_chosenProduct.Controls.Add(this.labelN);
+            this.groupBox_chosenProduct.Controls.Add(this.pName);
+            this.groupBox_chosenProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 201);
+            this.groupBox_chosenProduct.Name = "groupBox_chosenProduct";
+            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 117);
+            this.groupBox_chosenProduct.TabIndex = 49;
+            this.groupBox_chosenProduct.TabStop = false;
+            this.groupBox_chosenProduct.Text = "Chosen product details";
+            // 
+            // labelCat
+            // 
+            this.labelCat.AutoSize = true;
+            this.labelCat.Location = new System.Drawing.Point(134, 95);
+            this.labelCat.Name = "labelCat";
+            this.labelCat.Size = new System.Drawing.Size(0, 18);
+            this.labelCat.TabIndex = 5;
+            // 
+            // pCategory
+            // 
+            this.pCategory.AutoSize = true;
+            this.pCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.pCategory.Location = new System.Drawing.Point(6, 95);
+            this.pCategory.Name = "pCategory";
+            this.pCategory.Size = new System.Drawing.Size(81, 18);
+            this.pCategory.TabIndex = 4;
+            this.pCategory.Text = "Category:";
+            // 
+            // labelCom
+            // 
+            this.labelCom.AutoSize = true;
+            this.labelCom.Location = new System.Drawing.Point(134, 63);
+            this.labelCom.Name = "labelCom";
+            this.labelCom.Size = new System.Drawing.Size(0, 18);
+            this.labelCom.TabIndex = 3;
+            // 
+            // pCompany
+            // 
+            this.pCompany.AutoSize = true;
+            this.pCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.pCompany.Location = new System.Drawing.Point(6, 63);
+            this.pCompany.Name = "pCompany";
+            this.pCompany.Size = new System.Drawing.Size(84, 18);
+            this.pCompany.TabIndex = 2;
+            this.pCompany.Text = "Company:";
+            // 
+            // labelN
+            // 
+            this.labelN.AutoSize = true;
+            this.labelN.Location = new System.Drawing.Point(134, 32);
+            this.labelN.Name = "labelN";
+            this.labelN.Size = new System.Drawing.Size(0, 18);
+            this.labelN.TabIndex = 1;
+            // 
+            // pName
+            // 
+            this.pName.AutoSize = true;
+            this.pName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.pName.Location = new System.Drawing.Point(8, 32);
+            this.pName.Name = "pName";
+            this.pName.Size = new System.Drawing.Size(57, 18);
+            this.pName.TabIndex = 0;
+            this.pName.Text = "Name:";
+            // 
             // ProductsInOrder
             // 
             this.ProductsInOrder.AutoSize = true;
@@ -662,6 +732,7 @@ namespace hontashvili_family.UI
             this.listBox_ProductsInOrder.Name = "listBox_ProductsInOrder";
             this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
             this.listBox_ProductsInOrder.TabIndex = 1;
+            this.listBox_ProductsInOrder.DoubleClick += new System.EventHandler(this.listBox_PotentialsProducts_DoubleClick);
             // 
             // listBox_PotentialsProducts
             // 
@@ -697,76 +768,6 @@ namespace hontashvili_family.UI
             this.save_button.UseVisualStyleBackColor = false;
             this.save_button.Click += new System.EventHandler(this.button_Save_Click);
             // 
-            // groupBox_chosenProduct
-            // 
-            this.groupBox_chosenProduct.Controls.Add(this.labelCat);
-            this.groupBox_chosenProduct.Controls.Add(this.pCategory);
-            this.groupBox_chosenProduct.Controls.Add(this.labelCom);
-            this.groupBox_chosenProduct.Controls.Add(this.pCompany);
-            this.groupBox_chosenProduct.Controls.Add(this.labelN);
-            this.groupBox_chosenProduct.Controls.Add(this.pName);
-            this.groupBox_chosenProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 201);
-            this.groupBox_chosenProduct.Name = "groupBox_chosenProduct";
-            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 117);
-            this.groupBox_chosenProduct.TabIndex = 49;
-            this.groupBox_chosenProduct.TabStop = false;
-            this.groupBox_chosenProduct.Text = "Chosen product details";
-            // 
-            // labelCat
-            // 
-            this.labelCat.AutoSize = true;
-            this.labelCat.Location = new System.Drawing.Point(134, 95);
-            this.labelCat.Name = "labelCat";
-            this.labelCat.Size = new System.Drawing.Size(0, 18);
-            this.labelCat.TabIndex = 5;
-            // 
-            // pCategory
-            // 
-            this.pCategory.AutoSize = true;
-            this.pCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pCategory.Location = new System.Drawing.Point(6, 95);
-            this.pCategory.Name = "pCategory";
-            this.pCategory.Size = new System.Drawing.Size(81, 18);
-            this.pCategory.TabIndex = 4;
-            this.pCategory.Text = "Category:";
-            // 
-            // labelCom
-            // 
-            this.labelCom.AutoSize = true;
-            this.labelCom.Location = new System.Drawing.Point(134, 63);
-            this.labelCom.Name = "labelCom";
-            this.labelCom.Size = new System.Drawing.Size(0, 18);
-            this.labelCom.TabIndex = 3;
-            // 
-            // pCompany
-            // 
-            this.pCompany.AutoSize = true;
-            this.pCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pCompany.Location = new System.Drawing.Point(6, 63);
-            this.pCompany.Name = "pCompany";
-            this.pCompany.Size = new System.Drawing.Size(84, 18);
-            this.pCompany.TabIndex = 2;
-            this.pCompany.Text = "Company:";
-            // 
-            // labelN
-            // 
-            this.labelN.AutoSize = true;
-            this.labelN.Location = new System.Drawing.Point(134, 32);
-            this.labelN.Name = "labelN";
-            this.labelN.Size = new System.Drawing.Size(0, 18);
-            this.labelN.TabIndex = 1;
-            // 
-            // pName
-            // 
-            this.pName.AutoSize = true;
-            this.pName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pName.Location = new System.Drawing.Point(8, 32);
-            this.pName.Name = "pName";
-            this.pName.Size = new System.Drawing.Size(57, 18);
-            this.pName.TabIndex = 0;
-            this.pName.Text = "Name:";
-            // 
             // Form_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -791,10 +792,10 @@ namespace hontashvili_family.UI
             this.groupBox_clientFilter.PerformLayout();
             this.Order_items.ResumeLayout(false);
             this.Order_items.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox_chosenProduct.ResumeLayout(false);
             this.groupBox_chosenProduct.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
