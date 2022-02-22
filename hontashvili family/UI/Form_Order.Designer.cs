@@ -732,7 +732,7 @@ namespace hontashvili_family.UI
             this.listBox_ProductsInOrder.Name = "listBox_ProductsInOrder";
             this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
             this.listBox_ProductsInOrder.TabIndex = 1;
-            this.listBox_ProductsInOrder.DoubleClick += new System.EventHandler(this.listBox_PotentialsProducts_DoubleClick);
+            this.listBox_ProductsInOrder.DoubleClick += new System.EventHandler(this.listBox_ProductsInOrder_DoubleClick);
             // 
             // listBox_PotentialsProducts
             // 

@@ -51,7 +51,7 @@ namespace hontashvili_family.UI
             labelCom.Text = "";
             labelN.Text = "";
 
-
+            ProductArrToForm(listBox_PotentialsProducts);
             ClientArrToForm(false);
             ClientArrToForm(true);
 
@@ -91,7 +91,7 @@ namespace hontashvili_family.UI
                 dateTimePicker_Date.BackColor = Color.White;
 
 
-            if (listBox_Clients.SelectedIndex ==-1 || label_ChosenClient.Text == "None chosen")
+            if (listBox_Clients.SelectedIndex == -1 || label_ChosenClient.Text == "None chosen")
             {
                 label_ChosenClient.ForeColor = Color.Red;
                 if (flag)
@@ -158,14 +158,41 @@ namespace hontashvili_family.UI
 
                     }
                     else
-                        MessageBox.Show("Error in insert");
+                        ;
+                }
+                else
+                {
+                    if (order.Update())
+                    {
+
+                        //מוחקים את הפריטים הקודמים של ההזמנה
+                        //אוסף כלל הזוגות - הזמנה-פריט
+
+                        OrderProductArr orderProductArr_Old = new OrderProductArr();
+                        orderProductArr_Old.Fill();
+
+                        //סינון לפי ההזמנה הנוכחית
+
+                        orderProductArr_Old = orderProductArr_Old.FilterByOrder(order);
+
+                        //מחיקת כל הפריטים באוסף ההזמנה-פריט של ההזמנה הנוכחית
+
+                        orderProductArr_Old.Delete();
+
+                        //מוסיפים את הפריטים לפי העדכני להזמנה
+
+                        orderProductArr_New = FormToOrderProductArr(order);
+                        orderProductArr_New.Insert();
+                        MessageBox.Show("Updated successfully");
+                        OrderArrToForm();
+
+
+                        ResetForm();
+                    }
+                    else
+                        MessageBox.Show("Error updating");
                 }
             }
-
-
-
-
-
         }
 
         private void Form_Order_InputLanguageChanged(object sender, InputLanguageChangedEventArgs e)
@@ -189,8 +216,8 @@ namespace hontashvili_family.UI
                 textBox_Comment.Text = order.Comment;
                 dateTimePicker_Date.Value = order.Date;
                 label_ChosenClient.Text = order.Client.FirstName + " " + order.Client.LastName;
-               
-                
+
+
             }
             else
             {
@@ -488,11 +515,14 @@ namespace hontashvili_family.UI
             return orderProductArr;
         }
 
-            private void listBox_PotentialsProducts_DoubleClick(object sender, EventArgs e)
+        private void listBox_PotentialsProducts_DoubleClick(object sender, EventArgs e)
         {
             MoveSelectedItemBetweenListBox(listBox_PotentialsProducts, listBox_ProductsInOrder);
         }
-
+        private void listBox_ProductsInOrder_DoubleClick(object sender, EventArgs e)
+        {
+            MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts);
+        }
         private void textBox_ProductFilter_KeyUp(object sender, KeyEventArgs e)
         {
             SetProductByFilter();
@@ -515,8 +545,7 @@ namespace hontashvili_family.UI
             comboBox_Filter_Company.SelectedItem as Company,
             comboBox_Filter_Category.SelectedItem as Category);
 
-            //מציבים בתיבת הרשימה את אוסף המוצרים
-            listBox_PotentialsProducts.DataSource = productArr;
+
 
             if (listBox_ProductsInOrder.DataSource != null)
                 productArr.Remove(listBox_ProductsInOrder.DataSource as ProductArr);
@@ -594,7 +623,7 @@ namespace hontashvili_family.UI
 
         private void ListBox_Products_Click(object sender, EventArgs e)
         {
-            
+
             ProductToForm(listBox_PotentialsProducts.SelectedItem as Product);
         }
     }

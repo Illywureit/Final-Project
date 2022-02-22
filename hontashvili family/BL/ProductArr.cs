@@ -103,6 +103,14 @@ namespace hontashvili_family.BL
 
             return false;
         }
+        public void UpdateCount()
+        {
+
+            //מעדכנת את אוסף המוצרים
+
+            for (int i = 0; i < this.Count; i++)
+                (this[i] as Product).UpdateCount();
+        }
     }
 
 }

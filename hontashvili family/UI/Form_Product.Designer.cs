@@ -49,7 +49,10 @@ namespace hontashvili_family.UI
             this.label_Filter_Company = new System.Windows.Forms.Label();
             this.comboBox_Filter_Company = new System.Windows.Forms.ComboBox();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label_Count = new System.Windows.Forms.Label();
             this.groupBox_Filter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_AddCompany
@@ -273,12 +276,32 @@ namespace hontashvili_family.UI
             this.groupBox_Filter.TabStop = false;
             this.groupBox_Filter.Text = "Filter";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.numericUpDown1.Location = new System.Drawing.Point(151, 196);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(89, 26);
+            this.numericUpDown1.TabIndex = 46;
+            // 
+            // label_Count
+            // 
+            this.label_Count.AutoSize = true;
+            this.label_Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label_Count.Location = new System.Drawing.Point(44, 196);
+            this.label_Count.Name = "label_Count";
+            this.label_Count.Size = new System.Drawing.Size(52, 20);
+            this.label_Count.TabIndex = 47;
+            this.label_Count.Text = "Count";
+            // 
             // Form_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_Count);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.groupBox_Filter);
             this.Controls.Add(this.button_AddCategory);
             this.Controls.Add(this.category);
@@ -298,6 +321,7 @@ namespace hontashvili_family.UI
             this.InputLanguageChanged += new System.Windows.Forms.InputLanguageChangedEventHandler(this.Form_Product_InputLanguageChanged);
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +349,7 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.Label label_Filter_Company;
         private System.Windows.Forms.ComboBox comboBox_Filter_Company;
         private System.Windows.Forms.GroupBox groupBox_Filter;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label_Count;
     }
 }

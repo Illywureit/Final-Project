@@ -131,6 +131,16 @@ namespace hontashvili_family.BL
                 productArr.Add((this[i] as OrderProduct).Product);
             return productArr;
         }
+
+        public bool Delete()
+        {
+
+            //מוחקת את אוסף המוצרים להזמנה ממסד הנתונים
+
+            for (int i = 0; i < this.Count; i++)
+                (this[i] as OrderProduct).Delete();
+            return true;
+        }
     }
 
 }

@@ -10,7 +10,7 @@ namespace hontashvili_family.DAL
     class Product_Dal
     {
 
-        public static bool Insert(string name, int company, int category)
+        public static bool Insert(string name, int company, int category, int count)
         {
 
             //מוסיפה את הלקוח למסד הנתונים
@@ -18,11 +18,11 @@ namespace hontashvili_family.DAL
 
             string str = "INSERT INTO Table_Product"
             + "("
-            + "[Name],[Company],[Category]"
+            + "[Name],[Company],[Category],[Count]"
             + ")"
             + " VALUES "
             + "("
-            + $"'{name}',{company},{category}"
+            + $"'{name}',{company},{category},{count}"
             + ")";
             //הפעלת פעולת הSQL -תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה
             return Dal.ExecuteSql(str);
@@ -85,7 +85,7 @@ namespace hontashvili_family.DAL
 
 
         }
-        public static bool Update(int id, string name, int company, int category)
+        public static bool Update(int id, string name, int company, int category, int count)
         {
 
             //מעדכנת את הלקוח במסד הנתונים
@@ -94,6 +94,7 @@ namespace hontashvili_family.DAL
             + $" [Name] = '{name}'"
             + $",[Company] = {company}"
             + $",[Category] = {category}"
+            + $",[Count] = {count}"
 
             + $" WHERE ID = {id}";
             //הפעלת פעולת הSQL -תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה
@@ -108,6 +109,14 @@ namespace hontashvili_family.DAL
 
             //הפעלת פעולת הSQL -תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה
 
+            return Dal.ExecuteSql(str);
+        }
+        public static bool UpdateCount(int id, int count)
+        {
+
+            // מעדכנת את מלאי המוצר במסד הנתונים
+            string str = $"UPDATE Table_Product SET [Count] = {count} WHERE ID = {id}";
+            //הפעלת פעולת ה SQL-תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה
             return Dal.ExecuteSql(str);
         }
     }
