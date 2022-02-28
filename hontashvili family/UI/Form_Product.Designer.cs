@@ -49,9 +49,12 @@ namespace hontashvili_family.UI
             this.label_Filter_Company = new System.Windows.Forms.Label();
             this.comboBox_Filter_Company = new System.Windows.Forms.ComboBox();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
+            this.label_filterCount = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label_Count = new System.Windows.Forms.Label();
             this.groupBox_Filter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,9 +76,9 @@ namespace hontashvili_family.UI
             this.company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.company.Location = new System.Drawing.Point(44, 101);
             this.company.Name = "company";
-            this.company.Size = new System.Drawing.Size(76, 20);
+            this.company.Size = new System.Drawing.Size(80, 20);
             this.company.TabIndex = 34;
-            this.company.Text = "Company";
+            this.company.Text = "Company:";
             // 
             // comboBox_Company
             // 
@@ -188,9 +191,9 @@ namespace hontashvili_family.UI
             this.category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.category.Location = new System.Drawing.Point(44, 154);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(73, 20);
+            this.category.Size = new System.Drawing.Size(77, 20);
             this.category.TabIndex = 38;
-            this.category.Text = "Category";
+            this.category.Text = "Category:";
             // 
             // comboBox_Category
             // 
@@ -220,9 +223,9 @@ namespace hontashvili_family.UI
             this.label_Filter_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label_Filter_Category.Location = new System.Drawing.Point(14, 127);
             this.label_Filter_Category.Name = "label_Filter_Category";
-            this.label_Filter_Category.Size = new System.Drawing.Size(73, 20);
+            this.label_Filter_Category.Size = new System.Drawing.Size(77, 20);
             this.label_Filter_Category.TabIndex = 44;
-            this.label_Filter_Category.Text = "Category";
+            this.label_Filter_Category.Text = "Category:";
             // 
             // comboBox_Filter_Category
             // 
@@ -243,9 +246,9 @@ namespace hontashvili_family.UI
             this.label_Filter_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label_Filter_Company.Location = new System.Drawing.Point(14, 85);
             this.label_Filter_Company.Name = "label_Filter_Company";
-            this.label_Filter_Company.Size = new System.Drawing.Size(76, 20);
+            this.label_Filter_Company.Size = new System.Drawing.Size(80, 20);
             this.label_Filter_Company.TabIndex = 42;
-            this.label_Filter_Company.Text = "Company";
+            this.label_Filter_Company.Text = "Company:";
             // 
             // comboBox_Filter_Company
             // 
@@ -262,6 +265,8 @@ namespace hontashvili_family.UI
             // 
             // groupBox_Filter
             // 
+            this.groupBox_Filter.Controls.Add(this.label_filterCount);
+            this.groupBox_Filter.Controls.Add(this.numericUpDown2);
             this.groupBox_Filter.Controls.Add(this.label_Filter_Category);
             this.groupBox_Filter.Controls.Add(this.comboBox_Filter_Category);
             this.groupBox_Filter.Controls.Add(this.label_Filter_Company);
@@ -271,10 +276,29 @@ namespace hontashvili_family.UI
             this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox_Filter.Location = new System.Drawing.Point(559, 36);
             this.groupBox_Filter.Name = "groupBox_Filter";
-            this.groupBox_Filter.Size = new System.Drawing.Size(229, 186);
+            this.groupBox_Filter.Size = new System.Drawing.Size(229, 237);
             this.groupBox_Filter.TabIndex = 45;
             this.groupBox_Filter.TabStop = false;
             this.groupBox_Filter.Text = "Filter";
+            // 
+            // label_filterCount
+            // 
+            this.label_filterCount.AutoSize = true;
+            this.label_filterCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label_filterCount.Location = new System.Drawing.Point(14, 180);
+            this.label_filterCount.Name = "label_filterCount";
+            this.label_filterCount.Size = new System.Drawing.Size(102, 20);
+            this.label_filterCount.TabIndex = 48;
+            this.label_filterCount.Text = "Max quantity:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.numericUpDown2.Location = new System.Drawing.Point(129, 180);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(89, 26);
+            this.numericUpDown2.TabIndex = 48;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // numericUpDown1
             // 
@@ -290,9 +314,9 @@ namespace hontashvili_family.UI
             this.label_Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label_Count.Location = new System.Drawing.Point(44, 196);
             this.label_Count.Name = "label_Count";
-            this.label_Count.Size = new System.Drawing.Size(52, 20);
+            this.label_Count.Size = new System.Drawing.Size(78, 20);
             this.label_Count.TabIndex = 47;
-            this.label_Count.Text = "Count";
+            this.label_Count.Text = "Inventory:";
             // 
             // Form_Product
             // 
@@ -321,6 +345,7 @@ namespace hontashvili_family.UI
             this.InputLanguageChanged += new System.Windows.Forms.InputLanguageChangedEventHandler(this.Form_Product_InputLanguageChanged);
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -351,5 +376,7 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.GroupBox groupBox_Filter;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label_Count;
+        private System.Windows.Forms.Label label_filterCount;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }

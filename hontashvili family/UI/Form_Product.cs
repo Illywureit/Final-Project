@@ -89,8 +89,16 @@ namespace hontashvili_family.UI
             }
             else
                 textBox_Name.BackColor = Color.White;
+            if (numericUpDown1.Value < 0)
+            {
+                flag = false;
+                numericUpDown1.BackColor = Color.Red;
+                MessageBox.Show("The inventory can't be negetive!");
+            }
+            else
+                numericUpDown1.BackColor = Color.White;
 
-            
+
             if ((int)comboBox_Company.SelectedValue < 1)
             {
                 comboBox_Company.ForeColor = Color.Red;
@@ -192,6 +200,7 @@ namespace hontashvili_family.UI
                 textBox_Name.Text = product.Name;
                 comboBox_Company.SelectedValue = product.Company.Id;
                 comboBox_Category.SelectedValue = product.Category.Id;
+                numericUpDown1.Value = product.Count;
             }
             else
             {
@@ -207,6 +216,7 @@ namespace hontashvili_family.UI
             product.Category = comboBox_Category.SelectedItem as Category;
             product.Company = comboBox_Company.SelectedItem as Company;
             product.Id = int.Parse(label_id.Text);
+            product.Count = (int)numericUpDown1.Value;
             return product;
         }
         private void ProductArrToForm()
@@ -284,7 +294,7 @@ namespace hontashvili_family.UI
 
             productArr = productArr.Filter(textBox_Name_Filter.Text,
             comboBox_Filter_Company.SelectedItem as Company,
-            comboBox_Filter_Category.SelectedItem as Category);
+            comboBox_Filter_Category.SelectedItem as Category, (int)numericUpDown2.Value, true);
 
             //מציבים בתיבת הרשימה את אוסף המוצרים
 
@@ -351,6 +361,9 @@ namespace hontashvili_family.UI
             CategoryArrToForm(comboBox_Category, true, form_Category.SelectedCategory);
         }
 
-       
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            SetProductsByFilter();
+        }
     }
 }

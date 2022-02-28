@@ -47,6 +47,7 @@ namespace hontashvili_family.UI
             dateTimePicker_Date.Value = DateTime.Today;
             dateTimePicker_Date.Checked = false;
             listBox_ProductsInOrder.DataSource = null;
+            listBox_ProductsInOrderCount.Items.Clear();
             labelCat.Text = "";
             labelCom.Text = "";
             labelN.Text = "";
@@ -145,6 +146,9 @@ namespace hontashvili_family.UI
                         orderArr.Fill();
                         order = orderArr.GetOrderWithMaxId();
                         orderProductArr_New = FormToOrderProductArr(order);
+                        //מעדכנים את מלאי הפריטים שהוזמנו
+
+                        (listBox_ProductsInOrder.DataSource as ProductArr).UpdateCount();
 
                         //מוסיפים את הפריטים החדשים להזמנה
 
@@ -183,6 +187,10 @@ namespace hontashvili_family.UI
 
                         orderProductArr_New = FormToOrderProductArr(order);
                         orderProductArr_New.Insert();
+                        //מעדכנים את מלאי הפריטים, אלו שהוזמנו ואלו שבפוטנציאל
+
+                        (listBox_ProductsInOrder.DataSource as ProductArr).UpdateCount();
+                        (listBox_PotentialsProducts.DataSource as ProductArr).UpdateCount();
                         MessageBox.Show("Updated successfully");
                         OrderArrToForm();
 
@@ -449,14 +457,25 @@ namespace hontashvili_family.UI
             listBox_Clients.DataSource = clientArr;
         }
 
-        private void MoveSelectedItemBetweenListBox(ListBox listBox_From, ListBox listBox_To)
+        private void MoveSelectedItemBetweenListBox(ListBox listBox_From, ListBox listBox_To, bool isToOrder)
         {
             ProductArr arrList = null;
 
             //מוצאים את הפריט הנבחר
 
             Product selectedItem = listBox_From.SelectedItem as Product;
-
+            //עדכון הכמות במלאי של הפריט
+            if (isToOrder)
+            //ההעברה היא אל הרשימה של הפריטים בהזמנה
+            {
+                selectedItem.Count--;
+                listBox_ProductsInOrderCount.Items.Add(1);
+            }
+            else
+            {
+                selectedItem.Count += (int)listBox_ProductsInOrderCount.SelectedItem;
+                listBox_ProductsInOrderCount.Items.RemoveAt(listBox_ProductsInOrderCount.SelectedIndex);
+            }
             //מוסיפים את הפריט הנבחר לרשימת הפריטים הפוטנציאליים
             //אם כבר יש פריטים ברשימת הפוטנציאליים
 
@@ -471,6 +490,15 @@ namespace hontashvili_family.UI
             arrList = listBox_From.DataSource as ProductArr;
             arrList.Remove(selectedItem);
             ProductArrToForm(listBox_From, arrList);
+            //בסוף הפעולה
+            //אם זאת הוספה לתיבת המוצרים בהזמנה - סימון שתי השורה האחרונה בה וגם בתיבת הרשימה של הכמויות
+
+            if (isToOrder)
+            {
+                int k = listBox_To.Items.Count - 1;
+                listBox_To.SelectedIndex = k;
+                listBox_ProductsInOrderCount.SelectedIndex = k;
+            }
         }
         private void ProductArrToForm(ListBox listBox, ProductArr productArr = null)
         {
@@ -517,11 +545,11 @@ namespace hontashvili_family.UI
 
         private void listBox_PotentialsProducts_DoubleClick(object sender, EventArgs e)
         {
-            MoveSelectedItemBetweenListBox(listBox_PotentialsProducts, listBox_ProductsInOrder);
+            MoveSelectedItemBetweenListBox(listBox_PotentialsProducts, listBox_ProductsInOrder, true);
         }
         private void listBox_ProductsInOrder_DoubleClick(object sender, EventArgs e)
         {
-            MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts);
+            MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts, false);
         }
         private void textBox_ProductFilter_KeyUp(object sender, KeyEventArgs e)
         {
@@ -543,7 +571,7 @@ namespace hontashvili_family.UI
 
             productArr = productArr.Filter(textBox_Name_Filter.Text,
             comboBox_Filter_Company.SelectedItem as Company,
-            comboBox_Filter_Category.SelectedItem as Category);
+            comboBox_Filter_Category.SelectedItem as Category, (int)numericUpDown2.Value, false);
 
 
 
@@ -626,5 +654,69 @@ namespace hontashvili_family.UI
 
             ProductToForm(listBox_PotentialsProducts.SelectedItem as Product);
         }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            SetProductByFilter();
+        }
+
+        private void listBox_ProductsInOrder_Click(object sender, EventArgs e)
+        {
+            listBox_ProductsInOrderCount.SelectedIndex = listBox_ProductsInOrder.SelectedIndex;
+        }
+        private void listBox_ProductsInOrderCount_Click(object sender, EventArgs e)
+        {
+            listBox_ProductsInOrder.SelectedIndex = listBox_ProductsInOrderCount.SelectedIndex;
+        }
+
+        private void button_Plus_Click(object sender, EventArgs e)
+        {
+
+            //הגדלת הכמות של המוצר בהזמנה באחד
+            //בדיקה שמסומנת השורה של הכמויות
+
+            if (listBox_ProductsInOrderCount.SelectedIndex >= 0)
+            {
+                // הוספה לכמות של פריט-הזמנה
+
+                //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
+
+                int k = listBox_ProductsInOrderCount.SelectedIndex;
+                listBox_ProductsInOrderCount.Items[k] = (int)listBox_ProductsInOrderCount.Items[k] + 1;
+            }
+        }
+
+        private void button_Minus_Click(object sender, EventArgs e)
+        {
+            //הקטנת הכמות של המוצר בהזמנה באחד
+            //בדיקה שמסומנת השורה של הכמויות
+
+            if (listBox_ProductsInOrderCount.SelectedIndex >= 0)
+            {
+                // חיסור לכמות של פריט-הזמנה
+
+                //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
+                
+                int k = listBox_ProductsInOrderCount.SelectedIndex;
+                if ((int)listBox_ProductsInOrderCount.Items[k] > 1) 
+                    listBox_ProductsInOrderCount.Items[k] = (int)listBox_ProductsInOrderCount.Items[k] - 1;
+                else
+                    MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts, false);
+
+            }
+
+        }
     }
 }
+
+           
+                
+            
+            
+
+
+            
+
+        
+
+        

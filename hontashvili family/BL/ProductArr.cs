@@ -31,7 +31,7 @@ namespace hontashvili_family.BL
                 this.Add(curProduct);
             }
         }
-        public ProductArr Filter(string name, Company company, Category category)
+        public ProductArr Filter(string name, Company company, Category category, int count,bool x)
         {
             ProductArr productArr = new ProductArr();
 
@@ -52,6 +52,7 @@ namespace hontashvili_family.BL
                 && (company == null || company.Id == -1 || product.Company.Id == company.Id)
                 //סינון לפי קטגוריה
                 && (category == null || category.Id == -1 || product.Category.Id == category.Id)
+                && ((product.Count <= count) == x)
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר
