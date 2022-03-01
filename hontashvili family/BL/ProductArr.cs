@@ -52,7 +52,7 @@ namespace hontashvili_family.BL
                 && (company == null || company.Id == -1 || product.Company.Id == company.Id)
                 //סינון לפי קטגוריה
                 && (category == null || category.Id == -1 || product.Category.Id == category.Id)
-                && ((product.Count <= count) == x)
+                && (x && product.Count <= count || !x && product.Count >= count)
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר
@@ -111,6 +111,19 @@ namespace hontashvili_family.BL
 
             for (int i = 0; i < this.Count; i++)
                 (this[i] as Product).UpdateCount();
+        }
+
+        public void UpdateProduct(Product product)
+        {
+
+            //מעדכנת את הכמות של הפריט באוסף הנוכחי
+
+            for (int i = 0; i < this.Count; i++)
+                if ((this[i] as Product).Id == product.Id)
+                {
+                    this[i] = product;
+                    return;
+                }
         }
     }
 

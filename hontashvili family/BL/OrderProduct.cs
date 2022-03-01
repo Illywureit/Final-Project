@@ -14,14 +14,16 @@ namespace hontashvili_family.BL
         private int m_Id;
         private Order m_Order;
         private Product m_Product;
+        private int m_Count;
 
         public int Id { get => m_Id; set => m_Id = value; }        
         public Order Order { get => m_Order; set => m_Order = value; }
         public Product Product { get => m_Product; set => m_Product = value; }
+        public int Count { get => m_Count; set => m_Count = value; }
 
         public bool Insert()
         {
-            return OrderProduct_Dal.Insert(m_Order.Id, m_Product.Id);
+            return OrderProduct_Dal.Insert(m_Order.Id, m_Product.Id, m_Count);
         }
         public OrderProduct() { }
 
@@ -39,7 +41,7 @@ namespace hontashvili_family.BL
 
         public bool Update()
         {
-            return OrderProduct_Dal.Update(m_Id, m_Order.Id, m_Product.Id);
+            return OrderProduct_Dal.Update(m_Id, m_Order.Id, m_Product.Id, m_Count);
         }
         public bool Delete()
         {

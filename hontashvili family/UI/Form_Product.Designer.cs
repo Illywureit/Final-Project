@@ -232,10 +232,11 @@ namespace hontashvili_family.UI
             this.comboBox_Filter_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox_Filter_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Filter_Category.DisplayMember = "city";
+            this.comboBox_Filter_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBox_Filter_Category.FormattingEnabled = true;
             this.comboBox_Filter_Category.Location = new System.Drawing.Point(97, 126);
             this.comboBox_Filter_Category.Name = "comboBox_Filter_Category";
-            this.comboBox_Filter_Category.Size = new System.Drawing.Size(100, 32);
+            this.comboBox_Filter_Category.Size = new System.Drawing.Size(100, 28);
             this.comboBox_Filter_Category.TabIndex = 43;
             this.comboBox_Filter_Category.ValueMember = "city";
             this.comboBox_Filter_Category.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
@@ -255,10 +256,11 @@ namespace hontashvili_family.UI
             this.comboBox_Filter_Company.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox_Filter_Company.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Filter_Company.DisplayMember = "city";
+            this.comboBox_Filter_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBox_Filter_Company.FormattingEnabled = true;
             this.comboBox_Filter_Company.Location = new System.Drawing.Point(98, 84);
             this.comboBox_Filter_Company.Name = "comboBox_Filter_Company";
-            this.comboBox_Filter_Company.Size = new System.Drawing.Size(99, 32);
+            this.comboBox_Filter_Company.Size = new System.Drawing.Size(99, 28);
             this.comboBox_Filter_Company.TabIndex = 41;
             this.comboBox_Filter_Company.ValueMember = "city";
             this.comboBox_Filter_Company.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
@@ -285,7 +287,7 @@ namespace hontashvili_family.UI
             // 
             this.label_filterCount.AutoSize = true;
             this.label_filterCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_filterCount.Location = new System.Drawing.Point(14, 180);
+            this.label_filterCount.Location = new System.Drawing.Point(14, 166);
             this.label_filterCount.Name = "label_filterCount";
             this.label_filterCount.Size = new System.Drawing.Size(102, 20);
             this.label_filterCount.TabIndex = 48;
@@ -294,9 +296,9 @@ namespace hontashvili_family.UI
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.numericUpDown2.Location = new System.Drawing.Point(129, 180);
+            this.numericUpDown2.Location = new System.Drawing.Point(134, 164);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(89, 26);
+            this.numericUpDown2.Size = new System.Drawing.Size(63, 26);
             this.numericUpDown2.TabIndex = 48;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 

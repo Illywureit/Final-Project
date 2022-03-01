@@ -43,12 +43,10 @@ namespace hontashvili_family.BL
                 OrderProduct orderProduct = (this[i] as OrderProduct);
                 if
                 (
-
-               
+                              
                 //סינון לפי הזמנה
                  (orderProduct.Order.Id == order.Id)
-                
-               
+                               
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר

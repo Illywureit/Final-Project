@@ -51,7 +51,8 @@ namespace hontashvili_family.UI
             labelCat.Text = "";
             labelCom.Text = "";
             labelN.Text = "";
-
+            CategoryArrToForm(comboBox_Filter_Category, false);
+            CompanyArrToForm(comboBox_Filter_Company, false);
             ProductArrToForm(listBox_PotentialsProducts);
             ClientArrToForm(false);
             ClientArrToForm(true);
@@ -315,6 +316,7 @@ namespace hontashvili_family.UI
 
             productArrNotInOrder.Remove(productArrInOrder);
             ProductArrToForm(listBox_PotentialsProducts, productArrNotInOrder);
+            ProductArrCountToForm(orderProductArr);
         }
 
         private void Button_clear_Click(object sender, EventArgs e)
@@ -535,7 +537,8 @@ namespace hontashvili_family.UI
                 //מוצר נוכחי לזוג הזמנה-מוצר
 
                 orderProduct.Product = listBox_ProductsInOrder.Items[i] as Product;
-
+                //כמות מוצר נוכחי לזוג הזמנה-מוצר
+                orderProduct.Count = (int)listBox_ProductsInOrderCount.Items[i];
                 //הוספת הזוג הזמנה -מוצר לאוסף
 
                 orderProductArr.Add(orderProduct);
@@ -676,16 +679,26 @@ namespace hontashvili_family.UI
             //בדיקה שמסומנת השורה של הכמויות
 
             if (listBox_ProductsInOrderCount.SelectedIndex >= 0)
-            {
-                // הוספה לכמות של פריט-הזמנה
+                if ((listBox_ProductsInOrder.SelectedItem as Product).Count > 0)
+                {
+                    // הוספה לכמות של פריט-הזמנה
 
-                //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
+                    //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
 
-                int k = listBox_ProductsInOrderCount.SelectedIndex;
-                listBox_ProductsInOrderCount.Items[k] = (int)listBox_ProductsInOrderCount.Items[k] + 1;
-            }
+                    int k = listBox_ProductsInOrderCount.SelectedIndex;
+                    listBox_ProductsInOrderCount.Items[k] = (int)listBox_ProductsInOrderCount.Items[k] + 1;
+
+                    //הורדה מהמלאי - עדכון כמות המוצר בתוך אוסף המוצרים ברשימת המוצרים בהזמנה
+                    ProductArr productArr = listBox_ProductsInOrder.DataSource as ProductArr;
+                    Product product = listBox_ProductsInOrder.SelectedItem as Product;
+                    product.Count--;
+                    productArr.UpdateProduct(product);
+                    ProductArrToForm(listBox_ProductsInOrder, productArr);
+                }
+            //אם לא הודעה מתאימה
+                else
+                    MessageBox.Show("There are no more items left", "out of stock", MessageBoxButtons.OK);
         }
-
         private void button_Minus_Click(object sender, EventArgs e)
         {
             //הקטנת הכמות של המוצר בהזמנה באחד
@@ -696,17 +709,42 @@ namespace hontashvili_family.UI
                 // חיסור לכמות של פריט-הזמנה
 
                 //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
-                
+
                 int k = listBox_ProductsInOrderCount.SelectedIndex;
-                if ((int)listBox_ProductsInOrderCount.Items[k] > 1) 
+                if ((int)listBox_ProductsInOrderCount.Items[k] > 1)
+                {
                     listBox_ProductsInOrderCount.Items[k] = (int)listBox_ProductsInOrderCount.Items[k] - 1;
+                    //הוספה להמלאי - עדכון כמות המוצר בתוך אוסף המוצרים ברשימת המוצרים בהזמנה
+                    ProductArr productArr = listBox_ProductsInOrder.DataSource as ProductArr;
+                    Product product = listBox_ProductsInOrder.SelectedItem as Product;
+                    product.Count++;
+                    productArr.UpdateProduct(product);
+                    ProductArrToForm(listBox_ProductsInOrder, productArr);
+                }
+                   
                 else
                     MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts, false);
 
             }
 
         }
+        private void ProductArrCountToForm(OrderProductArr curOrderproductArr)
+        {
+            listBox_ProductsInOrderCount.Items.Clear();
+            for (int i = 0; i < curOrderproductArr.Count; i++)
+            {
+                listBox_ProductsInOrderCount.Items.Add(
+                (curOrderproductArr[i] as OrderProduct).Count);
+            }
+            //כדי לסמן את השורה הראשונה ישר בהתחלה )אם יש כזאת(
+
+            if (listBox_ProductsInOrderCount.Items.Count > 0)
+                listBox_ProductsInOrderCount.SelectedIndex = 0;
+        }
     }
+
+       
+    
 }
 
            

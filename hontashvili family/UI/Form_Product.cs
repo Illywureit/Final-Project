@@ -49,6 +49,7 @@ namespace hontashvili_family.UI
             CompanyArrToForm(comboBox_Filter_Company, false);
             CategoryArrToForm(comboBox_Category, true);
             CategoryArrToForm(comboBox_Filter_Category, false);
+            numericUpDown2.Value = 0;
 
 
             textBox_Name.BackColor = Color.White;
