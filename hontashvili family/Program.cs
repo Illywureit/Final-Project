@@ -18,9 +18,11 @@ namespace hontashvili_family
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             //Application.Run(new Form_Client());
-            Application.Run(new Form_Order());
-            //Application.Run(new Form_Product());
+            //Application.Run(new Form_Client());
+            // Application.Run(new Form_Order());
+            Application.Run(new Form_MainPage());
+            // Application.Run(new Form_ProductReport());
+            // Application.Run(new Form_Product());
             //Application.Run(new Form_City());
         }
     }

@@ -52,7 +52,7 @@ namespace hontashvili_family.BL
                 && (company == null || company.Id == -1 || product.Company.Id == company.Id)
                 //סינון לפי קטגוריה
                 && (category == null || category.Id == -1 || product.Category.Id == category.Id)
-                && (x && product.Count <= count || !x && product.Count >= count)
+                && (((x && product.Count <= count) || count == -1) || ((!x && product.Count >= count) || count == -1))
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר

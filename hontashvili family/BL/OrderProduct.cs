@@ -35,6 +35,7 @@ namespace hontashvili_family.BL
             m_Id = (int)dataRow["ID"];
             m_Order = new Order(dataRow.GetParentRow("OrderProductOrder"));
             m_Product = new Product(dataRow.GetParentRow("OrderProductProduct"));
+            m_Count = (int)dataRow["Count"];
         }
         public override string ToString()
         { return $"{m_Id}"; }

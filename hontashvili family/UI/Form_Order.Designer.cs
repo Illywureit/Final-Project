@@ -95,6 +95,7 @@ namespace hontashvili_family.UI
             this.label_From = new System.Windows.Forms.Label();
             this.label_FilterId = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.button_Delete = new System.Windows.Forms.Button();
             this.Order_items.SuspendLayout();
             this.groupBox_chosenProduct.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -831,12 +832,24 @@ namespace hontashvili_family.UI
             this.tabControl1.Size = new System.Drawing.Size(769, 370);
             this.tabControl1.TabIndex = 0;
             // 
+            // button_Delete
+            // 
+            this.button_Delete.BackColor = System.Drawing.Color.LightCoral;
+            this.button_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Delete.Location = new System.Drawing.Point(459, 376);
+            this.button_Delete.Name = "button_Delete";
+            this.button_Delete.Size = new System.Drawing.Size(88, 37);
+            this.button_Delete.TabIndex = 15;
+            this.button_Delete.Text = "Delete";
+            this.button_Delete.UseVisualStyleBackColor = false;
+            // 
             // Form_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Delete);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.save_button);
@@ -931,5 +944,6 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.Label label_From;
         private System.Windows.Forms.Label label_FilterId;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button button_Delete;
     }
 }
