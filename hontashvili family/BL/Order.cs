@@ -15,15 +15,17 @@ namespace hontashvili_family.BL
         private string m_Comment;
         private Client m_Client;
         private DateTime m_Date;
+        private bool m_Return;
 
         public string Comment { get => m_Comment; set => m_Comment = value; }        
         public int Id { get => m_Id; set => m_Id = value; }        
         public Client Client { get => m_Client; set => m_Client = value; }
         public DateTime Date { get => m_Date; set => m_Date = value; }
+        public bool Return { get => m_Return; set => m_Return = value; }
 
         public bool Insert()
         {
-            return Order_Dal.Insert(m_Date, m_Client.Id, m_Comment);
+            return Order_Dal.Insert(m_Date, m_Client.Id, m_Comment, m_Return);
         }
         public Order() { }
 
@@ -35,13 +37,21 @@ namespace hontashvili_family.BL
             m_Comment = dataRow["Comment"].ToString();
             m_Client = new Client(dataRow.GetParentRow("OrderClient"));
             m_Date = (DateTime) dataRow["Date"];
+            m_Return = (bool)dataRow["Return"];
         }
         public override string ToString()
-        { return $"{m_Id} {m_Client.FirstName} {m_Client.LastName}"; }
+        {
+            string returned;
+            if (m_Return)
+                returned = "[Returned]";
+            else
+                returned = "[Not returned]";
+            return $" {returned} {m_Client.FirstName} {m_Client.LastName}";
+        }
 
         public bool Update()
         {
-            return Order_Dal.Update(m_Id, m_Date, m_Client.Id, m_Comment);
+            return Order_Dal.Update(m_Id, m_Date, m_Client.Id, m_Comment, m_Return);
         }
         public bool Delete()
         {   

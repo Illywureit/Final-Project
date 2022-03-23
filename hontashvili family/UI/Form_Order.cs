@@ -26,9 +26,6 @@ namespace hontashvili_family.UI
             CompanyArrToForm(comboBox_Filter_Company, false);
             CategoryArrToForm(comboBox_Filter_Category, false);
 
-
-
-
         }
 
 
@@ -39,13 +36,21 @@ namespace hontashvili_family.UI
             label_Id.Text = "0";
             textBox_Comment.Text = "";
             label_ChosenClient.Text = "None Chosen";
+            label_ChosenClient.BackColor = Color.Black;
             label_chosenFirst.Text = "";
             label_ChosenLast.Text = "";
             label_chosenMail.Text = "";
             label_chosenPhone.Text = "";
             label_chosenCity.Text = "";
-            dateTimePicker_Date.Value = DateTime.Today;
+            comboBox_Returned.Text = "";
+            textBox_Id.Text = "";
             dateTimePicker_Date.Checked = false;
+            dateTimePicker_From.Checked = false;
+            dateTimePicker_To.Checked = false;
+            dateTimePicker_Date.Value = DateTime.Today;
+            dateTimePicker_From.Value = DateTime.Today;
+            dateTimePicker_To.Value = DateTime.Today;
+            
             listBox_ProductsInOrder.DataSource = null;
             listBox_ProductsInOrderCount.Items.Clear();
             labelCat.Text = "";
@@ -241,6 +246,7 @@ namespace hontashvili_family.UI
             order.Comment = textBox_Comment.Text;
             order.Client = listBox_Clients.SelectedItem as Client;
             order.Id = int.Parse(label_Id.Text);
+            order.Return = false;
             return order;
         }
         private void OrderArrToForm()
@@ -393,7 +399,13 @@ namespace hontashvili_family.UI
             else
                 to = DateTime.MinValue;
 
-            orderArr = orderArr.Filter(id, comboBox_Client.SelectedItem as Client, from, to);
+            bool returned;
+            if (comboBox_Returned.Text == "True")
+                returned = true;
+            else  
+                returned = false;
+
+            orderArr = orderArr.Filter(id, comboBox_Client.SelectedItem as Client, from, to, returned);
             //מציבים בתיבת הרשימה את אוסף הלקוחות
 
             listBox_Orders.DataSource = orderArr;
@@ -524,6 +536,7 @@ namespace hontashvili_family.UI
             // יצירת אוסף הזוגות הזמנה -מוצר 
             OrderProduct orderProduct;
 
+           
             //סורקים את כל הערכים בתיבת הרשימה של המוצרים שנבחרו להזמנה
             for (int i = 0; i < listBox_ProductsInOrder.Items.Count; i++)
             {
@@ -539,9 +552,19 @@ namespace hontashvili_family.UI
                 //כמות מוצר נוכחי לזוג הזמנה-מוצר
                 orderProduct.Count = (int)listBox_ProductsInOrderCount.Items[i];
                 //הוספת הזוג הזמנה -מוצר לאוסף
+                if (orderProduct.Count > 0)
+                {
+                    orderProduct.Returned = false;
+                }
+                else
+                {
+                    orderProduct.Returned = true;
+                } 
+                    
 
                 orderProductArr.Add(orderProduct);
             }
+            
             return orderProductArr;
         }
 
@@ -724,7 +747,7 @@ namespace hontashvili_family.UI
                 else
                     MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts, false);
 
-            }
+             }
 
         }
         private void ProductArrCountToForm(OrderProductArr curOrderproductArr)
@@ -740,6 +763,8 @@ namespace hontashvili_family.UI
             if (listBox_ProductsInOrderCount.Items.Count > 0)
                 listBox_ProductsInOrderCount.SelectedIndex = 0;
         }
+
+      
     }
 
        

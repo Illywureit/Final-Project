@@ -86,6 +86,8 @@ namespace hontashvili_family.UI
             this.lablel_Id = new System.Windows.Forms.Label();
             this.listBox_Orders = new System.Windows.Forms.ListBox();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
+            this.comboBox_Returned = new System.Windows.Forms.ComboBox();
+            this.label_Returned = new System.Windows.Forms.Label();
             this.dateTimePicker_To = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_From = new System.Windows.Forms.DateTimePicker();
             this.comboBox_Client = new System.Windows.Forms.ComboBox();
@@ -722,6 +724,8 @@ namespace hontashvili_family.UI
             // 
             // groupBox_Filter
             // 
+            this.groupBox_Filter.Controls.Add(this.comboBox_Returned);
+            this.groupBox_Filter.Controls.Add(this.label_Returned);
             this.groupBox_Filter.Controls.Add(this.dateTimePicker_To);
             this.groupBox_Filter.Controls.Add(this.dateTimePicker_From);
             this.groupBox_Filter.Controls.Add(this.comboBox_Client);
@@ -733,10 +737,34 @@ namespace hontashvili_family.UI
             this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox_Filter.Location = new System.Drawing.Point(486, 18);
             this.groupBox_Filter.Name = "groupBox_Filter";
-            this.groupBox_Filter.Size = new System.Drawing.Size(239, 166);
+            this.groupBox_Filter.Size = new System.Drawing.Size(239, 213);
             this.groupBox_Filter.TabIndex = 0;
             this.groupBox_Filter.TabStop = false;
             this.groupBox_Filter.Text = "Filter";
+            // 
+            // comboBox_Returned
+            // 
+            this.comboBox_Returned.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Returned.FormattingEnabled = true;
+            this.comboBox_Returned.Items.AddRange(new object[] {
+            "",
+            "True",
+            "False"});
+            this.comboBox_Returned.Location = new System.Drawing.Point(94, 171);
+            this.comboBox_Returned.Name = "comboBox_Returned";
+            this.comboBox_Returned.Size = new System.Drawing.Size(120, 28);
+            this.comboBox_Returned.TabIndex = 11;
+            this.comboBox_Returned.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
+            // 
+            // label_Returned
+            // 
+            this.label_Returned.AutoSize = true;
+            this.label_Returned.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label_Returned.Location = new System.Drawing.Point(8, 174);
+            this.label_Returned.Name = "label_Returned";
+            this.label_Returned.Size = new System.Drawing.Size(80, 20);
+            this.label_Returned.TabIndex = 10;
+            this.label_Returned.Text = "Returned:";
             // 
             // dateTimePicker_To
             // 
@@ -778,6 +806,7 @@ namespace hontashvili_family.UI
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.Size = new System.Drawing.Size(139, 26);
             this.textBox_Id.TabIndex = 4;
+            this.textBox_Id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Number_KeyPress);
             this.textBox_Id.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_Filter_KeyUp);
             // 
             // label_Client
@@ -826,7 +855,7 @@ namespace hontashvili_family.UI
             this.tabControl1.Controls.Add(this.Order_client);
             this.tabControl1.Controls.Add(this.Order_items);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(-3, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(769, 370);
@@ -939,11 +968,13 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.DateTimePicker dateTimePicker_From;
         private System.Windows.Forms.ComboBox comboBox_Client;
         private System.Windows.Forms.TextBox textBox_Id;
-        private System.Windows.Forms.Label label_Client;
         private System.Windows.Forms.Label label_To;
         private System.Windows.Forms.Label label_From;
         private System.Windows.Forms.Label label_FilterId;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button button_Delete;
+        private System.Windows.Forms.ComboBox comboBox_Returned;
+        private System.Windows.Forms.Label label_Returned;
+        private System.Windows.Forms.Label label_Client;
     }
 }

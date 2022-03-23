@@ -31,7 +31,7 @@ namespace hontashvili_family.BL
                 this.Add(curOrder);
             }
         }
-        public OrderArr Filter(int id, Client client, DateTime from, DateTime to)
+        public OrderArr Filter(int id, Client client, DateTime from, DateTime to, bool returned)
         {
             OrderArr orderArr = new OrderArr();
 
@@ -51,7 +51,8 @@ namespace hontashvili_family.BL
                 //סינון לפי החברה
                 && (client == null || client.Id == -1 || order.Client.Id == client.Id)
                 //סינון לפי קטגוריה
-                && ( IsDate(order, from , to))
+                && (IsDate(order, from, to))
+                && order.Return == returned
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר

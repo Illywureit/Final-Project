@@ -15,15 +15,17 @@ namespace hontashvili_family.BL
         private Order m_Order;
         private Product m_Product;
         private int m_Count;
+        private bool m_Returned;
 
         public int Id { get => m_Id; set => m_Id = value; }        
         public Order Order { get => m_Order; set => m_Order = value; }
         public Product Product { get => m_Product; set => m_Product = value; }
         public int Count { get => m_Count; set => m_Count = value; }
+        public bool Returned { get => m_Returned; set => m_Returned = value; }
 
         public bool Insert()
         {
-            return OrderProduct_Dal.Insert(m_Order.Id, m_Product.Id, m_Count);
+            return OrderProduct_Dal.Insert(m_Order.Id, m_Product.Id, m_Count, m_Returned);
         }
         public OrderProduct() { }
 
@@ -36,13 +38,14 @@ namespace hontashvili_family.BL
             m_Order = new Order(dataRow.GetParentRow("OrderProductOrder"));
             m_Product = new Product(dataRow.GetParentRow("OrderProductProduct"));
             m_Count = (int)dataRow["Count"];
+            m_Returned = (bool)dataRow["Returned"];
         }
         public override string ToString()
         { return $"{m_Id}"; }
 
         public bool Update()
         {
-            return OrderProduct_Dal.Update(m_Id, m_Order.Id, m_Product.Id, m_Count);
+            return OrderProduct_Dal.Update(m_Id, m_Order.Id, m_Product.Id, m_Count, m_Returned);
         }
         public bool Delete()
         {

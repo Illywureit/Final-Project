@@ -10,7 +10,7 @@ namespace hontashvili_family.DAL
     class Order_Dal
     {
 
-        public static bool Insert(DateTime date, int client, string comment)
+        public static bool Insert(DateTime date, int client, string comment,bool returned)
         {
             
                 
@@ -19,11 +19,11 @@ namespace hontashvili_family.DAL
 
             string str = "INSERT INTO Table_Order"
             + "("
-            + "[Date],[Client],[Comment]"
+            + "[Date],[Client],[Comment],[Return]"
             + ")"
             + " VALUES "
             + "("
-            + $"'{date:yyyy-MM-dd}',{client},'{comment}'"
+            + $"'{date:yyyy-MM-dd}',{client},'{comment}','{returned}'"
             + ")";
             //הפעלת פעולת הSQL -תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה
             return Dal.ExecuteSql(str);
@@ -67,7 +67,7 @@ namespace hontashvili_family.DAL
 
             
         }
-        public static bool Update(int id, DateTime date, int client, string comment)
+        public static bool Update(int id, DateTime date, int client, string comment, bool returned)
         {
 
             //מעדכנת את ההזמנה במסד הנתונים
@@ -76,6 +76,7 @@ namespace hontashvili_family.DAL
             + $" [Date] = '{date:yyyy-MM-dd}'"
             + $",[Client] = {client}"
             + $",[Comment] = '{comment}'"
+            + $",[Return] = '{returned}'"
 
             + $" WHERE ID = {id}";
             //הפעלת פעולת הSQL -תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה

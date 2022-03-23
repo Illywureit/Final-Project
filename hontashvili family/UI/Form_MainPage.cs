@@ -15,6 +15,7 @@ namespace hontashvili_family.UI
         public Form_MainPage()
         {
             InitializeComponent();
+
         }
 
         private void button_Orders_Click(object sender, EventArgs e)
@@ -40,6 +41,12 @@ namespace hontashvili_family.UI
         {
             Form_ProductReport form_ProductReport = new Form_ProductReport();
             form_ProductReport.ShowDialog();
+        }
+
+        private void button_Return_Click(object sender, EventArgs e)
+        {
+            Form_ReturnItems form_ReturnItems = new Form_ReturnItems();
+            form_ReturnItems.ShowDialog();
         }
     }
 }

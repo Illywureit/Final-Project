@@ -297,6 +297,11 @@ namespace hontashvili_family.UI
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.numericUpDown2.Location = new System.Drawing.Point(134, 164);
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(63, 26);
             this.numericUpDown2.TabIndex = 48;

@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.tabPage_Reports = new System.Windows.Forms.TabPage();
+            this.button_ProductReport = new System.Windows.Forms.Button();
             this.tabPage_Manage = new System.Windows.Forms.TabPage();
+            this.button_Orders = new System.Windows.Forms.Button();
             this.button_Products = new System.Windows.Forms.Button();
             this.button_Client = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
-            this.button_ProductReport = new System.Windows.Forms.Button();
-            this.button_Orders = new System.Windows.Forms.Button();
+            this.button_Return = new System.Windows.Forms.Button();
             this.tabPage_Reports.SuspendLayout();
             this.tabPage_Manage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
@@ -52,8 +53,20 @@
             this.tabPage_Reports.Text = "All Reports";
             this.tabPage_Reports.UseVisualStyleBackColor = true;
             // 
+            // button_ProductReport
+            // 
+            this.button_ProductReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ProductReport.Location = new System.Drawing.Point(27, 32);
+            this.button_ProductReport.Name = "button_ProductReport";
+            this.button_ProductReport.Size = new System.Drawing.Size(127, 55);
+            this.button_ProductReport.TabIndex = 1;
+            this.button_ProductReport.Text = "All product";
+            this.button_ProductReport.UseVisualStyleBackColor = true;
+            this.button_ProductReport.Click += new System.EventHandler(this.button_ProductReport_Click);
+            // 
             // tabPage_Manage
             // 
+            this.tabPage_Manage.Controls.Add(this.button_Return);
             this.tabPage_Manage.Controls.Add(this.button_Orders);
             this.tabPage_Manage.Controls.Add(this.button_Products);
             this.tabPage_Manage.Controls.Add(this.button_Client);
@@ -64,6 +77,17 @@
             this.tabPage_Manage.TabIndex = 0;
             this.tabPage_Manage.Text = "Manage";
             this.tabPage_Manage.UseVisualStyleBackColor = true;
+            // 
+            // button_Orders
+            // 
+            this.button_Orders.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Orders.Location = new System.Drawing.Point(36, 30);
+            this.button_Orders.Name = "button_Orders";
+            this.button_Orders.Size = new System.Drawing.Size(127, 55);
+            this.button_Orders.TabIndex = 3;
+            this.button_Orders.Text = "Orders";
+            this.button_Orders.UseVisualStyleBackColor = true;
+            this.button_Orders.Click += new System.EventHandler(this.button_Orders_Click);
             // 
             // button_Products
             // 
@@ -97,27 +121,16 @@
             this.tabControl_main.Size = new System.Drawing.Size(765, 327);
             this.tabControl_main.TabIndex = 0;
             // 
-            // button_ProductReport
+            // button_Return
             // 
-            this.button_ProductReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ProductReport.Location = new System.Drawing.Point(27, 32);
-            this.button_ProductReport.Name = "button_ProductReport";
-            this.button_ProductReport.Size = new System.Drawing.Size(127, 55);
-            this.button_ProductReport.TabIndex = 1;
-            this.button_ProductReport.Text = "All product";
-            this.button_ProductReport.UseVisualStyleBackColor = true;
-            this.button_ProductReport.Click += new System.EventHandler(this.button_ProductReport_Click);
-            // 
-            // button_Orders
-            // 
-            this.button_Orders.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Orders.Location = new System.Drawing.Point(36, 30);
-            this.button_Orders.Name = "button_Orders";
-            this.button_Orders.Size = new System.Drawing.Size(127, 55);
-            this.button_Orders.TabIndex = 3;
-            this.button_Orders.Text = "Orders";
-            this.button_Orders.UseVisualStyleBackColor = true;
-            this.button_Orders.Click += new System.EventHandler(this.button_Orders_Click);
+            this.button_Return.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Return.Location = new System.Drawing.Point(222, 30);
+            this.button_Return.Name = "button_Return";
+            this.button_Return.Size = new System.Drawing.Size(127, 55);
+            this.button_Return.TabIndex = 4;
+            this.button_Return.Text = "Return products";
+            this.button_Return.UseVisualStyleBackColor = true;
+            this.button_Return.Click += new System.EventHandler(this.button_Return_Click);
             // 
             // Form_MainPage
             // 
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Button button_Client;
         private System.Windows.Forms.Button button_ProductReport;
         private System.Windows.Forms.Button button_Orders;
+        private System.Windows.Forms.Button button_Return;
     }
 }

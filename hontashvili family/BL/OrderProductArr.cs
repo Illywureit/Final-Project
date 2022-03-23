@@ -91,6 +91,14 @@ namespace hontashvili_family.BL
 
             return false;
         }
+        public OrderProduct GetOrderProduct(Order order, Product product)
+        {
+            for (int i = 0; i < this.Count; i++)
+                if (((this[i] as OrderProduct).Order.Id == order.Id) && (this[i] as OrderProduct).Product.Id == product.Id)
+                    return this[i] as OrderProduct;
+            return null;
+                
+        }
 
         public bool DoesProductExist(Product curProduct)
         {
