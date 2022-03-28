@@ -42,7 +42,7 @@ namespace hontashvili_family.UI
             // button_delete
             // 
             this.button_delete.BackColor = System.Drawing.Color.LightCoral;
-            this.button_delete.Location = new System.Drawing.Point(177, 288);
+            this.button_delete.Location = new System.Drawing.Point(186, 158);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(87, 27);
             this.button_delete.TabIndex = 37;
@@ -52,7 +52,7 @@ namespace hontashvili_family.UI
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(176, 253);
+            this.button_clear.Location = new System.Drawing.Point(185, 123);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(87, 27);
             this.button_clear.TabIndex = 36;
@@ -93,7 +93,7 @@ namespace hontashvili_family.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(57, 253);
+            this.save_button.Location = new System.Drawing.Point(66, 123);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(114, 61);
             this.save_button.TabIndex = 32;

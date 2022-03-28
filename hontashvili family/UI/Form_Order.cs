@@ -25,7 +25,6 @@ namespace hontashvili_family.UI
             ProductArrToForm(listBox_PotentialsProducts);
             CompanyArrToForm(comboBox_Filter_Company, false);
             CategoryArrToForm(comboBox_Filter_Category, false);
-
         }
 
 
@@ -36,11 +35,12 @@ namespace hontashvili_family.UI
             label_Id.Text = "0";
             textBox_Comment.Text = "";
             label_ChosenClient.Text = "None Chosen";
-            label_ChosenClient.BackColor = Color.Black;
+            label_ChosenClient.ForeColor = Color.Black;
             label_chosenFirst.Text = "";
             label_ChosenLast.Text = "";
             label_chosenMail.Text = "";
             label_chosenPhone.Text = "";
+            label_Filter_Name.Text = "";
             label_chosenCity.Text = "";
             comboBox_Returned.Text = "";
             textBox_Id.Text = "";
@@ -50,12 +50,14 @@ namespace hontashvili_family.UI
             dateTimePicker_Date.Value = DateTime.Today;
             dateTimePicker_From.Value = DateTime.Today;
             dateTimePicker_To.Value = DateTime.Today;
+            numericUpDown2.Value = 0;
             
             listBox_ProductsInOrder.DataSource = null;
             listBox_ProductsInOrderCount.Items.Clear();
             labelCat.Text = "";
             labelCom.Text = "";
             labelN.Text = "";
+            label_ChosenQuantity.Text = "";
             CategoryArrToForm(comboBox_Filter_Category, false);
             CompanyArrToForm(comboBox_Filter_Company, false);
             ProductArrToForm(listBox_PotentialsProducts);
@@ -117,10 +119,14 @@ namespace hontashvili_family.UI
 
                 flag = false;
             }
+            if ((listBox_Orders.SelectedItem as Order).Return && label_Id.Text != "0")
+            {
 
+                if (flag)
+                    MessageBox.Show("You can not change an order that has already been returned!", "Coose an Order", MessageBoxButtons.OK);
 
-
-
+                flag = false;
+            }
 
 
 
@@ -399,11 +405,13 @@ namespace hontashvili_family.UI
             else
                 to = DateTime.MinValue;
 
-            bool returned;
+            string returned;
             if (comboBox_Returned.Text == "True")
-                returned = true;
-            else  
-                returned = false;
+                returned = true.ToString();
+            else if (comboBox_Returned.Text == "False")
+                returned = false.ToString();
+            else
+                returned = "";
 
             orderArr = orderArr.Filter(id, comboBox_Client.SelectedItem as Client, from, to, returned);
             //מציבים בתיבת הרשימה את אוסף הלקוחות
@@ -665,6 +673,7 @@ namespace hontashvili_family.UI
                 labelN.Text = product.Name;
                 labelCom.Text = product.Company.Name;
                 labelCat.Text = product.Category.Name;
+                label_ChosenQuantity.Text = product.Count.ToString();
             }
             else
             {
@@ -764,7 +773,7 @@ namespace hontashvili_family.UI
                 listBox_ProductsInOrderCount.SelectedIndex = 0;
         }
 
-      
+       
     }
 
        

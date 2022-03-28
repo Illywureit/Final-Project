@@ -37,6 +37,7 @@
             this.label_Date = new System.Windows.Forms.Label();
             this.label_ChosenId = new System.Windows.Forms.Label();
             this.label_id = new System.Windows.Forms.Label();
+            this.button_Return = new System.Windows.Forms.Button();
             this.listBox_Orders = new System.Windows.Forms.ListBox();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_To = new System.Windows.Forms.DateTimePicker();
@@ -64,10 +65,11 @@
             this.comboBox_Filter_Company = new System.Windows.Forms.ComboBox();
             this.textBox_Name_Filter = new System.Windows.Forms.TextBox();
             this.label_Filter_Name = new System.Windows.Forms.Label();
-            this.button_Return = new System.Windows.Forms.Button();
             this.listBox_ProductsInOrderCount = new System.Windows.Forms.ListBox();
             this.ProductsInOrder = new System.Windows.Forms.Label();
             this.listBox_ProductsInOrder = new System.Windows.Forms.ListBox();
+            this.label_ChosenQuantity = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_Orders.SuspendLayout();
             this.groupBox_OrderDetails.SuspendLayout();
@@ -86,13 +88,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 372);
+            this.tabControl1.Size = new System.Drawing.Size(788, 397);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage_Orders
             // 
             this.tabPage_Orders.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage_Orders.Controls.Add(this.groupBox_OrderDetails);
+            this.tabPage_Orders.Controls.Add(this.button_Return);
             this.tabPage_Orders.Controls.Add(this.listBox_Orders);
             this.tabPage_Orders.Controls.Add(this.groupBox_Filter);
             this.tabPage_Orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -172,6 +175,18 @@
             this.label_id.Size = new System.Drawing.Size(30, 20);
             this.label_id.TabIndex = 4;
             this.label_id.Text = "Id:";
+            // 
+            // button_Return
+            // 
+            this.button_Return.BackColor = System.Drawing.Color.LightCoral;
+            this.button_Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Return.Location = new System.Drawing.Point(536, 275);
+            this.button_Return.Name = "button_Return";
+            this.button_Return.Size = new System.Drawing.Size(97, 38);
+            this.button_Return.TabIndex = 57;
+            this.button_Return.Text = "Return";
+            this.button_Return.UseVisualStyleBackColor = false;
+            this.button_Return.Click += new System.EventHandler(this.button_Return_Click);
             // 
             // listBox_Orders
             // 
@@ -288,19 +303,20 @@
             this.tabPage_Return.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage_Return.Controls.Add(this.groupBox_chosenProduct);
             this.tabPage_Return.Controls.Add(this.groupBox1);
-            this.tabPage_Return.Controls.Add(this.button_Return);
             this.tabPage_Return.Controls.Add(this.listBox_ProductsInOrderCount);
             this.tabPage_Return.Controls.Add(this.ProductsInOrder);
             this.tabPage_Return.Controls.Add(this.listBox_ProductsInOrder);
             this.tabPage_Return.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Return.Name = "tabPage_Return";
             this.tabPage_Return.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Return.Size = new System.Drawing.Size(780, 343);
+            this.tabPage_Return.Size = new System.Drawing.Size(780, 368);
             this.tabPage_Return.TabIndex = 1;
             this.tabPage_Return.Text = "Return products";
             // 
             // groupBox_chosenProduct
             // 
+            this.groupBox_chosenProduct.Controls.Add(this.label_ChosenQuantity);
+            this.groupBox_chosenProduct.Controls.Add(this.label3);
             this.groupBox_chosenProduct.Controls.Add(this.labelCat);
             this.groupBox_chosenProduct.Controls.Add(this.pCategory);
             this.groupBox_chosenProduct.Controls.Add(this.labelCom);
@@ -308,9 +324,9 @@
             this.groupBox_chosenProduct.Controls.Add(this.labelN);
             this.groupBox_chosenProduct.Controls.Add(this.pName);
             this.groupBox_chosenProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 224);
+            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 210);
             this.groupBox_chosenProduct.Name = "groupBox_chosenProduct";
-            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 117);
+            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 152);
             this.groupBox_chosenProduct.TabIndex = 59;
             this.groupBox_chosenProduct.TabStop = false;
             this.groupBox_chosenProduct.Text = "Chosen product details";
@@ -474,18 +490,6 @@
             this.label_Filter_Name.TabIndex = 30;
             this.label_Filter_Name.Text = "Name:";
             // 
-            // button_Return
-            // 
-            this.button_Return.BackColor = System.Drawing.Color.LightCoral;
-            this.button_Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Return.Location = new System.Drawing.Point(603, 237);
-            this.button_Return.Name = "button_Return";
-            this.button_Return.Size = new System.Drawing.Size(97, 38);
-            this.button_Return.TabIndex = 57;
-            this.button_Return.Text = "Return";
-            this.button_Return.UseVisualStyleBackColor = false;
-            this.button_Return.Click += new System.EventHandler(this.button_Return_Click);
-            // 
             // listBox_ProductsInOrderCount
             // 
             this.listBox_ProductsInOrderCount.FormattingEnabled = true;
@@ -515,6 +519,24 @@
             this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
             this.listBox_ProductsInOrder.TabIndex = 54;
             this.listBox_ProductsInOrder.Click += new System.EventHandler(this.listBox_ProductsInOrder_Click);
+            // 
+            // label_ChosenQuantity
+            // 
+            this.label_ChosenQuantity.AutoSize = true;
+            this.label_ChosenQuantity.Location = new System.Drawing.Point(134, 127);
+            this.label_ChosenQuantity.Name = "label_ChosenQuantity";
+            this.label_ChosenQuantity.Size = new System.Drawing.Size(0, 18);
+            this.label_ChosenQuantity.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(6, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Quantity:";
             // 
             // Form_ReturnItems
             // 
@@ -584,5 +606,7 @@
         private System.Windows.Forms.ComboBox comboBox_Filter_Company;
         private System.Windows.Forms.TextBox textBox_Name_Filter;
         private System.Windows.Forms.Label label_Filter_Name;
+        private System.Windows.Forms.Label label_ChosenQuantity;
+        private System.Windows.Forms.Label label3;
     }
 }

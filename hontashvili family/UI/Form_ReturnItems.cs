@@ -18,7 +18,7 @@ namespace hontashvili_family.UI
         public Form_ReturnItems()
         {
             InitializeComponent();
-            InitializeComponent();
+            
             Form_Order_InputLanguageChanged(null, null);
 
             OrderArrToForm();
@@ -34,23 +34,60 @@ namespace hontashvili_family.UI
         {
 
             label_ChosenId.Text = "";
-           
+            label_ChosenDate.Text = "";
             label1_ChosenClient.Text = "";
-            
+            labelN.Text = "";
+            labelCom.Text = "";
+            labelCat.Text = "";
+            label_ChosenQuantity.Text = "";
+            numericUpDown2.Value = 0;
+            textBox_Name_Filter.Text = "";
+
             dateTimePicker_From.Value = DateTime.Today;
             dateTimePicker_To.Value = DateTime.Today;
             dateTimePicker_From.Checked = false;
             dateTimePicker_To.Checked = false;
             listBox_ProductsInOrder.DataSource = null;
             listBox_ProductsInOrderCount.Items.Clear();
-            label_ChosenDate.Text = "";
-            label1_ChosenClient.Text = "";           
-          
+            CategoryArrToForm(comboBox_Filter_Category, false);
+            CompanyArrToForm(comboBox_Filter_Company, false);
+
+
             ClientArrToForm();
-          
+            OrderArrToForm();
 
 
 
+        }
+        private bool CheckForm()
+        {
+
+            //מחזירה האם הטופס תקין - שדות חובה ורשות
+
+            bool flag = true;
+
+            
+
+            if (listBox_Orders.SelectedIndex == -1)
+            {
+
+                if (flag)
+                    MessageBox.Show("Please select an order from the list!", "Coose an Order", MessageBoxButtons.OK);
+
+                flag = false;
+            }
+
+            if ((listBox_Orders.SelectedItem as Order).Return)
+            {
+
+                if (flag)
+                    MessageBox.Show("You can not return an order that has already been returned!", "Coose an Order", MessageBoxButtons.OK);
+
+                flag = false;
+            }
+
+
+            return flag;
         }
         private void Form_Order_InputLanguageChanged(object sender, InputLanguageChangedEventArgs e)
         {
@@ -97,7 +134,7 @@ namespace hontashvili_family.UI
             else
                 to = DateTime.MinValue;
 
-            orderArr = orderArr.Filter(id, comboBox_Client.SelectedItem as Client, from, to, false);
+            orderArr = orderArr.Filter(id, comboBox_Client.SelectedItem as Client, from, to, false.ToString());
             //מציבים בתיבת הרשימה את אוסף הלקוחות
 
             listBox_Orders.DataSource = orderArr;
@@ -181,6 +218,7 @@ namespace hontashvili_family.UI
             OrderArr orderArr = new OrderArr();
             orderArr.Fill();
             listBox_Orders.DataSource = orderArr;
+
         }
 
         private void ProductArrCountToForm(OrderProductArr curOrderproductArr)
@@ -268,38 +306,33 @@ namespace hontashvili_family.UI
 
         private void button_Return_Click(object sender, EventArgs e)
         {
-            if (listBox_ProductsInOrderCount.SelectedIndex >= 0)
+            if (CheckForm())
             {
-                // חיסור לכמות של פריט-הזמנה
+                Order order = new Order();
+                order = listBox_Orders.SelectedItem as Order;
+                order.Return = true;
 
-                //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
+                OrderProductArr orderProductArr = new OrderProductArr();
+                orderProductArr.Fill();
+                OrderProductArr curOrderProductArr = orderProductArr.FilterByOrder(order);
 
-                int k = listBox_ProductsInOrderCount.SelectedIndex;
-                if ((int)listBox_ProductsInOrderCount.Items[k] >= 1)
+                for (int i = 0; i < curOrderProductArr.Count; i++)
                 {
-                   
-                    //הוספה להמלאי - עדכון כמות המוצר בתוך אוסף המוצרים ברשימת המוצרים בהזמנה
-                    ProductArr productArr = listBox_ProductsInOrder.DataSource as ProductArr;
-                    Product product = listBox_ProductsInOrder.SelectedItem as Product;
-                    product.Count+= (int)listBox_ProductsInOrderCount.Items[k];
-                    listBox_ProductsInOrderCount.Items[k] = 0;
-                    productArr.UpdateProduct(product);
-                    ProductArrToForm(listBox_ProductsInOrder, productArr);
+                    OrderProduct orderProduct = curOrderProductArr[i] as OrderProduct;
+                    Product product = orderProduct.Product;
+                    product.Count += orderProduct.Count;
+                    product.UpdateCount();
                 }
+                if (order.Update())
+                    MessageBox.Show("Successfully returned");
+                else
+                    MessageBox.Show("Eror returning");
 
-                
-
+                OrderArrToForm();
+                ResetForm();
             }
-            Product curProduct = listBox_ProductsInOrder.SelectedItem as Product;
-            Order order = listBox_Orders.SelectedItem as Order;
-            OrderProductArr orderProductArr = new OrderProductArr();
-            orderProductArr.Fill();
-            OrderProduct orderProduct = orderProductArr.GetOrderProduct(order, curProduct);
-            orderProduct.Returned = true;
-
-
+                
         }
-
         private void textBox_ProductFilter_KeyUp(object sender, KeyEventArgs e)
         {
             SetProductByFilter();
@@ -363,7 +396,41 @@ namespace hontashvili_family.UI
             listBox_ProductsInOrder.SelectedIndex = listBox_ProductsInOrderCount.SelectedIndex;
         }
 
-       
+        
+        /* private void button_Return_Click(object sender, EventArgs e)
+{
+    if (listBox_ProductsInOrderCount.SelectedIndex >= 0)
+    {
+        // חיסור לכמות של פריט-הזמנה
+
+        //עדכון כמות המוצר בתוך רשימת כמויות המוצרים בהזמנה
+
+        int k = listBox_ProductsInOrderCount.SelectedIndex;
+        if ((int)listBox_ProductsInOrderCount.Items[k] >= 1)
+        {
+
+            //הוספה להמלאי - עדכון כמות המוצר בתוך אוסף המוצרים ברשימת המוצרים בהזמנה
+            ProductArr productArr = listBox_ProductsInOrder.DataSource as ProductArr;
+            Product product = listBox_ProductsInOrder.SelectedItem as Product;
+            product.Count += (int)listBox_ProductsInOrderCount.Items[k];
+            listBox_ProductsInOrderCount.Items[k] = 0;
+            productArr.UpdateProduct(product);
+            ProductArrToForm(listBox_ProductsInOrder, productArr);
+        }
+
+
+
+    }
+    Product curProduct = listBox_ProductsInOrder.SelectedItem as Product;
+    Order order = listBox_Orders.SelectedItem as Order;
+    OrderProductArr orderProductArr = new OrderProductArr();
+    orderProductArr.Fill();
+    OrderProduct orderProduct = orderProductArr.GetOrderProduct(order, curProduct);
+    orderProduct.Returned = true;
+
+
+} */
+
     }
        
 

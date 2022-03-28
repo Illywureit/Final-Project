@@ -98,6 +98,9 @@ namespace hontashvili_family.UI
             this.label_FilterId = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button_Delete = new System.Windows.Forms.Button();
+            this.groupBox_OrderDetails = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label_ChosenQuantity = new System.Windows.Forms.Label();
             this.Order_items.SuspendLayout();
             this.groupBox_chosenProduct.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,12 +111,13 @@ namespace hontashvili_family.UI
             this.Order_details.SuspendLayout();
             this.groupBox_Filter.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.groupBox_OrderDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_clear
             // 
             this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(654, 376);
+            this.button_clear.Location = new System.Drawing.Point(651, 397);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(89, 37);
             this.button_clear.TabIndex = 14;
@@ -125,7 +129,7 @@ namespace hontashvili_family.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(553, 376);
+            this.save_button.Location = new System.Drawing.Point(550, 397);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(95, 41);
             this.save_button.TabIndex = 13;
@@ -149,7 +153,7 @@ namespace hontashvili_family.UI
             this.Order_items.Location = new System.Drawing.Point(4, 25);
             this.Order_items.Name = "Order_items";
             this.Order_items.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Order_items.Size = new System.Drawing.Size(761, 341);
+            this.Order_items.Size = new System.Drawing.Size(761, 362);
             this.Order_items.TabIndex = 2;
             this.Order_items.Text = "Order items";
             // 
@@ -187,6 +191,8 @@ namespace hontashvili_family.UI
             // 
             // groupBox_chosenProduct
             // 
+            this.groupBox_chosenProduct.Controls.Add(this.label_ChosenQuantity);
+            this.groupBox_chosenProduct.Controls.Add(this.label3);
             this.groupBox_chosenProduct.Controls.Add(this.labelCat);
             this.groupBox_chosenProduct.Controls.Add(this.pCategory);
             this.groupBox_chosenProduct.Controls.Add(this.labelCom);
@@ -194,9 +200,9 @@ namespace hontashvili_family.UI
             this.groupBox_chosenProduct.Controls.Add(this.labelN);
             this.groupBox_chosenProduct.Controls.Add(this.pName);
             this.groupBox_chosenProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 224);
+            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 210);
             this.groupBox_chosenProduct.Name = "groupBox_chosenProduct";
-            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 117);
+            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 149);
             this.groupBox_chosenProduct.TabIndex = 49;
             this.groupBox_chosenProduct.TabStop = false;
             this.groupBox_chosenProduct.Text = "Chosen product details";
@@ -395,9 +401,9 @@ namespace hontashvili_family.UI
             // 
             this.listBox_PotentialsProducts.FormattingEnabled = true;
             this.listBox_PotentialsProducts.ItemHeight = 16;
-            this.listBox_PotentialsProducts.Location = new System.Drawing.Point(276, 52);
+            this.listBox_PotentialsProducts.Location = new System.Drawing.Point(261, 52);
             this.listBox_PotentialsProducts.Name = "listBox_PotentialsProducts";
-            this.listBox_PotentialsProducts.Size = new System.Drawing.Size(192, 244);
+            this.listBox_PotentialsProducts.Size = new System.Drawing.Size(223, 244);
             this.listBox_PotentialsProducts.TabIndex = 0;
             this.listBox_PotentialsProducts.Click += new System.EventHandler(this.ListBox_Products_Click);
             this.listBox_PotentialsProducts.DoubleClick += new System.EventHandler(this.listBox_PotentialsProducts_DoubleClick);
@@ -589,16 +595,7 @@ namespace hontashvili_family.UI
             // Order_details
             // 
             this.Order_details.BackColor = System.Drawing.Color.LightCyan;
-            this.Order_details.Controls.Add(this.label2);
-            this.Order_details.Controls.Add(this.label1);
-            this.Order_details.Controls.Add(this.label_ChosenClient);
-            this.Order_details.Controls.Add(this.label_client1);
-            this.Order_details.Controls.Add(this.textBox_Comment);
-            this.Order_details.Controls.Add(this.dateTimePicker_Date);
-            this.Order_details.Controls.Add(this.label_Comment);
-            this.Order_details.Controls.Add(this.label_Date);
-            this.Order_details.Controls.Add(this.label_Id);
-            this.Order_details.Controls.Add(this.lablel_Id);
+            this.Order_details.Controls.Add(this.groupBox_OrderDetails);
             this.Order_details.Controls.Add(this.listBox_Orders);
             this.Order_details.Controls.Add(this.groupBox_Filter);
             this.Order_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -614,7 +611,7 @@ namespace hontashvili_family.UI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(3, 211);
+            this.label2.Location = new System.Drawing.Point(9, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(15, 20);
             this.label2.TabIndex = 14;
@@ -625,7 +622,7 @@ namespace hontashvili_family.UI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(3, 67);
+            this.label1.Location = new System.Drawing.Point(9, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 20);
             this.label1.TabIndex = 13;
@@ -635,7 +632,7 @@ namespace hontashvili_family.UI
             // 
             this.label_ChosenClient.AutoSize = true;
             this.label_ChosenClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_ChosenClient.Location = new System.Drawing.Point(73, 211);
+            this.label_ChosenClient.Location = new System.Drawing.Point(79, 207);
             this.label_ChosenClient.Name = "label_ChosenClient";
             this.label_ChosenClient.Size = new System.Drawing.Size(103, 20);
             this.label_ChosenClient.TabIndex = 12;
@@ -645,7 +642,7 @@ namespace hontashvili_family.UI
             // 
             this.label_client1.AutoSize = true;
             this.label_client1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_client1.Location = new System.Drawing.Point(14, 211);
+            this.label_client1.Location = new System.Drawing.Point(20, 207);
             this.label_client1.Name = "label_client1";
             this.label_client1.Size = new System.Drawing.Size(53, 20);
             this.label_client1.TabIndex = 11;
@@ -653,7 +650,7 @@ namespace hontashvili_family.UI
             // 
             // textBox_Comment
             // 
-            this.textBox_Comment.Location = new System.Drawing.Point(72, 117);
+            this.textBox_Comment.Location = new System.Drawing.Point(78, 113);
             this.textBox_Comment.Multiline = true;
             this.textBox_Comment.Name = "textBox_Comment";
             this.textBox_Comment.Size = new System.Drawing.Size(133, 67);
@@ -666,7 +663,7 @@ namespace hontashvili_family.UI
             this.dateTimePicker_Date.Checked = false;
             this.dateTimePicker_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.dateTimePicker_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Date.Location = new System.Drawing.Point(72, 68);
+            this.dateTimePicker_Date.Location = new System.Drawing.Point(78, 64);
             this.dateTimePicker_Date.Name = "dateTimePicker_Date";
             this.dateTimePicker_Date.ShowCheckBox = true;
             this.dateTimePicker_Date.Size = new System.Drawing.Size(133, 24);
@@ -676,7 +673,7 @@ namespace hontashvili_family.UI
             // 
             this.label_Comment.AutoSize = true;
             this.label_Comment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Comment.Location = new System.Drawing.Point(14, 113);
+            this.label_Comment.Location = new System.Drawing.Point(20, 109);
             this.label_Comment.Name = "label_Comment";
             this.label_Comment.Size = new System.Drawing.Size(47, 20);
             this.label_Comment.TabIndex = 5;
@@ -686,7 +683,7 @@ namespace hontashvili_family.UI
             // 
             this.label_Date.AutoSize = true;
             this.label_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Date.Location = new System.Drawing.Point(14, 67);
+            this.label_Date.Location = new System.Drawing.Point(20, 63);
             this.label_Date.Name = "label_Date";
             this.label_Date.Size = new System.Drawing.Size(48, 20);
             this.label_Date.TabIndex = 4;
@@ -696,7 +693,7 @@ namespace hontashvili_family.UI
             // 
             this.label_Id.AutoSize = true;
             this.label_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Id.Location = new System.Drawing.Point(68, 34);
+            this.label_Id.Location = new System.Drawing.Point(74, 30);
             this.label_Id.Name = "label_Id";
             this.label_Id.Size = new System.Drawing.Size(18, 20);
             this.label_Id.TabIndex = 3;
@@ -706,7 +703,7 @@ namespace hontashvili_family.UI
             // 
             this.lablel_Id.AutoSize = true;
             this.lablel_Id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lablel_Id.Location = new System.Drawing.Point(14, 34);
+            this.lablel_Id.Location = new System.Drawing.Point(20, 30);
             this.lablel_Id.Name = "lablel_Id";
             this.lablel_Id.Size = new System.Drawing.Size(25, 20);
             this.lablel_Id.TabIndex = 2;
@@ -735,7 +732,7 @@ namespace hontashvili_family.UI
             this.groupBox_Filter.Controls.Add(this.label_From);
             this.groupBox_Filter.Controls.Add(this.label_FilterId);
             this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_Filter.Location = new System.Drawing.Point(486, 18);
+            this.groupBox_Filter.Location = new System.Drawing.Point(6, 18);
             this.groupBox_Filter.Name = "groupBox_Filter";
             this.groupBox_Filter.Size = new System.Drawing.Size(239, 213);
             this.groupBox_Filter.TabIndex = 0;
@@ -747,7 +744,7 @@ namespace hontashvili_family.UI
             this.comboBox_Returned.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Returned.FormattingEnabled = true;
             this.comboBox_Returned.Items.AddRange(new object[] {
-            "",
+            "All",
             "True",
             "False"});
             this.comboBox_Returned.Location = new System.Drawing.Point(94, 171);
@@ -858,19 +855,57 @@ namespace hontashvili_family.UI
             this.tabControl1.Location = new System.Drawing.Point(-3, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(769, 370);
+            this.tabControl1.Size = new System.Drawing.Size(769, 391);
             this.tabControl1.TabIndex = 0;
             // 
             // button_Delete
             // 
             this.button_Delete.BackColor = System.Drawing.Color.LightCoral;
             this.button_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Delete.Location = new System.Drawing.Point(459, 376);
+            this.button_Delete.Location = new System.Drawing.Point(456, 397);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(88, 37);
             this.button_Delete.TabIndex = 15;
             this.button_Delete.Text = "Delete";
             this.button_Delete.UseVisualStyleBackColor = false;
+            // 
+            // groupBox_OrderDetails
+            // 
+            this.groupBox_OrderDetails.Controls.Add(this.label2);
+            this.groupBox_OrderDetails.Controls.Add(this.label1);
+            this.groupBox_OrderDetails.Controls.Add(this.label_ChosenClient);
+            this.groupBox_OrderDetails.Controls.Add(this.label_client1);
+            this.groupBox_OrderDetails.Controls.Add(this.textBox_Comment);
+            this.groupBox_OrderDetails.Controls.Add(this.dateTimePicker_Date);
+            this.groupBox_OrderDetails.Controls.Add(this.label_Comment);
+            this.groupBox_OrderDetails.Controls.Add(this.label_Date);
+            this.groupBox_OrderDetails.Controls.Add(this.label_Id);
+            this.groupBox_OrderDetails.Controls.Add(this.lablel_Id);
+            this.groupBox_OrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox_OrderDetails.Location = new System.Drawing.Point(500, 18);
+            this.groupBox_OrderDetails.Name = "groupBox_OrderDetails";
+            this.groupBox_OrderDetails.Size = new System.Drawing.Size(230, 285);
+            this.groupBox_OrderDetails.TabIndex = 15;
+            this.groupBox_OrderDetails.TabStop = false;
+            this.groupBox_OrderDetails.Text = "Details";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(6, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 18);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Quantity:";
+            // 
+            // label_ChosenQuantity
+            // 
+            this.label_ChosenQuantity.AutoSize = true;
+            this.label_ChosenQuantity.Location = new System.Drawing.Point(134, 126);
+            this.label_ChosenQuantity.Name = "label_ChosenQuantity";
+            this.label_ChosenQuantity.Size = new System.Drawing.Size(0, 18);
+            this.label_ChosenQuantity.TabIndex = 7;
             // 
             // Form_Order
             // 
@@ -898,10 +933,11 @@ namespace hontashvili_family.UI
             this.groupBox_clientFilter.ResumeLayout(false);
             this.groupBox_clientFilter.PerformLayout();
             this.Order_details.ResumeLayout(false);
-            this.Order_details.PerformLayout();
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.groupBox_OrderDetails.ResumeLayout(false);
+            this.groupBox_OrderDetails.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -976,5 +1012,8 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.ComboBox comboBox_Returned;
         private System.Windows.Forms.Label label_Returned;
         private System.Windows.Forms.Label label_Client;
+        private System.Windows.Forms.GroupBox groupBox_OrderDetails;
+        private System.Windows.Forms.Label label_ChosenQuantity;
+        private System.Windows.Forms.Label label3;
     }
 }

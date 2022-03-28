@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Data;
 using hontashvili_family.DAL;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace hontashvili_family.BL
 {
@@ -31,7 +33,7 @@ namespace hontashvili_family.BL
                 this.Add(curOrder);
             }
         }
-        public OrderArr Filter(int id, Client client, DateTime from, DateTime to, bool returned)
+        public OrderArr Filter(int id, Client client, DateTime from, DateTime to, string returned)
         {
             OrderArr orderArr = new OrderArr();
 
@@ -52,7 +54,7 @@ namespace hontashvili_family.BL
                 && (client == null || client.Id == -1 || order.Client.Id == client.Id)
                 //סינון לפי קטגוריה
                 && (IsDate(order, from, to))
-                && order.Return == returned
+                && ((order.Return.ToString() == returned) || returned == "")
                 )
 
                     //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר
@@ -115,7 +117,7 @@ namespace hontashvili_family.BL
         public bool DoesClientExist(Client curclient)
         {
 
-            //מחזירה האם לפחות לאחד מהלקוחות יש את היישוב
+            //מחזירה האם לפחות לאחד מההזמון יש את הקליינט
 
             for (int i = 0; i < this.Count; i++)
                 if ((this[i] as Order).Client.Id == curclient.Id)
@@ -124,7 +126,34 @@ namespace hontashvili_family.BL
             return false;
         }
 
-        
+        public OrderArr Filter(int year, int month)
+        {
+
+            //מחזירה את אוסף ההזמנות מאותה שנה ואותו חודש
+
+            OrderArr returnArr = new OrderArr();
+            foreach (Order item in this)
+                if (item.Date.Year == year && item.Date.Month == month)
+                    returnArr.Add(item);
+            return returnArr;
+        }
+
+        public Dictionary<string, int> GetDictionary(int year)
+        {
+
+            //מחזירה משתנה מסוג מילון הכולל עבור כל חודש בשנה מסוימת, כמות ההזמנות לאותו חודש
+
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            for (int i = 1; i <= 12; i++)
+            {
+
+                //אם רוצים את שם החודש בהתאם לשפת מערכת ההפעלה
+                string monthName = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                dictionary.Add(monthName, this.Filter(year, i).Count);
+            }
+            return dictionary;
+        }
+
     }
 
 }

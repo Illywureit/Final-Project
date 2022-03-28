@@ -48,5 +48,13 @@ namespace hontashvili_family.UI
             Form_ReturnItems form_ReturnItems = new Form_ReturnItems();
             form_ReturnItems.ShowDialog();
         }
+
+        private void button_OrderReport_Click(object sender, EventArgs e)
+        {
+            Form_OrderMonthReport form_OrderMonthReport = new Form_OrderMonthReport();
+            form_OrderMonthReport.ShowDialog();
+        }
+
+       
     }
 }

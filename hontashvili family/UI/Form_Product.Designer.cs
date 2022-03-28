@@ -62,7 +62,7 @@ namespace hontashvili_family.UI
             // 
             this.button_AddCompany.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_AddCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_AddCompany.Location = new System.Drawing.Point(278, 96);
+            this.button_AddCompany.Location = new System.Drawing.Point(761, 109);
             this.button_AddCompany.Name = "button_AddCompany";
             this.button_AddCompany.Size = new System.Drawing.Size(25, 28);
             this.button_AddCompany.TabIndex = 3;
@@ -74,7 +74,7 @@ namespace hontashvili_family.UI
             // 
             this.company.AutoSize = true;
             this.company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.company.Location = new System.Drawing.Point(44, 101);
+            this.company.Location = new System.Drawing.Point(527, 114);
             this.company.Name = "company";
             this.company.Size = new System.Drawing.Size(80, 20);
             this.company.TabIndex = 34;
@@ -87,7 +87,7 @@ namespace hontashvili_family.UI
             this.comboBox_Company.DisplayMember = "city";
             this.comboBox_Company.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Company.FormattingEnabled = true;
-            this.comboBox_Company.Location = new System.Drawing.Point(151, 98);
+            this.comboBox_Company.Location = new System.Drawing.Point(634, 111);
             this.comboBox_Company.Name = "comboBox_Company";
             this.comboBox_Company.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Company.TabIndex = 2;
@@ -114,7 +114,7 @@ namespace hontashvili_family.UI
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(138, 306);
+            this.button_clear.Location = new System.Drawing.Point(621, 319);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(87, 27);
             this.button_clear.TabIndex = 7;
@@ -126,7 +126,7 @@ namespace hontashvili_family.UI
             // 
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(44, 20);
+            this.ID.Location = new System.Drawing.Point(527, 33);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(26, 20);
             this.ID.TabIndex = 26;
@@ -136,7 +136,7 @@ namespace hontashvili_family.UI
             // 
             this.label_id.AutoSize = true;
             this.label_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_id.Location = new System.Drawing.Point(187, 20);
+            this.label_id.Location = new System.Drawing.Point(670, 33);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(18, 20);
             this.label_id.TabIndex = 25;
@@ -146,7 +146,7 @@ namespace hontashvili_family.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(125, 239);
+            this.save_button.Location = new System.Drawing.Point(608, 252);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(114, 61);
             this.save_button.TabIndex = 6;
@@ -158,7 +158,7 @@ namespace hontashvili_family.UI
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name.Location = new System.Drawing.Point(44, 59);
+            this.name.Location = new System.Drawing.Point(527, 72);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(55, 20);
             this.name.TabIndex = 22;
@@ -166,7 +166,7 @@ namespace hontashvili_family.UI
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(151, 59);
+            this.textBox_Name.Location = new System.Drawing.Point(634, 72);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(143, 20);
             this.textBox_Name.TabIndex = 1;
@@ -177,7 +177,7 @@ namespace hontashvili_family.UI
             // 
             this.button_AddCategory.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_AddCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_AddCategory.Location = new System.Drawing.Point(278, 146);
+            this.button_AddCategory.Location = new System.Drawing.Point(761, 159);
             this.button_AddCategory.Name = "button_AddCategory";
             this.button_AddCategory.Size = new System.Drawing.Size(25, 28);
             this.button_AddCategory.TabIndex = 5;
@@ -189,7 +189,7 @@ namespace hontashvili_family.UI
             // 
             this.category.AutoSize = true;
             this.category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.category.Location = new System.Drawing.Point(44, 154);
+            this.category.Location = new System.Drawing.Point(527, 167);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(77, 20);
             this.category.TabIndex = 38;
@@ -202,7 +202,7 @@ namespace hontashvili_family.UI
             this.comboBox_Category.DisplayMember = "city";
             this.comboBox_Category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Category.FormattingEnabled = true;
-            this.comboBox_Category.Location = new System.Drawing.Point(151, 149);
+            this.comboBox_Category.Location = new System.Drawing.Point(634, 162);
             this.comboBox_Category.Name = "comboBox_Category";
             this.comboBox_Category.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Category.TabIndex = 4;
@@ -210,10 +210,12 @@ namespace hontashvili_family.UI
             // 
             // listBox_Products
             // 
+            this.listBox_Products.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.listBox_Products.FormattingEnabled = true;
-            this.listBox_Products.Location = new System.Drawing.Point(363, 20);
+            this.listBox_Products.ItemHeight = 16;
+            this.listBox_Products.Location = new System.Drawing.Point(247, 20);
             this.listBox_Products.Name = "listBox_Products";
-            this.listBox_Products.Size = new System.Drawing.Size(180, 303);
+            this.listBox_Products.Size = new System.Drawing.Size(264, 292);
             this.listBox_Products.TabIndex = 36;
             this.listBox_Products.DoubleClick += new System.EventHandler(this.ListBox_Products_DoubleClick);
             // 
@@ -276,7 +278,7 @@ namespace hontashvili_family.UI
             this.groupBox_Filter.Controls.Add(this.textBox_Name_Filter);
             this.groupBox_Filter.Controls.Add(this.label_Filter_Name);
             this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_Filter.Location = new System.Drawing.Point(559, 36);
+            this.groupBox_Filter.Location = new System.Drawing.Point(12, 20);
             this.groupBox_Filter.Name = "groupBox_Filter";
             this.groupBox_Filter.Size = new System.Drawing.Size(229, 237);
             this.groupBox_Filter.TabIndex = 45;
@@ -310,7 +312,7 @@ namespace hontashvili_family.UI
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.numericUpDown1.Location = new System.Drawing.Point(151, 196);
+            this.numericUpDown1.Location = new System.Drawing.Point(634, 209);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(89, 26);
             this.numericUpDown1.TabIndex = 46;
@@ -319,7 +321,7 @@ namespace hontashvili_family.UI
             // 
             this.label_Count.AutoSize = true;
             this.label_Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Count.Location = new System.Drawing.Point(44, 196);
+            this.label_Count.Location = new System.Drawing.Point(527, 209);
             this.label_Count.Name = "label_Count";
             this.label_Count.Size = new System.Drawing.Size(78, 20);
             this.label_Count.TabIndex = 47;

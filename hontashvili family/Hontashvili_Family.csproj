@@ -121,6 +121,12 @@
     <Compile Include="UI\Form_Order.Designer.cs">
       <DependentUpon>Form_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Form_OrderMonthReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_OrderMonthReport.Designer.cs">
+      <DependentUpon>Form_OrderMonthReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form_Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Form_Company.resx">
       <DependentUpon>Form_Company.cs</DependentUpon>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_Order.resx">
       <DependentUpon>Form_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_OrderMonthReport.resx">
+      <DependentUpon>Form_OrderMonthReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_Product.resx">
       <DependentUpon>Form_Product.cs</DependentUpon>
@@ -209,6 +219,13 @@
       <DependentUpon>DBHontashvili.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\תמונה4.png" />
+    <None Include="Resources\תמונה3.png" />
+    <None Include="Resources\er-s-class-regatta-starting-line-sails-start-th-leg-princesa-sofia-sailing-race-palma-spanish-62778517.jpg" />
+    <None Include="Resources\תמונה2.png" />
+    <None Include="Resources\תמונה1.png" />
+    <None Include="Resources\compass_water_952x460px.jpg" />
+    <None Include="Resources\מים.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

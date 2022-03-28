@@ -41,7 +41,7 @@
             // button_delete
             // 
             this.button_delete.BackColor = System.Drawing.Color.LightCoral;
-            this.button_delete.Location = new System.Drawing.Point(173, 298);
+            this.button_delete.Location = new System.Drawing.Point(172, 169);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(87, 27);
             this.button_delete.TabIndex = 21;
@@ -51,7 +51,7 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(172, 263);
+            this.button_clear.Location = new System.Drawing.Point(171, 134);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(87, 27);
             this.button_clear.TabIndex = 20;
@@ -92,7 +92,7 @@
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(53, 263);
+            this.save_button.Location = new System.Drawing.Point(52, 134);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(114, 61);
             this.save_button.TabIndex = 16;
