@@ -51,6 +51,7 @@ namespace hontashvili_family.UI
             CategoryArrToForm(comboBox_Filter_Category, false);
             numericUpDown2.Value = -1;
             numericUpDown1.Value = 0;
+            textBox_Name_Filter.Text = "";
 
 
             textBox_Name.BackColor = Color.White;
@@ -366,6 +367,36 @@ namespace hontashvili_family.UI
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             SetProductsByFilter();
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            Product product = FormToProduct();
+            if (product.Id == 0)
+
+                MessageBox.Show("You need to choose a product");
+            else
+            {
+
+                //בהמשך תהיה כאן בדיקה שאין מידע נוסף על פריט זה
+                if (MessageBox.Show("Are you sure?", "warning", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) ==
+                System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (product.Delete())
+                    {
+                        MessageBox.Show("Successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("not deleted!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    ProductToForm(null);
+                    ProductArrToForm();
+
+                }
+            }
         }
     }
 }

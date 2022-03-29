@@ -135,8 +135,8 @@ namespace hontashvili_family.UI
 
             //תפיסת החלק של הטופס להדפסה כולל הרשימה והכותרת שמעליה - לתוך תמונת הסיביות
 
-            int addAboveListView = 30;
-            int moveLeft = 10;
+            int addAboveListView = 100;
+            int moveLeft = 20;
             Graphics graphics = listViewProducts.CreateGraphics();
             Size curSize = listViewProducts.Size;
             curSize.Height += addAboveListView;
@@ -184,5 +184,7 @@ namespace hontashvili_family.UI
 
             m_LastSortOrder = sorter.SortOrder;
         }
+
+      
     }
 }

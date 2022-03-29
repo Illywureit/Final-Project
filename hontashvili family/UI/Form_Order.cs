@@ -51,7 +51,8 @@ namespace hontashvili_family.UI
             dateTimePicker_From.Value = DateTime.Today;
             dateTimePicker_To.Value = DateTime.Today;
             numericUpDown2.Value = 0;
-            
+            checkBox_Return.Checked = false;    
+
             listBox_ProductsInOrder.DataSource = null;
             listBox_ProductsInOrderCount.Items.Clear();
             labelCat.Text = "";
@@ -143,7 +144,8 @@ namespace hontashvili_family.UI
             {
 
                 Order order = FormToOrder();
-
+                order.Return = false;
+                
                 //הוספת ההזמנה למסד הנתונים
 
                 OrderProductArr orderProductArr_New;
@@ -173,7 +175,7 @@ namespace hontashvili_family.UI
                         //לא לשכוח כאן לנקות את הטופס ולטעון מחדש ערכים לתיבת הרשימה של ההזמנות
 
                     }
-                    
+
                 }
                 else
                 {
@@ -214,6 +216,55 @@ namespace hontashvili_family.UI
             }
         }
 
+        private void Button_delete_Click(object sender, EventArgs e)
+        {
+
+            
+            Order order = FormToOrder();
+            
+
+
+
+            if (order.Id == 0)
+                MessageBox.Show("You need to choose an order!");
+            else
+            {
+               
+                if (order.Return)
+                {
+                    //בהמשך תהיה כאן בדיקה שאין מידע נוסף על לקוח זה
+                    if (MessageBox.Show("Are you sure?", "warning", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) ==
+                    System.Windows.Forms.DialogResult.Yes)
+                    {
+                        OrderProductArr orderProductArr = new OrderProductArr();
+                        orderProductArr.Fill();
+                        orderProductArr = orderProductArr.FilterByOrder(order);
+                        if (order.Delete())
+                        {
+                            MessageBox.Show("Successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            orderProductArr.Delete();
+                        }
+                        else
+                        {
+                            MessageBox.Show("not deleted!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        OrderToForm(null);
+                        OrderArrToForm();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("You can't delete an order before returning it!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+
+        }
+
         private void Form_Order_InputLanguageChanged(object sender, InputLanguageChangedEventArgs e)
         {
             if (InputLanguage.CurrentInputLanguage.Culture.Name.ToLower() != "en-us")
@@ -235,7 +286,7 @@ namespace hontashvili_family.UI
                 textBox_Comment.Text = order.Comment;
                 dateTimePicker_Date.Value = order.Date;
                 label_ChosenClient.Text = order.Client.FirstName + " " + order.Client.LastName;
-
+                checkBox_Return.Checked = order.Return;
 
             }
             else
@@ -248,11 +299,12 @@ namespace hontashvili_family.UI
         private Order FormToOrder()
         {
             Order order = new Order();
+            order.Id = int.Parse(label_Id.Text);
             order.Date = dateTimePicker_Date.Value;
             order.Comment = textBox_Comment.Text;
             order.Client = listBox_Clients.SelectedItem as Client;
-            order.Id = int.Parse(label_Id.Text);
-            order.Return = false;
+            order.Return = checkBox_Return.Checked;
+            
             return order;
         }
         private void OrderArrToForm()
@@ -335,38 +387,7 @@ namespace hontashvili_family.UI
             OrderToForm(null);
         }
 
-        /** private void Button_delete_Click(object sender, EventArgs e)
-        {
-
-
-            Order order = FormToOrder();
-            if (order.Id == 0)
-
-                MessageBox.Show("You need to choose a order");
-            else
-            {
-
-                //בהמשך תהיה כאן בדיקה שאין מידע נוסף על לקוח זה
-                if (MessageBox.Show("Are you sure?", "warning", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) ==
-                System.Windows.Forms.DialogResult.Yes)
-                {
-                    if (order.Delete())
-                    {
-                        MessageBox.Show("Successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("not deleted!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                    OrderToForm(null);
-                    OrderArrToForm();
-
-                }
-            }
-
-        } **/
+      
 
         //Filter
         private void textBox_Filter_KeyUp(object sender, KeyEventArgs e)
@@ -544,7 +565,7 @@ namespace hontashvili_family.UI
             // יצירת אוסף הזוגות הזמנה -מוצר 
             OrderProduct orderProduct;
 
-           
+
             //סורקים את כל הערכים בתיבת הרשימה של המוצרים שנבחרו להזמנה
             for (int i = 0; i < listBox_ProductsInOrder.Items.Count; i++)
             {
@@ -567,12 +588,12 @@ namespace hontashvili_family.UI
                 else
                 {
                     orderProduct.Returned = true;
-                } 
-                    
+                }
+
 
                 orderProductArr.Add(orderProduct);
             }
-            
+
             return orderProductArr;
         }
 
@@ -726,7 +747,7 @@ namespace hontashvili_family.UI
                     productArr.UpdateProduct(product);
                     ProductArrToForm(listBox_ProductsInOrder, productArr);
                 }
-            //אם לא הודעה מתאימה
+                //אם לא הודעה מתאימה
                 else
                     MessageBox.Show("There are no more items left", "out of stock", MessageBoxButtons.OK);
         }
@@ -752,11 +773,11 @@ namespace hontashvili_family.UI
                     productArr.UpdateProduct(product);
                     ProductArrToForm(listBox_ProductsInOrder, productArr);
                 }
-                   
+
                 else
                     MoveSelectedItemBetweenListBox(listBox_ProductsInOrder, listBox_PotentialsProducts, false);
 
-             }
+            }
 
         }
         private void ProductArrCountToForm(OrderProductArr curOrderproductArr)
@@ -773,21 +794,20 @@ namespace hontashvili_family.UI
                 listBox_ProductsInOrderCount.SelectedIndex = 0;
         }
 
-       
+
     }
 
-       
-    
+
+
 }
 
-           
-                
-            
-            
 
 
-            
 
-        
 
-        
+
+
+
+
+
+

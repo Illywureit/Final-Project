@@ -53,6 +53,7 @@ namespace hontashvili_family.UI
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label_Count = new System.Windows.Forms.Label();
+            this.button_delete = new System.Windows.Forms.Button();
             this.groupBox_Filter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -114,7 +115,7 @@ namespace hontashvili_family.UI
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(621, 319);
+            this.button_clear.Location = new System.Drawing.Point(651, 252);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(87, 27);
             this.button_clear.TabIndex = 7;
@@ -146,7 +147,7 @@ namespace hontashvili_family.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(608, 252);
+            this.save_button.Location = new System.Drawing.Point(531, 252);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(114, 61);
             this.save_button.TabIndex = 6;
@@ -327,12 +328,24 @@ namespace hontashvili_family.UI
             this.label_Count.TabIndex = 47;
             this.label_Count.Text = "Inventory:";
             // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.LightCoral;
+            this.button_delete.Location = new System.Drawing.Point(651, 286);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(87, 27);
+            this.button_delete.TabIndex = 48;
+            this.button_delete.Text = "Delete";
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
             // Form_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.label_Count);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.groupBox_Filter);
@@ -387,5 +400,6 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.Label label_Count;
         private System.Windows.Forms.Label label_filterCount;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button_delete;
     }
 }

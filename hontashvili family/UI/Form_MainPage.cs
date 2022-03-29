@@ -51,10 +51,15 @@ namespace hontashvili_family.UI
 
         private void button_OrderReport_Click(object sender, EventArgs e)
         {
+            Form_OrdersReport form_OrdersReport = new Form_OrdersReport();
+            form_OrdersReport.ShowDialog();
+        }
+
+        private void button_Month_Click(object sender, EventArgs e)
+        {
             Form_OrderMonthReport form_OrderMonthReport = new Form_OrderMonthReport();
             form_OrderMonthReport.ShowDialog();
         }
-
-       
     }
+    
 }

@@ -36,6 +36,8 @@ namespace hontashvili_family.UI
             this.button_Minus = new System.Windows.Forms.Button();
             this.listBox_ProductsInOrderCount = new System.Windows.Forms.ListBox();
             this.groupBox_chosenProduct = new System.Windows.Forms.GroupBox();
+            this.label_ChosenQuantity = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.labelCat = new System.Windows.Forms.Label();
             this.pCategory = new System.Windows.Forms.Label();
             this.labelCom = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@ namespace hontashvili_family.UI
             this.label_LastName = new System.Windows.Forms.Label();
             this.listBox_Clients = new System.Windows.Forms.ListBox();
             this.Order_details = new System.Windows.Forms.TabPage();
+            this.groupBox_OrderDetails = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_ChosenClient = new System.Windows.Forms.Label();
@@ -98,9 +101,7 @@ namespace hontashvili_family.UI
             this.label_FilterId = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button_Delete = new System.Windows.Forms.Button();
-            this.groupBox_OrderDetails = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label_ChosenQuantity = new System.Windows.Forms.Label();
+            this.checkBox_Return = new System.Windows.Forms.CheckBox();
             this.Order_items.SuspendLayout();
             this.groupBox_chosenProduct.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -109,9 +110,9 @@ namespace hontashvili_family.UI
             this.groupBox_details.SuspendLayout();
             this.groupBox_clientFilter.SuspendLayout();
             this.Order_details.SuspendLayout();
+            this.groupBox_OrderDetails.SuspendLayout();
             this.groupBox_Filter.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.groupBox_OrderDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_clear
@@ -206,6 +207,24 @@ namespace hontashvili_family.UI
             this.groupBox_chosenProduct.TabIndex = 49;
             this.groupBox_chosenProduct.TabStop = false;
             this.groupBox_chosenProduct.Text = "Chosen product details";
+            // 
+            // label_ChosenQuantity
+            // 
+            this.label_ChosenQuantity.AutoSize = true;
+            this.label_ChosenQuantity.Location = new System.Drawing.Point(134, 126);
+            this.label_ChosenQuantity.Name = "label_ChosenQuantity";
+            this.label_ChosenQuantity.Size = new System.Drawing.Size(0, 18);
+            this.label_ChosenQuantity.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(6, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 18);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Quantity:";
             // 
             // labelCat
             // 
@@ -418,7 +437,7 @@ namespace hontashvili_family.UI
             this.Order_client.Location = new System.Drawing.Point(4, 25);
             this.Order_client.Name = "Order_client";
             this.Order_client.Padding = new System.Windows.Forms.Padding(3);
-            this.Order_client.Size = new System.Drawing.Size(761, 341);
+            this.Order_client.Size = new System.Drawing.Size(761, 362);
             this.Order_client.TabIndex = 1;
             this.Order_client.Text = "Order client";
             // 
@@ -602,9 +621,30 @@ namespace hontashvili_family.UI
             this.Order_details.Location = new System.Drawing.Point(4, 25);
             this.Order_details.Name = "Order_details";
             this.Order_details.Padding = new System.Windows.Forms.Padding(3);
-            this.Order_details.Size = new System.Drawing.Size(761, 341);
+            this.Order_details.Size = new System.Drawing.Size(761, 362);
             this.Order_details.TabIndex = 0;
             this.Order_details.Text = "Order details";
+            // 
+            // groupBox_OrderDetails
+            // 
+            this.groupBox_OrderDetails.Controls.Add(this.checkBox_Return);
+            this.groupBox_OrderDetails.Controls.Add(this.label2);
+            this.groupBox_OrderDetails.Controls.Add(this.label1);
+            this.groupBox_OrderDetails.Controls.Add(this.label_ChosenClient);
+            this.groupBox_OrderDetails.Controls.Add(this.label_client1);
+            this.groupBox_OrderDetails.Controls.Add(this.textBox_Comment);
+            this.groupBox_OrderDetails.Controls.Add(this.dateTimePicker_Date);
+            this.groupBox_OrderDetails.Controls.Add(this.label_Comment);
+            this.groupBox_OrderDetails.Controls.Add(this.label_Date);
+            this.groupBox_OrderDetails.Controls.Add(this.label_Id);
+            this.groupBox_OrderDetails.Controls.Add(this.lablel_Id);
+            this.groupBox_OrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox_OrderDetails.Location = new System.Drawing.Point(500, 18);
+            this.groupBox_OrderDetails.Name = "groupBox_OrderDetails";
+            this.groupBox_OrderDetails.Size = new System.Drawing.Size(230, 285);
+            this.groupBox_OrderDetails.TabIndex = 15;
+            this.groupBox_OrderDetails.TabStop = false;
+            this.groupBox_OrderDetails.Text = "Details";
             // 
             // label2
             // 
@@ -868,44 +908,17 @@ namespace hontashvili_family.UI
             this.button_Delete.TabIndex = 15;
             this.button_Delete.Text = "Delete";
             this.button_Delete.UseVisualStyleBackColor = false;
+            this.button_Delete.Click += new System.EventHandler(this.Button_delete_Click);
             // 
-            // groupBox_OrderDetails
+            // checkBox_Return
             // 
-            this.groupBox_OrderDetails.Controls.Add(this.label2);
-            this.groupBox_OrderDetails.Controls.Add(this.label1);
-            this.groupBox_OrderDetails.Controls.Add(this.label_ChosenClient);
-            this.groupBox_OrderDetails.Controls.Add(this.label_client1);
-            this.groupBox_OrderDetails.Controls.Add(this.textBox_Comment);
-            this.groupBox_OrderDetails.Controls.Add(this.dateTimePicker_Date);
-            this.groupBox_OrderDetails.Controls.Add(this.label_Comment);
-            this.groupBox_OrderDetails.Controls.Add(this.label_Date);
-            this.groupBox_OrderDetails.Controls.Add(this.label_Id);
-            this.groupBox_OrderDetails.Controls.Add(this.lablel_Id);
-            this.groupBox_OrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_OrderDetails.Location = new System.Drawing.Point(500, 18);
-            this.groupBox_OrderDetails.Name = "groupBox_OrderDetails";
-            this.groupBox_OrderDetails.Size = new System.Drawing.Size(230, 285);
-            this.groupBox_OrderDetails.TabIndex = 15;
-            this.groupBox_OrderDetails.TabStop = false;
-            this.groupBox_OrderDetails.Text = "Details";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(6, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Quantity:";
-            // 
-            // label_ChosenQuantity
-            // 
-            this.label_ChosenQuantity.AutoSize = true;
-            this.label_ChosenQuantity.Location = new System.Drawing.Point(134, 126);
-            this.label_ChosenQuantity.Name = "label_ChosenQuantity";
-            this.label_ChosenQuantity.Size = new System.Drawing.Size(0, 18);
-            this.label_ChosenQuantity.TabIndex = 7;
+            this.checkBox_Return.AutoSize = true;
+            this.checkBox_Return.Location = new System.Drawing.Point(83, 242);
+            this.checkBox_Return.Name = "checkBox_Return";
+            this.checkBox_Return.Size = new System.Drawing.Size(121, 24);
+            this.checkBox_Return.TabIndex = 15;
+            this.checkBox_Return.Text = "Is Returned?";
+            this.checkBox_Return.UseVisualStyleBackColor = true;
             // 
             // Form_Order
             // 
@@ -933,11 +946,11 @@ namespace hontashvili_family.UI
             this.groupBox_clientFilter.ResumeLayout(false);
             this.groupBox_clientFilter.PerformLayout();
             this.Order_details.ResumeLayout(false);
+            this.groupBox_OrderDetails.ResumeLayout(false);
+            this.groupBox_OrderDetails.PerformLayout();
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.groupBox_OrderDetails.ResumeLayout(false);
-            this.groupBox_OrderDetails.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1015,5 +1028,6 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.GroupBox groupBox_OrderDetails;
         private System.Windows.Forms.Label label_ChosenQuantity;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox_Return;
     }
 }

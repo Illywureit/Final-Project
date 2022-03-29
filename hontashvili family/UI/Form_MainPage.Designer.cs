@@ -41,12 +41,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox_Info = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button_Month = new System.Windows.Forms.Button();
             this.tabPage_Reports.SuspendLayout();
             this.tabPage_Manage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
@@ -58,13 +59,14 @@
             // tabPage_Reports
             // 
             this.tabPage_Reports.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage_Reports.Controls.Add(this.button_Month);
             this.tabPage_Reports.Controls.Add(this.button_OrderReport);
             this.tabPage_Reports.Controls.Add(this.button_ProductReport);
             this.tabPage_Reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tabPage_Reports.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Reports.Location = new System.Drawing.Point(4, 29);
             this.tabPage_Reports.Name = "tabPage_Reports";
             this.tabPage_Reports.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Reports.Size = new System.Drawing.Size(457, 220);
+            this.tabPage_Reports.Size = new System.Drawing.Size(457, 213);
             this.tabPage_Reports.TabIndex = 1;
             this.tabPage_Reports.Text = "All Reports";
             // 
@@ -213,33 +215,24 @@
             this.groupBox_Info.TabStop = false;
             this.groupBox_Info.Text = "Info";
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Contry: ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.Location = new System.Drawing.Point(75, 107);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "+972544969595";
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(76, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Israel";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Address:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 107);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Phone:";
             // 
             // label5
             // 
@@ -251,24 +244,45 @@
             this.label5.TabIndex = 3;
             this.label5.Text = " 26 Yehuda Hanasi, Tel-Aviv";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Phone:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Address:";
             // 
-            // label7
+            // label3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label7.Location = new System.Drawing.Point(75, 107);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "+972544969595";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(76, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Israel";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Contry: ";
+            // 
+            // button_Month
+            // 
+            this.button_Month.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Month.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Month.Location = new System.Drawing.Point(160, 89);
+            this.button_Month.Name = "button_Month";
+            this.button_Month.Size = new System.Drawing.Size(127, 55);
+            this.button_Month.TabIndex = 3;
+            this.button_Month.Text = "Orders by month";
+            this.button_Month.UseVisualStyleBackColor = false;
+            this.button_Month.Click += new System.EventHandler(this.button_Month_Click);
             // 
             // Form_MainPage
             // 
@@ -317,5 +331,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button_Month;
     }
 }
