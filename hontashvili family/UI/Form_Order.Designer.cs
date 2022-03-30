@@ -77,6 +77,7 @@ namespace hontashvili_family.UI
             this.listBox_Clients = new System.Windows.Forms.ListBox();
             this.Order_details = new System.Windows.Forms.TabPage();
             this.groupBox_OrderDetails = new System.Windows.Forms.GroupBox();
+            this.checkBox_Return = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_ChosenClient = new System.Windows.Forms.Label();
@@ -101,7 +102,7 @@ namespace hontashvili_family.UI
             this.label_FilterId = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button_Delete = new System.Windows.Forms.Button();
-            this.checkBox_Return = new System.Windows.Forms.CheckBox();
+            this.button_Home = new System.Windows.Forms.Button();
             this.Order_items.SuspendLayout();
             this.groupBox_chosenProduct.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -118,7 +119,7 @@ namespace hontashvili_family.UI
             // button_clear
             // 
             this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(651, 397);
+            this.button_clear.Location = new System.Drawing.Point(623, 397);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(89, 37);
             this.button_clear.TabIndex = 14;
@@ -130,7 +131,7 @@ namespace hontashvili_family.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(550, 397);
+            this.save_button.Location = new System.Drawing.Point(522, 397);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(95, 41);
             this.save_button.TabIndex = 13;
@@ -646,6 +647,16 @@ namespace hontashvili_family.UI
             this.groupBox_OrderDetails.TabStop = false;
             this.groupBox_OrderDetails.Text = "Details";
             // 
+            // checkBox_Return
+            // 
+            this.checkBox_Return.AutoSize = true;
+            this.checkBox_Return.Location = new System.Drawing.Point(83, 242);
+            this.checkBox_Return.Name = "checkBox_Return";
+            this.checkBox_Return.Size = new System.Drawing.Size(121, 24);
+            this.checkBox_Return.TabIndex = 15;
+            this.checkBox_Return.Text = "Is Returned?";
+            this.checkBox_Return.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -902,7 +913,7 @@ namespace hontashvili_family.UI
             // 
             this.button_Delete.BackColor = System.Drawing.Color.LightCoral;
             this.button_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Delete.Location = new System.Drawing.Point(456, 397);
+            this.button_Delete.Location = new System.Drawing.Point(428, 397);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(88, 37);
             this.button_Delete.TabIndex = 15;
@@ -910,22 +921,25 @@ namespace hontashvili_family.UI
             this.button_Delete.UseVisualStyleBackColor = false;
             this.button_Delete.Click += new System.EventHandler(this.Button_delete_Click);
             // 
-            // checkBox_Return
+            // button_Home
             // 
-            this.checkBox_Return.AutoSize = true;
-            this.checkBox_Return.Location = new System.Drawing.Point(83, 242);
-            this.checkBox_Return.Name = "checkBox_Return";
-            this.checkBox_Return.Size = new System.Drawing.Size(121, 24);
-            this.checkBox_Return.TabIndex = 15;
-            this.checkBox_Return.Text = "Is Returned?";
-            this.checkBox_Return.UseVisualStyleBackColor = true;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(768, 12);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 16;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
             // 
             // Form_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_Delete);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.tabControl1);
@@ -1029,5 +1043,6 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.Label label_ChosenQuantity;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox_Return;
+        private System.Windows.Forms.Button button_Home;
     }
 }

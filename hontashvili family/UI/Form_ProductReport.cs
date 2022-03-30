@@ -185,6 +185,9 @@ namespace hontashvili_family.UI
             m_LastSortOrder = sorter.SortOrder;
         }
 
-      
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

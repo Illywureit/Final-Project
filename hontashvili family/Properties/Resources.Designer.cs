@@ -84,6 +84,26 @@ namespace hontashvili_family.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap חזרה {
+            get {
+                object obj = ResourceManager.GetObject("חזרה", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap כפתור_בית {
+            get {
+                object obj = ResourceManager.GetObject("כפתור בית", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap מים {
             get {
                 object obj = ResourceManager.GetObject("מים", resourceCulture);

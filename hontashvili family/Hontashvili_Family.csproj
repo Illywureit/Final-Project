@@ -238,6 +238,8 @@
       <DependentUpon>DBHontashvili.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\חזרה.png" />
+    <None Include="Resources\כפתור בית.png" />
     <None Include="Resources\תמונה4.png" />
     <None Include="Resources\תמונה3.png" />
     <None Include="Resources\er-s-class-regatta-starting-line-sails-start-th-leg-princesa-sofia-sailing-race-palma-spanish-62778517.jpg" />

@@ -333,7 +333,12 @@ namespace hontashvili_family.UI
             listBox_ProductsInOrder.SelectedIndex = listBox_ProductsInOrderCount.SelectedIndex;
         }
 
-        
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+
         /* private void button_Return_Click(object sender, EventArgs e)
 {
     if (listBox_ProductsInOrderCount.SelectedIndex >= 0)

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Data;
 using hontashvili_family.DAL;
-using System.Collections.Generic;
 using System.Globalization;
 
 namespace hontashvili_family.BL

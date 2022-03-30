@@ -37,7 +37,10 @@
             this.label_Date = new System.Windows.Forms.Label();
             this.label_ChosenId = new System.Windows.Forms.Label();
             this.label_id = new System.Windows.Forms.Label();
+            this.listBox_ProductsInOrder = new System.Windows.Forms.ListBox();
+            this.listBox_ProductsInOrderCount = new System.Windows.Forms.ListBox();
             this.button_Return = new System.Windows.Forms.Button();
+            this.ProductsInOrder = new System.Windows.Forms.Label();
             this.listBox_Orders = new System.Windows.Forms.ListBox();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_To = new System.Windows.Forms.DateTimePicker();
@@ -48,9 +51,7 @@
             this.label_To = new System.Windows.Forms.Label();
             this.label_From = new System.Windows.Forms.Label();
             this.label_FilterId = new System.Windows.Forms.Label();
-            this.listBox_ProductsInOrderCount = new System.Windows.Forms.ListBox();
-            this.ProductsInOrder = new System.Windows.Forms.Label();
-            this.listBox_ProductsInOrder = new System.Windows.Forms.ListBox();
+            this.button_Home = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_Orders.SuspendLayout();
             this.groupBox_OrderDetails.SuspendLayout();
@@ -64,7 +65,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 397);
+            this.tabControl1.Size = new System.Drawing.Size(784, 397);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage_Orders
@@ -81,7 +82,7 @@
             this.tabPage_Orders.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Orders.Name = "tabPage_Orders";
             this.tabPage_Orders.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Orders.Size = new System.Drawing.Size(780, 368);
+            this.tabPage_Orders.Size = new System.Drawing.Size(776, 368);
             this.tabPage_Orders.TabIndex = 0;
             this.tabPage_Orders.Text = "All orders";
             // 
@@ -155,6 +156,25 @@
             this.label_id.TabIndex = 4;
             this.label_id.Text = "Id:";
             // 
+            // listBox_ProductsInOrder
+            // 
+            this.listBox_ProductsInOrder.FormattingEnabled = true;
+            this.listBox_ProductsInOrder.ItemHeight = 16;
+            this.listBox_ProductsInOrder.Location = new System.Drawing.Point(539, 45);
+            this.listBox_ProductsInOrder.Name = "listBox_ProductsInOrder";
+            this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
+            this.listBox_ProductsInOrder.TabIndex = 54;
+            // 
+            // listBox_ProductsInOrderCount
+            // 
+            this.listBox_ProductsInOrderCount.FormattingEnabled = true;
+            this.listBox_ProductsInOrderCount.ItemHeight = 16;
+            this.listBox_ProductsInOrderCount.Location = new System.Drawing.Point(737, 45);
+            this.listBox_ProductsInOrderCount.Name = "listBox_ProductsInOrderCount";
+            this.listBox_ProductsInOrderCount.Size = new System.Drawing.Size(25, 244);
+            this.listBox_ProductsInOrderCount.TabIndex = 56;
+            this.listBox_ProductsInOrderCount.Click += new System.EventHandler(this.listBox_ProductsInOrderCount_Click);
+            // 
             // button_Return
             // 
             this.button_Return.BackColor = System.Drawing.Color.LightCoral;
@@ -166,6 +186,16 @@
             this.button_Return.Text = "Return";
             this.button_Return.UseVisualStyleBackColor = false;
             this.button_Return.Click += new System.EventHandler(this.button_Return_Click);
+            // 
+            // ProductsInOrder
+            // 
+            this.ProductsInOrder.AutoSize = true;
+            this.ProductsInOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ProductsInOrder.Location = new System.Drawing.Point(561, 22);
+            this.ProductsInOrder.Name = "ProductsInOrder";
+            this.ProductsInOrder.Size = new System.Drawing.Size(147, 20);
+            this.ProductsInOrder.TabIndex = 55;
+            this.ProductsInOrder.Text = "Products In Order:";
             // 
             // listBox_Orders
             // 
@@ -277,41 +307,25 @@
             this.label_FilterId.TabIndex = 0;
             this.label_FilterId.Text = "Id:";
             // 
-            // listBox_ProductsInOrderCount
+            // button_Home
             // 
-            this.listBox_ProductsInOrderCount.FormattingEnabled = true;
-            this.listBox_ProductsInOrderCount.ItemHeight = 16;
-            this.listBox_ProductsInOrderCount.Location = new System.Drawing.Point(737, 45);
-            this.listBox_ProductsInOrderCount.Name = "listBox_ProductsInOrderCount";
-            this.listBox_ProductsInOrderCount.Size = new System.Drawing.Size(25, 244);
-            this.listBox_ProductsInOrderCount.TabIndex = 56;
-            this.listBox_ProductsInOrderCount.Click += new System.EventHandler(this.listBox_ProductsInOrderCount_Click);
-            // 
-            // ProductsInOrder
-            // 
-            this.ProductsInOrder.AutoSize = true;
-            this.ProductsInOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ProductsInOrder.Location = new System.Drawing.Point(561, 22);
-            this.ProductsInOrder.Name = "ProductsInOrder";
-            this.ProductsInOrder.Size = new System.Drawing.Size(147, 20);
-            this.ProductsInOrder.TabIndex = 55;
-            this.ProductsInOrder.Text = "Products In Order:";
-            // 
-            // listBox_ProductsInOrder
-            // 
-            this.listBox_ProductsInOrder.FormattingEnabled = true;
-            this.listBox_ProductsInOrder.ItemHeight = 16;
-            this.listBox_ProductsInOrder.Location = new System.Drawing.Point(539, 45);
-            this.listBox_ProductsInOrder.Name = "listBox_ProductsInOrder";
-            this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
-            this.listBox_ProductsInOrder.TabIndex = 54;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(783, 12);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 17;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
             // 
             // Form_ReturnItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(843, 450);
+            this.Controls.Add(this.button_Home);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_ReturnItems";
             this.Text = "Form_ReturnItems";
@@ -351,5 +365,6 @@
         private System.Windows.Forms.Label label_ChosenClient;
         private System.Windows.Forms.Label label_ChosenDate;
         private System.Windows.Forms.Button button_Return;
+        private System.Windows.Forms.Button button_Home;
     }
 }

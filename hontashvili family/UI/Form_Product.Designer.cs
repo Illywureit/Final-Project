@@ -54,6 +54,7 @@ namespace hontashvili_family.UI
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label_Count = new System.Windows.Forms.Label();
             this.button_delete = new System.Windows.Forms.Button();
+            this.button_Home = new System.Windows.Forms.Button();
             this.groupBox_Filter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -339,12 +340,25 @@ namespace hontashvili_family.UI
             this.button_delete.UseVisualStyleBackColor = false;
             this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
+            // button_Home
+            // 
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(774, 2);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 49;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
+            // 
             // Form_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(833, 450);
+            this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.label_Count);
             this.Controls.Add(this.numericUpDown1);
@@ -401,5 +415,6 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.Label label_filterCount;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.Button button_Home;
     }
 }

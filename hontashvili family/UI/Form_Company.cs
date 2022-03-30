@@ -260,7 +260,12 @@ namespace hontashvili_family.UI
 
         }
 
-       
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+
 
         //private void TextBox_filter_KeyUp(object sender, KeyEventArgs e)
         //{

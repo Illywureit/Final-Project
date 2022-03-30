@@ -366,8 +366,9 @@ namespace hontashvili_family.UI
             CityArrToForm(form_City.SelectedCity);
         }
 
-        
-
-        
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

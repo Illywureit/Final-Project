@@ -787,7 +787,12 @@ namespace hontashvili_family.UI
                 listBox_ProductsInOrderCount.SelectedIndex = 0;
         }
 
-
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            //Form_MainPage form_mainPage = new Form_MainPage();
+            // form_mainPage.Show();
+            this.Hide();
+        }
     }
 
 

@@ -50,12 +50,13 @@
             this.textBox_LastName_Filter = new System.Windows.Forms.TextBox();
             this.textBox_Mail = new System.Windows.Forms.TextBox();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
+            this.button_Home = new System.Windows.Forms.Button();
             this.groupBox_Filter.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_FirstName
             // 
-            this.textBox_FirstName.Location = new System.Drawing.Point(701, 67);
+            this.textBox_FirstName.Location = new System.Drawing.Point(638, 62);
             this.textBox_FirstName.Name = "textBox_FirstName";
             this.textBox_FirstName.Size = new System.Drawing.Size(143, 21);
             this.textBox_FirstName.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             this.firstName.AutoSize = true;
             this.firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.firstName.Location = new System.Drawing.Point(553, 64);
+            this.firstName.Location = new System.Drawing.Point(490, 59);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(90, 20);
             this.firstName.TabIndex = 1;
@@ -76,7 +77,7 @@
             // 
             this.lastName.AutoSize = true;
             this.lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lastName.Location = new System.Drawing.Point(554, 102);
+            this.lastName.Location = new System.Drawing.Point(491, 97);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(90, 20);
             this.lastName.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             this.mail.AutoSize = true;
             this.mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.mail.Location = new System.Drawing.Point(552, 178);
+            this.mail.Location = new System.Drawing.Point(489, 173);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(41, 20);
             this.mail.TabIndex = 5;
@@ -96,7 +97,7 @@
             // 
             this.phone.AutoSize = true;
             this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.phone.Location = new System.Drawing.Point(552, 142);
+            this.phone.Location = new System.Drawing.Point(489, 137);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(119, 20);
             this.phone.TabIndex = 6;
@@ -104,7 +105,7 @@
             // 
             // textBox_Phone
             // 
-            this.textBox_Phone.Location = new System.Drawing.Point(700, 141);
+            this.textBox_Phone.Location = new System.Drawing.Point(637, 136);
             this.textBox_Phone.Name = "textBox_Phone";
             this.textBox_Phone.Size = new System.Drawing.Size(143, 21);
             this.textBox_Phone.TabIndex = 3;
@@ -115,7 +116,7 @@
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(556, 284);
+            this.save_button.Location = new System.Drawing.Point(493, 279);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(114, 61);
             this.save_button.TabIndex = 7;
@@ -128,7 +129,7 @@
             this.listBox_Clients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.listBox_Clients.FormattingEnabled = true;
             this.listBox_Clients.ItemHeight = 16;
-            this.listBox_Clients.Location = new System.Drawing.Point(278, 23);
+            this.listBox_Clients.Location = new System.Drawing.Point(244, 19);
             this.listBox_Clients.Name = "listBox_Clients";
             this.listBox_Clients.Size = new System.Drawing.Size(214, 292);
             this.listBox_Clients.TabIndex = 9;
@@ -138,7 +139,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_id.Location = new System.Drawing.Point(696, 25);
+            this.label_id.Location = new System.Drawing.Point(633, 20);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(18, 20);
             this.label_id.TabIndex = 10;
@@ -148,7 +149,7 @@
             // 
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(553, 25);
+            this.ID.Location = new System.Drawing.Point(490, 20);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(26, 20);
             this.ID.TabIndex = 11;
@@ -156,7 +157,7 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(675, 284);
+            this.button_clear.Location = new System.Drawing.Point(612, 279);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(87, 27);
             this.button_clear.TabIndex = 8;
@@ -167,7 +168,7 @@
             // button_delete
             // 
             this.button_delete.BackColor = System.Drawing.Color.LightCoral;
-            this.button_delete.Location = new System.Drawing.Point(676, 319);
+            this.button_delete.Location = new System.Drawing.Point(613, 314);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(87, 27);
             this.button_delete.TabIndex = 9;
@@ -200,7 +201,7 @@
             this.comboBox_City.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_City.DisplayMember = "city";
             this.comboBox_City.FormattingEnabled = true;
-            this.comboBox_City.Location = new System.Drawing.Point(701, 215);
+            this.comboBox_City.Location = new System.Drawing.Point(638, 210);
             this.comboBox_City.Name = "comboBox_City";
             this.comboBox_City.Size = new System.Drawing.Size(121, 23);
             this.comboBox_City.TabIndex = 5;
@@ -211,7 +212,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(554, 215);
+            this.label3.Location = new System.Drawing.Point(491, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 20;
@@ -221,7 +222,7 @@
             // 
             this.button_AddCity.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_AddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_AddCity.Location = new System.Drawing.Point(830, 194);
+            this.button_AddCity.Location = new System.Drawing.Point(769, 207);
             this.button_AddCity.Name = "button_AddCity";
             this.button_AddCity.Size = new System.Drawing.Size(25, 28);
             this.button_AddCity.TabIndex = 6;
@@ -231,7 +232,7 @@
             // 
             // textBox_LastName
             // 
-            this.textBox_LastName.Location = new System.Drawing.Point(700, 101);
+            this.textBox_LastName.Location = new System.Drawing.Point(637, 96);
             this.textBox_LastName.Name = "textBox_LastName";
             this.textBox_LastName.Size = new System.Drawing.Size(143, 21);
             this.textBox_LastName.TabIndex = 2;
@@ -259,7 +260,7 @@
             // 
             // textBox_Mail
             // 
-            this.textBox_Mail.Location = new System.Drawing.Point(701, 177);
+            this.textBox_Mail.Location = new System.Drawing.Point(638, 172);
             this.textBox_Mail.Name = "textBox_Mail";
             this.textBox_Mail.Size = new System.Drawing.Size(143, 21);
             this.textBox_Mail.TabIndex = 4;
@@ -278,12 +279,25 @@
             this.groupBox_Filter.TabStop = false;
             this.groupBox_Filter.Text = "Filter";
             // 
+            // button_Home
+            // 
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(813, 8);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 26;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
+            // 
             // Form_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.ClientSize = new System.Drawing.Size(880, 407);
+            this.Controls.Add(this.button_Home);
             this.Controls.Add(this.groupBox_Filter);
             this.Controls.Add(this.textBox_Mail);
             this.Controls.Add(this.textBox_LastName);
@@ -337,6 +351,7 @@
         private System.Windows.Forms.TextBox textBox_LastName_Filter;
         private System.Windows.Forms.TextBox textBox_Mail;
         private System.Windows.Forms.GroupBox groupBox_Filter;
+        private System.Windows.Forms.Button button_Home;
     }
 }
 

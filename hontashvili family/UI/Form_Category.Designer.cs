@@ -37,6 +37,7 @@ namespace hontashvili_family.UI
             this.save_button = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
             this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.button_Home = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_delete
@@ -120,12 +121,25 @@ namespace hontashvili_family.UI
             this.textBox_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Text_KeyPress);
             this.textBox_Name.Leave += new System.EventHandler(this.textBox_Name_Leave);
             // 
+            // button_Home
+            // 
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(738, 3);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 38;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
+            // 
             // Form_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.ID);
@@ -152,5 +166,6 @@ namespace hontashvili_family.UI
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.Button button_Home;
     }
 }
