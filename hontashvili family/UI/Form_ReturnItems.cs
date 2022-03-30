@@ -24,9 +24,7 @@ namespace hontashvili_family.UI
             OrderArrToForm();
             ClientArrToForm();
           
-            
-            CompanyArrToForm(comboBox_Filter_Company, false);
-            CategoryArrToForm(comboBox_Filter_Category, false);
+          
         }
 
 
@@ -36,12 +34,7 @@ namespace hontashvili_family.UI
             label_ChosenId.Text = "";
             label_ChosenDate.Text = "";
             label1_ChosenClient.Text = "";
-            labelN.Text = "";
-            labelCom.Text = "";
-            labelCat.Text = "";
-            label_ChosenQuantity.Text = "";
-            numericUpDown2.Value = 0;
-            textBox_Name_Filter.Text = "";
+            
 
             dateTimePicker_From.Value = DateTime.Today;
             dateTimePicker_To.Value = DateTime.Today;
@@ -49,8 +42,7 @@ namespace hontashvili_family.UI
             dateTimePicker_To.Checked = false;
             listBox_ProductsInOrder.DataSource = null;
             listBox_ProductsInOrderCount.Items.Clear();
-            CategoryArrToForm(comboBox_Filter_Category, false);
-            CompanyArrToForm(comboBox_Filter_Company, false);
+         
 
 
             ClientArrToForm();
@@ -333,64 +325,9 @@ namespace hontashvili_family.UI
             }
                 
         }
-        private void textBox_ProductFilter_KeyUp(object sender, KeyEventArgs e)
-        {
-            SetProductByFilter();
-        }
-        private void comboBoxProductFilter_TextChanged(object sender, EventArgs e)
-        {
-            SetProductByFilter();
-        }
-        private void SetProductByFilter()
-        {
-
-            //מייצרים אוסף של כלל המוצרים
-
-            ProductArr productArr = new ProductArr();
-            productArr.Fill();
-
-            //מסננים את אוסף המוצרים לפי שדות הסינון שרשם המשתמש
-
-            productArr = productArr.Filter(textBox_Name_Filter.Text,
-            comboBox_Filter_Company.SelectedItem as Company,
-            comboBox_Filter_Category.SelectedItem as Category, (int)numericUpDown2.Value, false);
-
-
-
-            if (listBox_ProductsInOrder.DataSource != null)
-                productArr.Remove(listBox_ProductsInOrder.DataSource as ProductArr);
-            //מציבים בתיבת הרשימה
-            ProductArrToForm(listBox_ProductsInOrder, productArr);
-        }
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            SetProductByFilter();
-        }
-
-        private void ProductToForm(Product product)
-        {
-
-            //ממירה את המידע בטנ"מ לקוח לטופס
-
-
-            if (product != null)
-            {
-                labelN.Text = product.Name;
-                labelCom.Text = product.Company.Name;
-                labelCat.Text = product.Category.Name;
-            }
-            else
-            {
-
-                ResetForm();
-
-            }
-        }
-        private void listBox_ProductsInOrder_Click(object sender, EventArgs e)
-        {
-            listBox_ProductsInOrderCount.SelectedIndex = listBox_ProductsInOrder.SelectedIndex;
-            ProductToForm(listBox_ProductsInOrder.SelectedItem as Product);
-        }
+      
+     
+       
         private void listBox_ProductsInOrderCount_Click(object sender, EventArgs e)
         {
             listBox_ProductsInOrder.SelectedIndex = listBox_ProductsInOrderCount.SelectedIndex;

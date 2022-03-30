@@ -383,14 +383,26 @@ namespace hontashvili_family.UI
                 MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) ==
                 System.Windows.Forms.DialogResult.Yes)
                 {
-                    if (product.Delete())
+                    OrderProductArr orderProductArr = new OrderProductArr();
+                    orderProductArr.Fill();
+
+                    if (orderProductArr.DoesProductExist(product))
                     {
-                        MessageBox.Show("Successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("You can’t delete a product that is related to an order!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show("not deleted!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                         if (product.Delete())
+                         {
+                            MessageBox.Show("Successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                         }
+                         else
+                         {
+                            MessageBox.Show("not deleted!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                         }
                     }
+
+                   
 
                     ProductToForm(null);
                     ProductArrToForm();

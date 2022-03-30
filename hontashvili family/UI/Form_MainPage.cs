@@ -60,6 +60,12 @@ namespace hontashvili_family.UI
             Form_OrderMonthReport form_OrderMonthReport = new Form_OrderMonthReport();
             form_OrderMonthReport.ShowDialog();
         }
+
+        private void buttonPBO_Click(object sender, EventArgs e)
+        {
+            Form_ProductsInOrdersReport form_productsInOrdersReport = new Form_ProductsInOrdersReport();
+            form_productsInOrdersReport.ShowDialog();
+        }
     }
     
 }

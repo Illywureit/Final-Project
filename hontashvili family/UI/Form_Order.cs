@@ -581,14 +581,7 @@ namespace hontashvili_family.UI
                 //כמות מוצר נוכחי לזוג הזמנה-מוצר
                 orderProduct.Count = (int)listBox_ProductsInOrderCount.Items[i];
                 //הוספת הזוג הזמנה -מוצר לאוסף
-                if (orderProduct.Count > 0)
-                {
-                    orderProduct.Returned = false;
-                }
-                else
-                {
-                    orderProduct.Returned = true;
-                }
+               
 
 
                 orderProductArr.Add(orderProduct);

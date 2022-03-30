@@ -45,7 +45,8 @@ namespace hontashvili_family.UI
             textBox_Phone.Text = "";
             textBox_LastName.Text = "";
             textBox_Mail.Text = "";
-            
+            textBox_FirstName.Text = "";
+            textBox_LastName_Filter.Text = "";
            
            
             CityArrToForm();
@@ -56,7 +57,7 @@ namespace hontashvili_family.UI
             textBox_Phone.BackColor = Color.White;
             textBox_Mail.BackColor = Color.White;
 
-            ;
+            
             comboBox_City.ForeColor = Color.Black;
         }
       
@@ -285,6 +286,15 @@ namespace hontashvili_family.UI
                     MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) ==
                     System.Windows.Forms.DialogResult.Yes)
                     {
+                    OrderArr orderArr = new OrderArr();
+                    orderArr.Fill();
+
+                    if (orderArr.DoesClientExist(client))
+                    {
+                        MessageBox.Show("You can’t delete a client that is related to an order!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
                         if (client.Delete())
                         {
                             MessageBox.Show("Successfully deleted!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -293,8 +303,9 @@ namespace hontashvili_family.UI
                         {
                             MessageBox.Show("not deleted!", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                    }
 
-                        ClientToForm(null);
+                    ClientToForm(null);
                         ClientArrToForm();
 
                     }

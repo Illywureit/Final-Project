@@ -7,6 +7,7 @@ using System.Collections;
 using System.Data;
 using hontashvili_family.DAL;
 
+
 namespace hontashvili_family.BL
 {
 
@@ -80,17 +81,7 @@ namespace hontashvili_family.BL
         }
 
 
-        public bool DoesOrderExist(Order curOrder)
-        {
-
-            //מחזירה האם לפחות לאחד מהלקוחות יש את היישוב
-
-            for (int i = 0; i < this.Count; i++)
-                if ((this[i] as OrderProduct).Order.Id == curOrder.Id)
-                    return true;
-
-            return false;
-        }
+       
         public OrderProduct GetOrderProduct(Order order, Product product)
         {
             for (int i = 0; i < this.Count; i++)
@@ -134,7 +125,11 @@ namespace hontashvili_family.BL
 
             ProductArr productArr = new ProductArr();
             for (int i = 0; i < this.Count; i++)
+            {
+                if (!(productArr.DoesProductExist((this[i] as OrderProduct).Product as Product)))
                 productArr.Add((this[i] as OrderProduct).Product);
+            }
+                
             return productArr;
         }
 
@@ -147,6 +142,18 @@ namespace hontashvili_family.BL
                 (this[i] as OrderProduct).Delete();
             return true;
         }
+
+        public Dictionary<string, int> GetDictionary()
+        {
+
+            // מחזירה משתנה מסוג מילון ממוין עם ערכים רלוונטיים לדוח
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            ProductArr ordersProductArr = this.GetProductArr();
+            foreach (Product curProduct in ordersProductArr)
+                dictionary.Add(curProduct.Name, this.FilterByProduct(curProduct).Count);
+            return dictionary;
+        }
+        
     }
 
 }

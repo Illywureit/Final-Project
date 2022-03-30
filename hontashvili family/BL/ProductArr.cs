@@ -84,10 +84,21 @@ namespace hontashvili_family.BL
         public bool DoesCompanyExist(Company curCompany)
         {
 
-            //מחזירה האם לפחות לאחד מהלקוחות יש את היישוב
+            //מחזירה האם לפחות לאחד מהמוצרים יש את החברה
 
             for (int i = 0; i < this.Count; i++)
                 if ((this[i] as Product).Company.Id == curCompany.Id)
+                    return true;
+
+            return false;
+        }
+        public bool DoesProductExist(Product curProduct)
+        {
+
+            //מחזירה האם מוצר קיים באוסף המוצרים
+
+            for (int i = 0; i < this.Count; i++)
+                if ((this[i] as Product).Id == curProduct.Id)
                     return true;
 
             return false;
@@ -96,7 +107,7 @@ namespace hontashvili_family.BL
         public bool DoesCategoryExist(Category curCategory)
         {
 
-            //מחזירה האם לפחות לאחד מהלקוחות יש את היישוב
+            //מחזירה האם לפחות לאחד מהמוצרים יש את הקטגוריה
 
             for (int i = 0; i < this.Count; i++)
                 if ((this[i] as Product).Category.Id == curCategory.Id)

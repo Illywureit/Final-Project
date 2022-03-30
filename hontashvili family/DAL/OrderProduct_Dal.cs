@@ -10,7 +10,7 @@ namespace hontashvili_family.DAL
     class OrderProduct_Dal
     {
 
-        public static bool Insert(int order, int product, int count, bool returned)
+        public static bool Insert(int order, int product, int count)
         {
 
             //מוסיפה את הלקוח למסד הנתונים
@@ -18,11 +18,11 @@ namespace hontashvili_family.DAL
 
             string str = "INSERT INTO Table_OrderProduct"
             + "("
-            + "[Order],[Product],[Count],[Returned]"
+            + "[Order],[Product],[Count]"
             + ")"
             + " VALUES "
             + "("
-            + $"{order},{product},{count},'{returned}'"
+            + $"{order},{product},{count}"
             + ")";
             //הפעלת פעולת הSQL -תוך שימוש בפעולה המוכנה ExecuteSql במחלקה Dal והחזרה האם הפעולה הצליחה
             return Dal.ExecuteSql(str);
@@ -85,7 +85,7 @@ namespace hontashvili_family.DAL
 
 
         }
-        public static bool Update(int id, int order, int product, int count, bool returned)
+        public static bool Update(int id, int order, int product, int count)
         {
 
             //מעדכנת את הלקוח במסד הנתונים
@@ -95,7 +95,7 @@ namespace hontashvili_family.DAL
             + $",[Order] = {order}"
             + $",[Product] = {product}"
             + $",[Count] = {count}"
-            + $",[Returned] = '{returned}'"
+           
 
 
             + $" WHERE ID = {id}";

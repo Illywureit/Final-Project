@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tabPage_Reports = new System.Windows.Forms.TabPage();
+            this.button_Month = new System.Windows.Forms.Button();
             this.button_OrderReport = new System.Windows.Forms.Button();
             this.button_ProductReport = new System.Windows.Forms.Button();
             this.tabPage_Manage = new System.Windows.Forms.TabPage();
@@ -47,7 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_Month = new System.Windows.Forms.Button();
+            this.buttonPBO = new System.Windows.Forms.Button();
             this.tabPage_Reports.SuspendLayout();
             this.tabPage_Manage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
@@ -59,6 +60,7 @@
             // tabPage_Reports
             // 
             this.tabPage_Reports.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage_Reports.Controls.Add(this.buttonPBO);
             this.tabPage_Reports.Controls.Add(this.button_Month);
             this.tabPage_Reports.Controls.Add(this.button_OrderReport);
             this.tabPage_Reports.Controls.Add(this.button_ProductReport);
@@ -69,6 +71,18 @@
             this.tabPage_Reports.Size = new System.Drawing.Size(457, 213);
             this.tabPage_Reports.TabIndex = 1;
             this.tabPage_Reports.Text = "All Reports";
+            // 
+            // button_Month
+            // 
+            this.button_Month.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button_Month.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Month.Location = new System.Drawing.Point(160, 89);
+            this.button_Month.Name = "button_Month";
+            this.button_Month.Size = new System.Drawing.Size(127, 55);
+            this.button_Month.TabIndex = 3;
+            this.button_Month.Text = "Orders by month";
+            this.button_Month.UseVisualStyleBackColor = false;
+            this.button_Month.Click += new System.EventHandler(this.button_Month_Click);
             // 
             // button_OrderReport
             // 
@@ -272,17 +286,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Contry: ";
             // 
-            // button_Month
+            // buttonPBO
             // 
-            this.button_Month.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button_Month.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Month.Location = new System.Drawing.Point(160, 89);
-            this.button_Month.Name = "button_Month";
-            this.button_Month.Size = new System.Drawing.Size(127, 55);
-            this.button_Month.TabIndex = 3;
-            this.button_Month.Text = "Orders by month";
-            this.button_Month.UseVisualStyleBackColor = false;
-            this.button_Month.Click += new System.EventHandler(this.button_Month_Click);
+            this.buttonPBO.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonPBO.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPBO.Location = new System.Drawing.Point(160, 32);
+            this.buttonPBO.Name = "buttonPBO";
+            this.buttonPBO.Size = new System.Drawing.Size(127, 55);
+            this.buttonPBO.TabIndex = 4;
+            this.buttonPBO.Text = "Products by orders";
+            this.buttonPBO.UseVisualStyleBackColor = false;
+            this.buttonPBO.Click += new System.EventHandler(this.buttonPBO_Click);
             // 
             // Form_MainPage
             // 
@@ -332,5 +346,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_Month;
+        private System.Windows.Forms.Button buttonPBO;
     }
 }

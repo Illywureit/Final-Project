@@ -48,42 +48,18 @@
             this.label_To = new System.Windows.Forms.Label();
             this.label_From = new System.Windows.Forms.Label();
             this.label_FilterId = new System.Windows.Forms.Label();
-            this.tabPage_Return = new System.Windows.Forms.TabPage();
-            this.groupBox_chosenProduct = new System.Windows.Forms.GroupBox();
-            this.labelCat = new System.Windows.Forms.Label();
-            this.pCategory = new System.Windows.Forms.Label();
-            this.labelCom = new System.Windows.Forms.Label();
-            this.pCompany = new System.Windows.Forms.Label();
-            this.labelN = new System.Windows.Forms.Label();
-            this.pName = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label_filterCount = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label_Filter_Category = new System.Windows.Forms.Label();
-            this.comboBox_Filter_Category = new System.Windows.Forms.ComboBox();
-            this.label_Filter_Company = new System.Windows.Forms.Label();
-            this.comboBox_Filter_Company = new System.Windows.Forms.ComboBox();
-            this.textBox_Name_Filter = new System.Windows.Forms.TextBox();
-            this.label_Filter_Name = new System.Windows.Forms.Label();
             this.listBox_ProductsInOrderCount = new System.Windows.Forms.ListBox();
             this.ProductsInOrder = new System.Windows.Forms.Label();
             this.listBox_ProductsInOrder = new System.Windows.Forms.ListBox();
-            this.label_ChosenQuantity = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_Orders.SuspendLayout();
             this.groupBox_OrderDetails.SuspendLayout();
             this.groupBox_Filter.SuspendLayout();
-            this.tabPage_Return.SuspendLayout();
-            this.groupBox_chosenProduct.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage_Orders);
-            this.tabControl1.Controls.Add(this.tabPage_Return);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
@@ -95,14 +71,17 @@
             // 
             this.tabPage_Orders.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage_Orders.Controls.Add(this.groupBox_OrderDetails);
+            this.tabPage_Orders.Controls.Add(this.listBox_ProductsInOrder);
+            this.tabPage_Orders.Controls.Add(this.listBox_ProductsInOrderCount);
             this.tabPage_Orders.Controls.Add(this.button_Return);
+            this.tabPage_Orders.Controls.Add(this.ProductsInOrder);
             this.tabPage_Orders.Controls.Add(this.listBox_Orders);
             this.tabPage_Orders.Controls.Add(this.groupBox_Filter);
             this.tabPage_Orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tabPage_Orders.Location = new System.Drawing.Point(4, 25);
             this.tabPage_Orders.Name = "tabPage_Orders";
             this.tabPage_Orders.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Orders.Size = new System.Drawing.Size(780, 343);
+            this.tabPage_Orders.Size = new System.Drawing.Size(780, 368);
             this.tabPage_Orders.TabIndex = 0;
             this.tabPage_Orders.Text = "All orders";
             // 
@@ -115,9 +94,9 @@
             this.groupBox_OrderDetails.Controls.Add(this.label_ChosenId);
             this.groupBox_OrderDetails.Controls.Add(this.label_id);
             this.groupBox_OrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_OrderDetails.Location = new System.Drawing.Point(526, 43);
+            this.groupBox_OrderDetails.Location = new System.Drawing.Point(23, 195);
             this.groupBox_OrderDetails.Name = "groupBox_OrderDetails";
-            this.groupBox_OrderDetails.Size = new System.Drawing.Size(198, 193);
+            this.groupBox_OrderDetails.Size = new System.Drawing.Size(198, 145);
             this.groupBox_OrderDetails.TabIndex = 7;
             this.groupBox_OrderDetails.TabStop = false;
             this.groupBox_OrderDetails.Text = "Chosen order details";
@@ -180,7 +159,7 @@
             // 
             this.button_Return.BackColor = System.Drawing.Color.LightCoral;
             this.button_Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Return.Location = new System.Drawing.Point(536, 275);
+            this.button_Return.Location = new System.Drawing.Point(651, 324);
             this.button_Return.Name = "button_Return";
             this.button_Return.Size = new System.Drawing.Size(97, 38);
             this.button_Return.TabIndex = 57;
@@ -192,7 +171,7 @@
             // 
             this.listBox_Orders.FormattingEnabled = true;
             this.listBox_Orders.ItemHeight = 16;
-            this.listBox_Orders.Location = new System.Drawing.Point(268, 53);
+            this.listBox_Orders.Location = new System.Drawing.Point(268, 23);
             this.listBox_Orders.Name = "listBox_Orders";
             this.listBox_Orders.Size = new System.Drawing.Size(231, 260);
             this.listBox_Orders.TabIndex = 3;
@@ -209,7 +188,7 @@
             this.groupBox_Filter.Controls.Add(this.label_From);
             this.groupBox_Filter.Controls.Add(this.label_FilterId);
             this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_Filter.Location = new System.Drawing.Point(23, 53);
+            this.groupBox_Filter.Location = new System.Drawing.Point(23, 23);
             this.groupBox_Filter.Name = "groupBox_Filter";
             this.groupBox_Filter.Size = new System.Drawing.Size(239, 166);
             this.groupBox_Filter.TabIndex = 2;
@@ -298,203 +277,11 @@
             this.label_FilterId.TabIndex = 0;
             this.label_FilterId.Text = "Id:";
             // 
-            // tabPage_Return
-            // 
-            this.tabPage_Return.BackColor = System.Drawing.Color.LightCyan;
-            this.tabPage_Return.Controls.Add(this.groupBox_chosenProduct);
-            this.tabPage_Return.Controls.Add(this.groupBox1);
-            this.tabPage_Return.Controls.Add(this.listBox_ProductsInOrderCount);
-            this.tabPage_Return.Controls.Add(this.ProductsInOrder);
-            this.tabPage_Return.Controls.Add(this.listBox_ProductsInOrder);
-            this.tabPage_Return.Location = new System.Drawing.Point(4, 25);
-            this.tabPage_Return.Name = "tabPage_Return";
-            this.tabPage_Return.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Return.Size = new System.Drawing.Size(780, 368);
-            this.tabPage_Return.TabIndex = 1;
-            this.tabPage_Return.Text = "Return products";
-            // 
-            // groupBox_chosenProduct
-            // 
-            this.groupBox_chosenProduct.Controls.Add(this.label_ChosenQuantity);
-            this.groupBox_chosenProduct.Controls.Add(this.label3);
-            this.groupBox_chosenProduct.Controls.Add(this.labelCat);
-            this.groupBox_chosenProduct.Controls.Add(this.pCategory);
-            this.groupBox_chosenProduct.Controls.Add(this.labelCom);
-            this.groupBox_chosenProduct.Controls.Add(this.pCompany);
-            this.groupBox_chosenProduct.Controls.Add(this.labelN);
-            this.groupBox_chosenProduct.Controls.Add(this.pName);
-            this.groupBox_chosenProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox_chosenProduct.Location = new System.Drawing.Point(8, 210);
-            this.groupBox_chosenProduct.Name = "groupBox_chosenProduct";
-            this.groupBox_chosenProduct.Size = new System.Drawing.Size(241, 152);
-            this.groupBox_chosenProduct.TabIndex = 59;
-            this.groupBox_chosenProduct.TabStop = false;
-            this.groupBox_chosenProduct.Text = "Chosen product details";
-            // 
-            // labelCat
-            // 
-            this.labelCat.AutoSize = true;
-            this.labelCat.Location = new System.Drawing.Point(134, 95);
-            this.labelCat.Name = "labelCat";
-            this.labelCat.Size = new System.Drawing.Size(0, 18);
-            this.labelCat.TabIndex = 5;
-            // 
-            // pCategory
-            // 
-            this.pCategory.AutoSize = true;
-            this.pCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pCategory.Location = new System.Drawing.Point(6, 95);
-            this.pCategory.Name = "pCategory";
-            this.pCategory.Size = new System.Drawing.Size(81, 18);
-            this.pCategory.TabIndex = 4;
-            this.pCategory.Text = "Category:";
-            // 
-            // labelCom
-            // 
-            this.labelCom.AutoSize = true;
-            this.labelCom.Location = new System.Drawing.Point(134, 63);
-            this.labelCom.Name = "labelCom";
-            this.labelCom.Size = new System.Drawing.Size(0, 18);
-            this.labelCom.TabIndex = 3;
-            // 
-            // pCompany
-            // 
-            this.pCompany.AutoSize = true;
-            this.pCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pCompany.Location = new System.Drawing.Point(6, 63);
-            this.pCompany.Name = "pCompany";
-            this.pCompany.Size = new System.Drawing.Size(84, 18);
-            this.pCompany.TabIndex = 2;
-            this.pCompany.Text = "Company:";
-            // 
-            // labelN
-            // 
-            this.labelN.AutoSize = true;
-            this.labelN.Location = new System.Drawing.Point(134, 32);
-            this.labelN.Name = "labelN";
-            this.labelN.Size = new System.Drawing.Size(0, 18);
-            this.labelN.TabIndex = 1;
-            // 
-            // pName
-            // 
-            this.pName.AutoSize = true;
-            this.pName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pName.Location = new System.Drawing.Point(8, 32);
-            this.pName.Name = "pName";
-            this.pName.Size = new System.Drawing.Size(57, 18);
-            this.pName.TabIndex = 0;
-            this.pName.Text = "Name:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label_filterCount);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.label_Filter_Category);
-            this.groupBox1.Controls.Add(this.comboBox_Filter_Category);
-            this.groupBox1.Controls.Add(this.label_Filter_Company);
-            this.groupBox1.Controls.Add(this.comboBox_Filter_Company);
-            this.groupBox1.Controls.Add(this.textBox_Name_Filter);
-            this.groupBox1.Controls.Add(this.label_Filter_Name);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 201);
-            this.groupBox1.TabIndex = 58;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
-            // 
-            // label_filterCount
-            // 
-            this.label_filterCount.AutoSize = true;
-            this.label_filterCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_filterCount.Location = new System.Drawing.Point(14, 169);
-            this.label_filterCount.Name = "label_filterCount";
-            this.label_filterCount.Size = new System.Drawing.Size(98, 20);
-            this.label_filterCount.TabIndex = 49;
-            this.label_filterCount.Text = "Min quantity:";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.numericUpDown2.Location = new System.Drawing.Point(129, 169);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(89, 26);
-            this.numericUpDown2.TabIndex = 50;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // label_Filter_Category
-            // 
-            this.label_Filter_Category.AutoSize = true;
-            this.label_Filter_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Filter_Category.Location = new System.Drawing.Point(14, 127);
-            this.label_Filter_Category.Name = "label_Filter_Category";
-            this.label_Filter_Category.Size = new System.Drawing.Size(73, 20);
-            this.label_Filter_Category.TabIndex = 44;
-            this.label_Filter_Category.Text = "Category";
-            // 
-            // comboBox_Filter_Category
-            // 
-            this.comboBox_Filter_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox_Filter_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Filter_Category.DisplayMember = "city";
-            this.comboBox_Filter_Category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Filter_Category.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.comboBox_Filter_Category.FormattingEnabled = true;
-            this.comboBox_Filter_Category.Location = new System.Drawing.Point(97, 126);
-            this.comboBox_Filter_Category.Name = "comboBox_Filter_Category";
-            this.comboBox_Filter_Category.Size = new System.Drawing.Size(144, 26);
-            this.comboBox_Filter_Category.TabIndex = 43;
-            this.comboBox_Filter_Category.ValueMember = "city";
-            this.comboBox_Filter_Category.TextChanged += new System.EventHandler(this.comboBoxProductFilter_TextChanged);
-            // 
-            // label_Filter_Company
-            // 
-            this.label_Filter_Company.AutoSize = true;
-            this.label_Filter_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Filter_Company.Location = new System.Drawing.Point(14, 85);
-            this.label_Filter_Company.Name = "label_Filter_Company";
-            this.label_Filter_Company.Size = new System.Drawing.Size(76, 20);
-            this.label_Filter_Company.TabIndex = 42;
-            this.label_Filter_Company.Text = "Company";
-            // 
-            // comboBox_Filter_Company
-            // 
-            this.comboBox_Filter_Company.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox_Filter_Company.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Filter_Company.DisplayMember = "city";
-            this.comboBox_Filter_Company.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Filter_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.comboBox_Filter_Company.FormattingEnabled = true;
-            this.comboBox_Filter_Company.Location = new System.Drawing.Point(98, 84);
-            this.comboBox_Filter_Company.Name = "comboBox_Filter_Company";
-            this.comboBox_Filter_Company.Size = new System.Drawing.Size(143, 26);
-            this.comboBox_Filter_Company.TabIndex = 41;
-            this.comboBox_Filter_Company.ValueMember = "city";
-            this.comboBox_Filter_Company.TextChanged += new System.EventHandler(this.comboBoxProductFilter_TextChanged);
-            // 
-            // textBox_Name_Filter
-            // 
-            this.textBox_Name_Filter.Location = new System.Drawing.Point(97, 42);
-            this.textBox_Name_Filter.Name = "textBox_Name_Filter";
-            this.textBox_Name_Filter.Size = new System.Drawing.Size(144, 26);
-            this.textBox_Name_Filter.TabIndex = 32;
-            this.textBox_Name_Filter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_ProductFilter_KeyUp);
-            // 
-            // label_Filter_Name
-            // 
-            this.label_Filter_Name.AutoSize = true;
-            this.label_Filter_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_Filter_Name.Location = new System.Drawing.Point(14, 40);
-            this.label_Filter_Name.Name = "label_Filter_Name";
-            this.label_Filter_Name.Size = new System.Drawing.Size(55, 20);
-            this.label_Filter_Name.TabIndex = 30;
-            this.label_Filter_Name.Text = "Name:";
-            // 
             // listBox_ProductsInOrderCount
             // 
             this.listBox_ProductsInOrderCount.FormattingEnabled = true;
             this.listBox_ProductsInOrderCount.ItemHeight = 16;
-            this.listBox_ProductsInOrderCount.Location = new System.Drawing.Point(536, 31);
+            this.listBox_ProductsInOrderCount.Location = new System.Drawing.Point(737, 45);
             this.listBox_ProductsInOrderCount.Name = "listBox_ProductsInOrderCount";
             this.listBox_ProductsInOrderCount.Size = new System.Drawing.Size(25, 244);
             this.listBox_ProductsInOrderCount.TabIndex = 56;
@@ -504,7 +291,7 @@
             // 
             this.ProductsInOrder.AutoSize = true;
             this.ProductsInOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ProductsInOrder.Location = new System.Drawing.Point(360, 8);
+            this.ProductsInOrder.Location = new System.Drawing.Point(561, 22);
             this.ProductsInOrder.Name = "ProductsInOrder";
             this.ProductsInOrder.Size = new System.Drawing.Size(147, 20);
             this.ProductsInOrder.TabIndex = 55;
@@ -514,29 +301,10 @@
             // 
             this.listBox_ProductsInOrder.FormattingEnabled = true;
             this.listBox_ProductsInOrder.ItemHeight = 16;
-            this.listBox_ProductsInOrder.Location = new System.Drawing.Point(338, 31);
+            this.listBox_ProductsInOrder.Location = new System.Drawing.Point(539, 45);
             this.listBox_ProductsInOrder.Name = "listBox_ProductsInOrder";
             this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
             this.listBox_ProductsInOrder.TabIndex = 54;
-            this.listBox_ProductsInOrder.Click += new System.EventHandler(this.listBox_ProductsInOrder_Click);
-            // 
-            // label_ChosenQuantity
-            // 
-            this.label_ChosenQuantity.AutoSize = true;
-            this.label_ChosenQuantity.Location = new System.Drawing.Point(134, 127);
-            this.label_ChosenQuantity.Name = "label_ChosenQuantity";
-            this.label_ChosenQuantity.Size = new System.Drawing.Size(0, 18);
-            this.label_ChosenQuantity.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(6, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Quantity:";
             // 
             // Form_ReturnItems
             // 
@@ -549,17 +317,11 @@
             this.Text = "Form_ReturnItems";
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Orders.ResumeLayout(false);
+            this.tabPage_Orders.PerformLayout();
             this.groupBox_OrderDetails.ResumeLayout(false);
             this.groupBox_OrderDetails.PerformLayout();
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
-            this.tabPage_Return.ResumeLayout(false);
-            this.tabPage_Return.PerformLayout();
-            this.groupBox_chosenProduct.ResumeLayout(false);
-            this.groupBox_chosenProduct.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -568,7 +330,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage_Orders;
-        private System.Windows.Forms.TabPage tabPage_Return;
         private System.Windows.Forms.ListBox listBox_Orders;
         private System.Windows.Forms.GroupBox groupBox_Filter;
         private System.Windows.Forms.DateTimePicker dateTimePicker_To;
@@ -590,23 +351,5 @@
         private System.Windows.Forms.Label label_ChosenClient;
         private System.Windows.Forms.Label label_ChosenDate;
         private System.Windows.Forms.Button button_Return;
-        private System.Windows.Forms.GroupBox groupBox_chosenProduct;
-        private System.Windows.Forms.Label labelCat;
-        private System.Windows.Forms.Label pCategory;
-        private System.Windows.Forms.Label labelCom;
-        private System.Windows.Forms.Label pCompany;
-        private System.Windows.Forms.Label labelN;
-        private System.Windows.Forms.Label pName;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label_filterCount;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label_Filter_Category;
-        private System.Windows.Forms.ComboBox comboBox_Filter_Category;
-        private System.Windows.Forms.Label label_Filter_Company;
-        private System.Windows.Forms.ComboBox comboBox_Filter_Company;
-        private System.Windows.Forms.TextBox textBox_Name_Filter;
-        private System.Windows.Forms.Label label_Filter_Name;
-        private System.Windows.Forms.Label label_ChosenQuantity;
-        private System.Windows.Forms.Label label3;
     }
 }
