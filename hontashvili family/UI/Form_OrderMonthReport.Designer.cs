@@ -70,7 +70,7 @@
             // 
             this.label_head.AutoSize = true;
             this.label_head.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_head.Location = new System.Drawing.Point(12, 27);
+            this.label_head.Location = new System.Drawing.Point(45, 27);
             this.label_head.Name = "label_head";
             this.label_head.Size = new System.Drawing.Size(462, 20);
             this.label_head.TabIndex = 52;
@@ -110,6 +110,10 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "Year:";
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.document_PrintPage);
+            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -125,7 +129,7 @@
             this.button_Print.BackColor = System.Drawing.SystemColors.Control;
             this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
             this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(567, 200);
+            this.button_Print.Location = new System.Drawing.Point(573, 188);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(91, 88);
             this.button_Print.TabIndex = 55;

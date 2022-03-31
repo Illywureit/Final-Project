@@ -34,7 +34,7 @@ namespace hontashvili_family.UI
             SortDictionaryByValue(ref dictionary);
             //הגדרת סדרה וערכיה - שם הסדרה מועבר למקרא - 2
 
-            Series series = new Series("Distribution");
+            Series series = new Series("Number of orders");
 
             //סוג הגרף
 

@@ -43,10 +43,11 @@
             this.label_To = new System.Windows.Forms.Label();
             this.label_From = new System.Windows.Forms.Label();
             this.button_clear = new System.Windows.Forms.Button();
-            this.button_Print = new System.Windows.Forms.Button();
             this.label_head = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button_Print = new System.Windows.Forms.Button();
+            this.button_Home = new System.Windows.Forms.Button();
             this.groupBox_Filter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,18 +199,6 @@
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
-            // button_Print
-            // 
-            this.button_Print.BackColor = System.Drawing.SystemColors.Control;
-            this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
-            this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(650, 254);
-            this.button_Print.Name = "button_Print";
-            this.button_Print.Size = new System.Drawing.Size(73, 70);
-            this.button_Print.TabIndex = 52;
-            this.button_Print.UseVisualStyleBackColor = false;
-            this.button_Print.Click += new System.EventHandler(this.button_Print_Click);
-            // 
             // label_head
             // 
             this.label_head.AutoSize = true;
@@ -234,12 +223,37 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button_Print
+            // 
+            this.button_Print.BackColor = System.Drawing.SystemColors.Control;
+            this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
+            this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Print.Location = new System.Drawing.Point(650, 254);
+            this.button_Print.Name = "button_Print";
+            this.button_Print.Size = new System.Drawing.Size(73, 70);
+            this.button_Print.TabIndex = 52;
+            this.button_Print.UseVisualStyleBackColor = false;
+            this.button_Print.Click += new System.EventHandler(this.button_Print_Click);
+            // 
+            // button_Home
+            // 
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(740, 2);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 57;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
+            // 
             // Form_OrdersReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_Print);
             this.Controls.Add(this.label_head);
@@ -274,5 +288,6 @@
         private System.Windows.Forms.Label label_head;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button_Home;
     }
 }
