@@ -104,6 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Form_ClientReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_ClientReport.Designer.cs">
+      <DependentUpon>Form_ClientReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form_Company.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="UI\Form_OrderMonthReport.Designer.cs">
       <DependentUpon>Form_OrderMonthReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form_OrdersByMonthReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_OrdersByMonthReport.Designer.cs">
+      <DependentUpon>Form_OrdersByMonthReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Form_OrdersReport.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Form_ClientReport.resx">
+      <DependentUpon>Form_ClientReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_Company.resx">
       <DependentUpon>Form_Company.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_OrderMonthReport.resx">
       <DependentUpon>Form_OrderMonthReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_OrdersByMonthReport.resx">
+      <DependentUpon>Form_OrdersByMonthReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_OrdersReport.resx">
       <DependentUpon>Form_OrdersReport.cs</DependentUpon>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tabPage_Reports = new System.Windows.Forms.TabPage();
+            this.buttonPBO = new System.Windows.Forms.Button();
             this.button_Month = new System.Windows.Forms.Button();
             this.button_OrderReport = new System.Windows.Forms.Button();
             this.button_ProductReport = new System.Windows.Forms.Button();
@@ -39,8 +40,6 @@
             this.button_Client = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox_Info = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,18 +47,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonPBO = new System.Windows.Forms.Button();
+            this.button_ClientReport = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage_Reports.SuspendLayout();
             this.tabPage_Manage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
+            this.groupBox_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox_Info.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage_Reports
             // 
             this.tabPage_Reports.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage_Reports.Controls.Add(this.button1);
+            this.tabPage_Reports.Controls.Add(this.button_ClientReport);
             this.tabPage_Reports.Controls.Add(this.buttonPBO);
             this.tabPage_Reports.Controls.Add(this.button_Month);
             this.tabPage_Reports.Controls.Add(this.button_OrderReport);
@@ -72,13 +76,25 @@
             this.tabPage_Reports.TabIndex = 1;
             this.tabPage_Reports.Text = "All Reports";
             // 
+            // buttonPBO
+            // 
+            this.buttonPBO.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonPBO.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPBO.Location = new System.Drawing.Point(160, 32);
+            this.buttonPBO.Name = "buttonPBO";
+            this.buttonPBO.Size = new System.Drawing.Size(134, 55);
+            this.buttonPBO.TabIndex = 4;
+            this.buttonPBO.Text = "Products by orders";
+            this.buttonPBO.UseVisualStyleBackColor = false;
+            this.buttonPBO.Click += new System.EventHandler(this.buttonPBO_Click);
+            // 
             // button_Month
             // 
             this.button_Month.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_Month.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Month.Location = new System.Drawing.Point(160, 89);
             this.button_Month.Name = "button_Month";
-            this.button_Month.Size = new System.Drawing.Size(127, 55);
+            this.button_Month.Size = new System.Drawing.Size(134, 55);
             this.button_Month.TabIndex = 3;
             this.button_Month.Text = "Orders by month";
             this.button_Month.UseVisualStyleBackColor = false;
@@ -88,9 +104,9 @@
             // 
             this.button_OrderReport.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_OrderReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_OrderReport.Location = new System.Drawing.Point(27, 93);
+            this.button_OrderReport.Location = new System.Drawing.Point(17, 93);
             this.button_OrderReport.Name = "button_OrderReport";
-            this.button_OrderReport.Size = new System.Drawing.Size(127, 55);
+            this.button_OrderReport.Size = new System.Drawing.Size(137, 55);
             this.button_OrderReport.TabIndex = 2;
             this.button_OrderReport.Text = "All orders";
             this.button_OrderReport.UseVisualStyleBackColor = false;
@@ -100,11 +116,11 @@
             // 
             this.button_ProductReport.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_ProductReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ProductReport.Location = new System.Drawing.Point(27, 32);
+            this.button_ProductReport.Location = new System.Drawing.Point(17, 32);
             this.button_ProductReport.Name = "button_ProductReport";
-            this.button_ProductReport.Size = new System.Drawing.Size(127, 55);
+            this.button_ProductReport.Size = new System.Drawing.Size(137, 55);
             this.button_ProductReport.TabIndex = 1;
-            this.button_ProductReport.Text = "All product";
+            this.button_ProductReport.Text = "All products";
             this.button_ProductReport.UseVisualStyleBackColor = false;
             this.button_ProductReport.Click += new System.EventHandler(this.button_ProductReport_Click);
             // 
@@ -194,25 +210,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Water Sport Rental Store";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::hontashvili_family.Properties.Resources.תמונה4;
-            this.pictureBox2.Location = new System.Drawing.Point(1, 345);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(808, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(808, 86);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox_Info
             // 
             this.groupBox_Info.Controls.Add(this.label7);
@@ -286,17 +283,48 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Contry: ";
             // 
-            // buttonPBO
+            // button_ClientReport
             // 
-            this.buttonPBO.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonPBO.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPBO.Location = new System.Drawing.Point(160, 32);
-            this.buttonPBO.Name = "buttonPBO";
-            this.buttonPBO.Size = new System.Drawing.Size(127, 55);
-            this.buttonPBO.TabIndex = 4;
-            this.buttonPBO.Text = "Products by orders";
-            this.buttonPBO.UseVisualStyleBackColor = false;
-            this.buttonPBO.Click += new System.EventHandler(this.buttonPBO_Click);
+            this.button_ClientReport.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button_ClientReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClientReport.Location = new System.Drawing.Point(17, 152);
+            this.button_ClientReport.Name = "button_ClientReport";
+            this.button_ClientReport.Size = new System.Drawing.Size(137, 55);
+            this.button_ClientReport.TabIndex = 5;
+            this.button_ClientReport.Text = "All clients";
+            this.button_ClientReport.UseVisualStyleBackColor = false;
+            this.button_ClientReport.Click += new System.EventHandler(this.button_ClientReport_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.Font = new System.Drawing.Font("Aharoni", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(160, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 57);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Orders by month (Comparison)";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::hontashvili_family.Properties.Resources.תמונה4;
+            this.pictureBox2.Location = new System.Drawing.Point(1, 345);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(808, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(808, 86);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Form_MainPage
             // 
@@ -315,10 +343,10 @@
             this.tabPage_Reports.ResumeLayout(false);
             this.tabPage_Manage.ResumeLayout(false);
             this.tabControl_main.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_Info.ResumeLayout(false);
             this.groupBox_Info.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +375,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_Month;
         private System.Windows.Forms.Button buttonPBO;
+        private System.Windows.Forms.Button button_ClientReport;
+        private System.Windows.Forms.Button button1;
     }
 }

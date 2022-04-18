@@ -172,7 +172,6 @@ namespace hontashvili_family.UI
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(143, 20);
             this.textBox_Name.TabIndex = 1;
-            this.textBox_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Text_KeyPress);
             this.textBox_Name.Leave += new System.EventHandler(this.textBox_Name_Leave);
             // 
             // button_AddCategory

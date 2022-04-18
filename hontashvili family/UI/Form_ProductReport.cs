@@ -189,5 +189,7 @@ namespace hontashvili_family.UI
         {
             this.Hide();
         }
+
+        
     }
 }

@@ -137,6 +137,7 @@ namespace hontashvili_family.BL
             return returnArr;
         }
 
+
         public Dictionary<string, int> GetDictionary(int year)
         {
 
@@ -152,6 +153,8 @@ namespace hontashvili_family.BL
             }
             return dictionary;
         }
+
+        
 
     }
 

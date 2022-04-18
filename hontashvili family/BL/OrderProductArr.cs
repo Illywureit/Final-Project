@@ -79,9 +79,38 @@ namespace hontashvili_family.BL
         
             return orderProductArr;
         }
+        public OrderProductArr FilterByProductArr(ProductArr productArr)
+        {
+            OrderProductArr orderProductArr = new OrderProductArr();
+
+            for (int i = 0; i < this.Count; i++)
+            {
+                for (int j = 0; j < productArr.Count; j++)
+                {
+                    //הצבת המוצר הנוכחי במשתנה עזר - מוצר
+
+                    OrderProduct orderProduct = (this[i] as OrderProduct);
+                    if (
+                     //סינון לפי מוצר
+                     (orderProduct.Product.Id == (productArr[j] as Product).Id)
+                    )
 
 
-       
+                        //ה מוצר ענה לדרישות החיפוש - הוספה שלו לאוסף המוחזר
+
+                        orderProductArr.Add(orderProduct);
+                }
+
+               
+            }
+
+            return orderProductArr;
+        }
+
+
+
+
+
         public OrderProduct GetOrderProduct(Order order, Product product)
         {
             for (int i = 0; i < this.Count; i++)

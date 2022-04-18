@@ -43,10 +43,12 @@ namespace hontashvili_family.BL
         {
             string returned;
             if (m_Return)
-                returned = "[Returned]";
+                returned = "[R]";
             else
-                returned = "[Not returned]";
-            return $" {returned} {m_Client.FirstName} {m_Client.LastName}";
+                returned = "[N-R]";
+            string date ="{" + m_Date.ToShortDateString() + "}";
+            
+            return $" {returned} {m_Client.FirstName} {m_Client.LastName} {date}";
         }
 
         public bool Update()

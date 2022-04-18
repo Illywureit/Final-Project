@@ -328,7 +328,7 @@
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form_ReturnItems";
-            this.Text = "Form_ReturnItems";
+            this.Text = "Return orders";
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Orders.ResumeLayout(false);
             this.tabPage_Orders.PerformLayout();
