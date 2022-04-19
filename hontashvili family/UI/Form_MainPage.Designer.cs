@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.tabPage_Reports = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button_ClientReport = new System.Windows.Forms.Button();
             this.buttonPBO = new System.Windows.Forms.Button();
             this.button_Month = new System.Windows.Forms.Button();
             this.button_OrderReport = new System.Windows.Forms.Button();
@@ -47,10 +49,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button_ClientReport = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabPage_Reports.SuspendLayout();
             this.tabPage_Manage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
@@ -62,6 +63,7 @@
             // tabPage_Reports
             // 
             this.tabPage_Reports.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage_Reports.Controls.Add(this.button2);
             this.tabPage_Reports.Controls.Add(this.button1);
             this.tabPage_Reports.Controls.Add(this.button_ClientReport);
             this.tabPage_Reports.Controls.Add(this.buttonPBO);
@@ -75,6 +77,30 @@
             this.tabPage_Reports.Size = new System.Drawing.Size(457, 213);
             this.tabPage_Reports.TabIndex = 1;
             this.tabPage_Reports.Text = "All Reports";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.Font = new System.Drawing.Font("Aharoni", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(160, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 57);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Orders by month (Comparison)";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button_ClientReport
+            // 
+            this.button_ClientReport.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button_ClientReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClientReport.Location = new System.Drawing.Point(17, 152);
+            this.button_ClientReport.Name = "button_ClientReport";
+            this.button_ClientReport.Size = new System.Drawing.Size(137, 55);
+            this.button_ClientReport.TabIndex = 5;
+            this.button_ClientReport.Text = "All clients";
+            this.button_ClientReport.UseVisualStyleBackColor = false;
+            this.button_ClientReport.Click += new System.EventHandler(this.button_ClientReport_Click);
             // 
             // buttonPBO
             // 
@@ -283,30 +309,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Contry: ";
             // 
-            // button_ClientReport
-            // 
-            this.button_ClientReport.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button_ClientReport.Font = new System.Drawing.Font("Aharoni", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ClientReport.Location = new System.Drawing.Point(17, 152);
-            this.button_ClientReport.Name = "button_ClientReport";
-            this.button_ClientReport.Size = new System.Drawing.Size(137, 55);
-            this.button_ClientReport.TabIndex = 5;
-            this.button_ClientReport.Text = "All clients";
-            this.button_ClientReport.UseVisualStyleBackColor = false;
-            this.button_ClientReport.Click += new System.EventHandler(this.button_ClientReport_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Font = new System.Drawing.Font("Aharoni", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(160, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 57);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Orders by month (Comparison)";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::hontashvili_family.Properties.Resources.תמונה4;
@@ -325,6 +327,18 @@
             this.pictureBox1.Size = new System.Drawing.Size(808, 86);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button2.Font = new System.Drawing.Font("Aharoni", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(300, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 55);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Return status of orders";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form_MainPage
             // 
@@ -377,5 +391,6 @@
         private System.Windows.Forms.Button buttonPBO;
         private System.Windows.Forms.Button button_ClientReport;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

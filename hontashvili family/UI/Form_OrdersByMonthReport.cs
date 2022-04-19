@@ -36,8 +36,8 @@ namespace hontashvili_family.UI
 
 
             //הגדרת סדרה וערכיה - שם הסדרה מועבר למקרא - 2
-
-            Series series1 = new Series("Number of orders in year x");
+          
+            Series series1 = new Series("Number of orders in year " + numericUpDown1.Value.ToString());
 
             //סוג הגרף
 
@@ -56,7 +56,8 @@ namespace hontashvili_family.UI
             //הוספת הסדרה לפקד הגרף
 
             chart1.Series.Add(series1);
-            Series series2 = new Series("Number of orders in year y");
+           
+            Series series2 = new Series("Number of orders in year" + numericUpDown2.Value.ToString());
 
             //סוג הגרף
 

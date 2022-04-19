@@ -154,6 +154,20 @@ namespace hontashvili_family.BL
             return dictionary;
         }
 
+        public int GetNumberOfReturned() 
+        {
+            int x = 0;
+            for (int i = 0; i < this.Count; i++)
+            {
+
+                if((this[i] as Order).Return)
+                    x++;
+
+            }
+            return x;
+        }
+
+
         
 
     }

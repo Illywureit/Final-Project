@@ -796,11 +796,11 @@ namespace hontashvili_family.UI
             this.comboBox_Returned.FormattingEnabled = true;
             this.comboBox_Returned.Items.AddRange(new object[] {
             "All",
-            "True",
-            "False"});
-            this.comboBox_Returned.Location = new System.Drawing.Point(94, 171);
+            "Returned",
+            "Unreturned"});
+            this.comboBox_Returned.Location = new System.Drawing.Point(127, 171);
             this.comboBox_Returned.Name = "comboBox_Returned";
-            this.comboBox_Returned.Size = new System.Drawing.Size(120, 28);
+            this.comboBox_Returned.Size = new System.Drawing.Size(87, 28);
             this.comboBox_Returned.TabIndex = 11;
             this.comboBox_Returned.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
             // 
@@ -810,9 +810,9 @@ namespace hontashvili_family.UI
             this.label_Returned.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label_Returned.Location = new System.Drawing.Point(8, 174);
             this.label_Returned.Name = "label_Returned";
-            this.label_Returned.Size = new System.Drawing.Size(80, 20);
+            this.label_Returned.Size = new System.Drawing.Size(113, 20);
             this.label_Returned.TabIndex = 10;
-            this.label_Returned.Text = "Returned:";
+            this.label_Returned.Text = "Return Status:";
             // 
             // dateTimePicker_To
             // 

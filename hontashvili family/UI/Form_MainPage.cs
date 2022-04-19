@@ -78,6 +78,12 @@ namespace hontashvili_family.UI
             Form_OrdersByMonthReport form_OrdersByMonthReport = new Form_OrdersByMonthReport();
             form_OrdersByMonthReport.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_OrdersReturnStatusReport form_OrdersReturnStatusReport = new Form_OrdersReturnStatusReport();
+            form_OrdersReturnStatusReport.ShowDialog();
+        }
     }
     
 }

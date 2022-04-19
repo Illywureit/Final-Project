@@ -95,7 +95,7 @@
             this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox_Filter.Location = new System.Drawing.Point(1, 38);
             this.groupBox_Filter.Name = "groupBox_Filter";
-            this.groupBox_Filter.Size = new System.Drawing.Size(696, 65);
+            this.groupBox_Filter.Size = new System.Drawing.Size(709, 65);
             this.groupBox_Filter.TabIndex = 1;
             this.groupBox_Filter.TabStop = false;
             this.groupBox_Filter.Text = "Filter";
@@ -106,9 +106,9 @@
             this.comboBox_Returned.FormattingEnabled = true;
             this.comboBox_Returned.Items.AddRange(new object[] {
             "All",
-            "True",
-            "False"});
-            this.comboBox_Returned.Location = new System.Drawing.Point(592, 25);
+            "Returned",
+            "Unreturned"});
+            this.comboBox_Returned.Location = new System.Drawing.Point(605, 27);
             this.comboBox_Returned.Name = "comboBox_Returned";
             this.comboBox_Returned.Size = new System.Drawing.Size(91, 24);
             this.comboBox_Returned.TabIndex = 11;
@@ -120,9 +120,9 @@
             this.label_Returned.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label_Returned.Location = new System.Drawing.Point(521, 30);
             this.label_Returned.Name = "label_Returned";
-            this.label_Returned.Size = new System.Drawing.Size(65, 16);
+            this.label_Returned.Size = new System.Drawing.Size(87, 16);
             this.label_Returned.TabIndex = 10;
-            this.label_Returned.Text = "Returned:";
+            this.label_Returned.Text = "Return status:";
             // 
             // dateTimePicker_To
             // 

@@ -427,9 +427,9 @@ namespace hontashvili_family.UI
                 to = DateTime.MinValue;
 
             string returned;
-            if (comboBox_Returned.Text == "True")
+            if (comboBox_Returned.Text == "Returned")
                 returned = true.ToString();
-            else if (comboBox_Returned.Text == "False")
+            else if (comboBox_Returned.Text == "Unreturned")
                 returned = false.ToString();
             else
                 returned = "";

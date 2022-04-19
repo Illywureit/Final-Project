@@ -146,6 +146,12 @@
     <Compile Include="UI\Form_OrdersReport.Designer.cs">
       <DependentUpon>Form_OrdersReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Form_OrdersReturnStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_OrdersReturnStatusReport.Designer.cs">
+      <DependentUpon>Form_OrdersReturnStatusReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form_Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_OrdersReport.resx">
       <DependentUpon>Form_OrdersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form_OrdersReturnStatusReport.resx">
+      <DependentUpon>Form_OrdersReturnStatusReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Form_Product.resx">
       <DependentUpon>Form_Product.cs</DependentUpon>
