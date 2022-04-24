@@ -46,7 +46,7 @@ namespace hontashvili_family.UI
             //המידע שיוצג לכל רכיב ערך בגרף - 3
 
 
-            series1.Label = "#VALX [#VAL = #PERCENT{P0}]";
+            series1.Label = "[#VAL = #PERCENT{P0}]";
 
             series1.Points.DataBindXY(dictionary1.Keys, dictionary1.Values);
             //מחיקת סדרות קיימות - אם יש ולא בכוונה
@@ -57,7 +57,7 @@ namespace hontashvili_family.UI
 
             chart1.Series.Add(series1);
            
-            Series series2 = new Series("Number of orders in year" + numericUpDown2.Value.ToString());
+            Series series2 = new Series("Number of orders in year " + numericUpDown2.Value.ToString());
 
             //סוג הגרף
 
@@ -66,7 +66,7 @@ namespace hontashvili_family.UI
             //המידע שיוצג לכל רכיב ערך בגרף - 3
 
 
-            series2.Label = "#VALX [#VAL = #PERCENT{P0}]";
+            series2.Label = "[#VAL = #PERCENT{P0}]";
 
             series2.Points.DataBindXY(dictionary2.Keys, dictionary2.Values);
             //מחיקת סדרות קיימות - אם יש ולא בכוונה

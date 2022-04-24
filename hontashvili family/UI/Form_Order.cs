@@ -506,40 +506,50 @@ namespace hontashvili_family.UI
             //מוצאים את הפריט הנבחר
 
             Product selectedItem = listBox_From.SelectedItem as Product;
-            //עדכון הכמות במלאי של הפריט
-            if (isToOrder)
-            //ההעברה היא אל הרשימה של הפריטים בהזמנה
+            if (!(isToOrder && selectedItem.Count < 0))
             {
-                selectedItem.Count--;
-                listBox_ProductsInOrderCount.Items.Add(1);
-            }
-            else
-            {
-                selectedItem.Count += (int)listBox_ProductsInOrderCount.SelectedItem;
-                listBox_ProductsInOrderCount.Items.RemoveAt(listBox_ProductsInOrderCount.SelectedIndex);
-            }
-            //מוסיפים את הפריט הנבחר לרשימת הפריטים הפוטנציאליים
-            //אם כבר יש פריטים ברשימת הפוטנציאליים
+                //עדכון הכמות במלאי של הפריט
+                if (isToOrder)
+                //ההעברה היא אל הרשימה של הפריטים בהזמנה
+                {
+                    if (selectedItem.Count > 0)
+                    {
+                        selectedItem.Count--;
+                        listBox_ProductsInOrderCount.Items.Add(1);
+                    }
 
-            if (listBox_To.DataSource != null)
-                arrList = listBox_To.DataSource as ProductArr;
-            else
-                arrList = new ProductArr();
-            arrList.Add(selectedItem);
-            ProductArrToForm(listBox_To, arrList);
-            ///הסרת הפריט הנבחר מרשימת הפריטים הנבחרים
+                }
+                else
+                {
+                    selectedItem.Count += (int)listBox_ProductsInOrderCount.SelectedItem;
+                    listBox_ProductsInOrderCount.Items.RemoveAt(listBox_ProductsInOrderCount.SelectedIndex);
+                }
+                //מוסיפים את הפריט הנבחר לרשימת הפריטים הפוטנציאליים
+                //אם כבר יש פריטים ברשימת הפוטנציאליים
 
-            arrList = listBox_From.DataSource as ProductArr;
-            arrList.Remove(selectedItem);
-            ProductArrToForm(listBox_From, arrList);
-            //בסוף הפעולה
-            //אם זאת הוספה לתיבת המוצרים בהזמנה - סימון שתי השורה האחרונה בה וגם בתיבת הרשימה של הכמויות
+                if (listBox_To.DataSource != null)
+                    arrList = listBox_To.DataSource as ProductArr;
+                else
+                    arrList = new ProductArr();
+                arrList.Add(selectedItem);
+                ProductArrToForm(listBox_To, arrList);
+                ///הסרת הפריט הנבחר מרשימת הפריטים הנבחרים
 
-            if (isToOrder)
-            {
-                int k = listBox_To.Items.Count - 1;
-                listBox_To.SelectedIndex = k;
-                listBox_ProductsInOrderCount.SelectedIndex = k;
+                arrList = listBox_From.DataSource as ProductArr;
+                arrList.Remove(selectedItem);
+                ProductArrToForm(listBox_From, arrList);
+                //בסוף הפעולה
+                //אם זאת הוספה לתיבת המוצרים בהזמנה - סימון שתי השורה האחרונה בה וגם בתיבת הרשימה של הכמויות
+
+                if (isToOrder)
+                {
+                    if (selectedItem.Count > 0)
+                    {
+                        int k = listBox_To.Items.Count - 1;
+                        listBox_To.SelectedIndex = k;
+                        listBox_ProductsInOrderCount.SelectedIndex = k;
+                    }
+                }
             }
         }
         private void ProductArrToForm(ListBox listBox, ProductArr productArr = null)

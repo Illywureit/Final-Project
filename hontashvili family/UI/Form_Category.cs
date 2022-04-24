@@ -207,7 +207,7 @@ namespace hontashvili_family.UI
 
         private void ListBox_Categories_DoubleClick(object sender, EventArgs e)
         {
-
+            CategoryToForm(listBox_Categories.SelectedItem as Category);
         }
 
         private void Button_clear_Click(object sender, EventArgs e)

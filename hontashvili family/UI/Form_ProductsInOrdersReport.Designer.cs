@@ -192,7 +192,7 @@
             // 
             // button_Home
             // 
-            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button_Home.Location = new System.Drawing.Point(740, 18);
@@ -224,7 +224,7 @@
             this.Controls.Add(this.groupBox_Filter);
             this.Controls.Add(this.chart1);
             this.Name = "Form_ProductsInOrdersReport";
-            this.Text = "Form_ProductsInOrdersReport";
+            this.Text = "Products In Orders Report";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();

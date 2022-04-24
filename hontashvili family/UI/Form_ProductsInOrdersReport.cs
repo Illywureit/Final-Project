@@ -54,7 +54,7 @@ namespace hontashvili_family.UI
             //המידע שיוצג לכל רכיב ערך בגרף - 3
 
 
-            series.Label = "#VALX [#VAL = #PERCENT{P0}]";
+            series.Label = "[#VAL = #PERCENT{P0}]";
                     
                 series.Points.DataBindXY(dictionary.Keys, dictionary.Values);
                     //מחיקת סדרות קיימות - אם יש ולא בכוונה

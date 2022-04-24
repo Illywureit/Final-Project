@@ -113,14 +113,7 @@ namespace hontashvili_family.UI
                 comboBox.SelectedValue = curCategory.Id;
         }
 
-        private void button_clear_Click(object sender, EventArgs e)
-        {
-            FillListView();
-            CompanyArrToForm(comboBox_Filter_Company, false);
-            CategoryArrToForm(comboBox_Filter_Category, false);
-            textBox_Name_Filter.Text = "";
-            numericUpDown2.Value = -1;
-        }
+      
 
         private void document_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -190,6 +183,13 @@ namespace hontashvili_family.UI
             this.Hide();
         }
 
-        
+        private void button_clear_Click_1(object sender, EventArgs e)
+        {
+            FillListView();
+            CompanyArrToForm(comboBox_Filter_Company, false);
+            CategoryArrToForm(comboBox_Filter_Category, false);
+            textBox_Name_Filter.Text = "";
+            numericUpDown2.Value = -1;
+        }
     }
 }

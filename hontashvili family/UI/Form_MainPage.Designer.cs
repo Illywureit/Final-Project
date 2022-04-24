@@ -311,7 +311,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::hontashvili_family.Properties.Resources.תמונה4;
+            this.pictureBox2.Image = global::hontashvili_family.Properties.Resources.boats2;
             this.pictureBox2.Location = new System.Drawing.Point(1, 345);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(808, 97);
@@ -353,7 +353,7 @@
             this.Controls.Add(this.tabControl_main);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form_MainPage";
-            this.Text = "Form_MainPage";
+            this.Text = "Main Page";
             this.tabPage_Reports.ResumeLayout(false);
             this.tabPage_Manage.ResumeLayout(false);
             this.tabControl_main.ResumeLayout(false);

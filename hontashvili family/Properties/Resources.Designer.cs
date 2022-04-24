@@ -63,9 +63,9 @@ namespace hontashvili_family.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap compass_water_952x460px {
+        internal static System.Drawing.Bitmap Back {
             get {
-                object obj = ResourceManager.GetObject("compass_water_952x460px", resourceCulture);
+                object obj = ResourceManager.GetObject("Back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,10 +73,9 @@ namespace hontashvili_family.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap er_s_class_regatta_starting_line_sails_start_th_leg_princesa_sofia_sailing_race_palma_spanish_62778517 {
+        internal static System.Drawing.Bitmap boats {
             get {
-                object obj = ResourceManager.GetObject("er-s-class-regatta-starting-line-sails-start-th-leg-princesa-sofia-sailing-race-p" +
-                        "alma-spanish-62778517", resourceCulture);
+                object obj = ResourceManager.GetObject("boats", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -84,9 +83,9 @@ namespace hontashvili_family.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap חזרה {
+        internal static System.Drawing.Bitmap boats2 {
             get {
-                object obj = ResourceManager.GetObject("חזרה", resourceCulture);
+                object obj = ResourceManager.GetObject("boats2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -94,59 +93,9 @@ namespace hontashvili_family.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap כפתור_בית {
+        internal static System.Drawing.Bitmap Home {
             get {
-                object obj = ResourceManager.GetObject("כפתור בית", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap מים {
-            get {
-                object obj = ResourceManager.GetObject("מים", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap תמונה1 {
-            get {
-                object obj = ResourceManager.GetObject("תמונה1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap תמונה2 {
-            get {
-                object obj = ResourceManager.GetObject("תמונה2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap תמונה3 {
-            get {
-                object obj = ResourceManager.GetObject("תמונה3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap תמונה4 {
-            get {
-                object obj = ResourceManager.GetObject("תמונה4", resourceCulture);
+                object obj = ResourceManager.GetObject("Home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

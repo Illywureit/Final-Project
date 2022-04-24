@@ -36,9 +36,9 @@
             this.ColumnLName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnMail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button_Home = new System.Windows.Forms.Button();
             this.button_Print = new System.Windows.Forms.Button();
-            this.columnCity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
             this.textBox_FirstName_Filter = new System.Windows.Forms.TextBox();
             this.label_FirstName = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.listViewClients.HideSelection = false;
             this.listViewClients.Location = new System.Drawing.Point(12, 120);
             this.listViewClients.Name = "listViewClients";
-            this.listViewClients.Size = new System.Drawing.Size(595, 295);
+            this.listViewClients.Size = new System.Drawing.Size(623, 295);
             this.listViewClients.TabIndex = 51;
             this.listViewClients.UseCompatibleStateImageBehavior = false;
             this.listViewClients.View = System.Windows.Forms.View.Details;
@@ -106,11 +106,16 @@
             // columnMail
             // 
             this.columnMail.Text = "Mail";
-            this.columnMail.Width = 106;
+            this.columnMail.Width = 125;
+            // 
+            // columnCity
+            // 
+            this.columnCity.Text = "City";
+            this.columnCity.Width = 91;
             // 
             // button_Home
             // 
-            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button_Home.Location = new System.Drawing.Point(735, 32);
@@ -130,10 +135,6 @@
             this.button_Print.TabIndex = 55;
             this.button_Print.UseVisualStyleBackColor = false;
             this.button_Print.Click += new System.EventHandler(this.button_Print_Click);
-            // 
-            // columnCity
-            // 
-            this.columnCity.Text = "City";
             // 
             // groupBox_Filter
             // 
@@ -212,7 +213,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewClients);
             this.Name = "Form_ClientReport";
-            this.Text = "Form_ClientReport";
+            this.Text = "Clients Report";
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
             this.ResumeLayout(false);

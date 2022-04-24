@@ -172,6 +172,7 @@ namespace hontashvili_family.UI
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(143, 20);
             this.textBox_Name.TabIndex = 1;
+            this.textBox_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Text_KeyPress);
             this.textBox_Name.Leave += new System.EventHandler(this.textBox_Name_Leave);
             // 
             // button_AddCategory
@@ -341,7 +342,7 @@ namespace hontashvili_family.UI
             // 
             // button_Home
             // 
-            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button_Home.Location = new System.Drawing.Point(774, 2);
@@ -376,7 +377,7 @@ namespace hontashvili_family.UI
             this.Controls.Add(this.name);
             this.Controls.Add(this.textBox_Name);
             this.Name = "Form_Product";
-            this.Text = "Product";
+            this.Text = "Product Management";
             this.InputLanguageChanged += new System.Windows.Forms.InputLanguageChangedEventHandler(this.Form_Product_InputLanguageChanged);
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();

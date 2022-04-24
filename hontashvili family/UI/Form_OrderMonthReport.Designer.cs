@@ -49,9 +49,9 @@
             this.columnOrders});
             this.listViewOrders.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewOrders.HideSelection = false;
-            this.listViewOrders.Location = new System.Drawing.Point(49, 106);
+            this.listViewOrders.Location = new System.Drawing.Point(37, 106);
             this.listViewOrders.Name = "listViewOrders";
-            this.listViewOrders.Size = new System.Drawing.Size(370, 332);
+            this.listViewOrders.Size = new System.Drawing.Size(470, 332);
             this.listViewOrders.TabIndex = 0;
             this.listViewOrders.UseCompatibleStateImageBehavior = false;
             this.listViewOrders.View = System.Windows.Forms.View.Details;
@@ -59,7 +59,7 @@
             // columnMonth
             // 
             this.columnMonth.Text = "Month";
-            this.columnMonth.Width = 138;
+            this.columnMonth.Width = 196;
             // 
             // columnOrders
             // 
@@ -138,7 +138,7 @@
             // 
             // button_Home
             // 
-            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button_Home.Location = new System.Drawing.Point(730, 5);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.label_head);
             this.Controls.Add(this.listViewOrders);
             this.Name = "Form_OrderMonthReport";
-            this.Text = "Form_OrderMonthReport";
+            this.Text = "Order by Month Report";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

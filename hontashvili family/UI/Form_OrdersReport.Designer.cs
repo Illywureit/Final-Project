@@ -59,9 +59,9 @@
             this.columnReturned});
             this.listViewOrders.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewOrders.HideSelection = false;
-            this.listViewOrders.Location = new System.Drawing.Point(36, 109);
+            this.listViewOrders.Location = new System.Drawing.Point(1, 109);
             this.listViewOrders.Name = "listViewOrders";
-            this.listViewOrders.Size = new System.Drawing.Size(562, 329);
+            this.listViewOrders.Size = new System.Drawing.Size(709, 329);
             this.listViewOrders.TabIndex = 0;
             this.listViewOrders.UseCompatibleStateImageBehavior = false;
             this.listViewOrders.View = System.Windows.Forms.View.Details;
@@ -191,7 +191,7 @@
             // button_clear
             // 
             this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(640, 211);
+            this.button_clear.Location = new System.Drawing.Point(711, 189);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(89, 37);
             this.button_clear.TabIndex = 50;
@@ -228,7 +228,7 @@
             this.button_Print.BackColor = System.Drawing.SystemColors.Control;
             this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
             this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(650, 254);
+            this.button_Print.Location = new System.Drawing.Point(719, 228);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(73, 70);
             this.button_Print.TabIndex = 52;
@@ -237,7 +237,7 @@
             // 
             // button_Home
             // 
-            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.חזרה;
+            this.button_Home.BackgroundImage = global::hontashvili_family.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button_Home.Location = new System.Drawing.Point(740, 2);
@@ -260,7 +260,7 @@
             this.Controls.Add(this.groupBox_Filter);
             this.Controls.Add(this.listViewOrders);
             this.Name = "Form_OrdersReport";
-            this.Text = "Form_OrdersReport";
+            this.Text = "Orders Report";
             this.groupBox_Filter.ResumeLayout(false);
             this.groupBox_Filter.PerformLayout();
             this.ResumeLayout(false);

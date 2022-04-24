@@ -39,7 +39,13 @@ namespace hontashvili_family.UI
             }
             return false;
         }
+       
 
+        private void textBox_Text_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!IsEngLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ') &&   (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar)))
+                e.KeyChar = char.MinValue;
+        }
         private void ResetForm()
         {
 
@@ -63,16 +69,9 @@ namespace hontashvili_family.UI
         {
             e.Handled = true;
         }
-        private void textBox_Number_KeyPress(object sender, KeyPressEventArgs e)
-        {
+       
 
-        }
-
-        private void textBox_Text_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!IsEngLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
-                e.KeyChar = char.MinValue;
-        }
+       
         private bool IsEngLetter(char c)
         {
             return (c >= 97 && c <= 122 || c >= 65 && c <= 90);
