@@ -51,12 +51,13 @@
             // 
             // button_clear
             // 
+            this.button_clear.BackgroundImage = global::Illy_Project.Properties.Resources.clear_icon;
+            this.button_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(641, 194);
+            this.button_clear.Location = new System.Drawing.Point(577, 72);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(89, 37);
+            this.button_clear.Size = new System.Drawing.Size(32, 46);
             this.button_clear.TabIndex = 53;
-            this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
@@ -118,7 +119,7 @@
             this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Home.Location = new System.Drawing.Point(735, 32);
+            this.button_Home.Location = new System.Drawing.Point(656, 12);
             this.button_Home.Name = "button_Home";
             this.button_Home.Size = new System.Drawing.Size(58, 42);
             this.button_Home.TabIndex = 56;
@@ -129,7 +130,7 @@
             this.button_Print.BackColor = System.Drawing.SystemColors.Control;
             this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
             this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(649, 240);
+            this.button_Print.Location = new System.Drawing.Point(641, 345);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(73, 70);
             this.button_Print.TabIndex = 55;
@@ -142,7 +143,7 @@
             this.groupBox_Filter.Controls.Add(this.label_FirstName);
             this.groupBox_Filter.Controls.Add(this.textBox_LastName_Filter);
             this.groupBox_Filter.Controls.Add(this.label_LastName);
-            this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox_Filter.Location = new System.Drawing.Point(79, 60);
             this.groupBox_Filter.Name = "groupBox_Filter";
             this.groupBox_Filter.Size = new System.Drawing.Size(492, 58);
@@ -154,7 +155,7 @@
             // 
             this.textBox_FirstName_Filter.Location = new System.Drawing.Point(110, 25);
             this.textBox_FirstName_Filter.Name = "textBox_FirstName_Filter";
-            this.textBox_FirstName_Filter.Size = new System.Drawing.Size(100, 29);
+            this.textBox_FirstName_Filter.Size = new System.Drawing.Size(100, 26);
             this.textBox_FirstName_Filter.TabIndex = 18;
             this.textBox_FirstName_Filter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_ClientFilter_KeyUp);
             // 
@@ -172,7 +173,7 @@
             // 
             this.textBox_LastName_Filter.Location = new System.Drawing.Point(341, 25);
             this.textBox_LastName_Filter.Name = "textBox_LastName_Filter";
-            this.textBox_LastName_Filter.Size = new System.Drawing.Size(102, 29);
+            this.textBox_LastName_Filter.Size = new System.Drawing.Size(102, 26);
             this.textBox_LastName_Filter.TabIndex = 24;
             this.textBox_LastName_Filter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox_ClientFilter_KeyUp);
             // 
@@ -205,7 +206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(725, 450);
             this.Controls.Add(this.groupBox_Filter);
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_clear);

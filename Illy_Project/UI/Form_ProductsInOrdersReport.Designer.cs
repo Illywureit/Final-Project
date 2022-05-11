@@ -32,7 +32,6 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button_clear = new System.Windows.Forms.Button();
             this.groupBox_Filter = new System.Windows.Forms.GroupBox();
             this.label_filterCount = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -42,8 +41,9 @@
             this.comboBox_Filter_Company = new System.Windows.Forms.ComboBox();
             this.textBox_Name_Filter = new System.Windows.Forms.TextBox();
             this.label_Filter_Name = new System.Windows.Forms.Label();
-            this.button_Home = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_Home = new System.Windows.Forms.Button();
+            this.button_clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox_Filter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -65,17 +65,6 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // button_clear
-            // 
-            this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(651, 70);
-            this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(89, 37);
-            this.button_clear.TabIndex = 49;
-            this.button_clear.Text = "Clear";
-            this.button_clear.UseVisualStyleBackColor = true;
-            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
-            // 
             // groupBox_Filter
             // 
             this.groupBox_Filter.Controls.Add(this.label_filterCount);
@@ -86,7 +75,7 @@
             this.groupBox_Filter.Controls.Add(this.comboBox_Filter_Company);
             this.groupBox_Filter.Controls.Add(this.textBox_Name_Filter);
             this.groupBox_Filter.Controls.Add(this.label_Filter_Name);
-            this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.groupBox_Filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.groupBox_Filter.Location = new System.Drawing.Point(3, 53);
             this.groupBox_Filter.Name = "groupBox_Filter";
             this.groupBox_Filter.Size = new System.Drawing.Size(642, 63);
@@ -190,18 +179,6 @@
             this.label_Filter_Name.TabIndex = 30;
             this.label_Filter_Name.Text = "Name:";
             // 
-            // button_Home
-            // 
-            this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
-            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Home.Location = new System.Drawing.Point(740, 18);
-            this.button_Home.Name = "button_Home";
-            this.button_Home.Size = new System.Drawing.Size(58, 42);
-            this.button_Home.TabIndex = 51;
-            this.button_Home.UseVisualStyleBackColor = true;
-            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -211,6 +188,31 @@
             this.label1.Size = new System.Drawing.Size(263, 20);
             this.label1.TabIndex = 52;
             this.label1.Text = "Products In orders Report";
+            // 
+            // button_Home
+            // 
+            this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
+            this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Home.Location = new System.Drawing.Point(730, 12);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(58, 42);
+            this.button_Home.TabIndex = 51;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
+            // 
+            // button_clear
+            // 
+            this.button_clear.BackgroundImage = global::Illy_Project.Properties.Resources.clear_icon;
+            this.button_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_clear.Location = new System.Drawing.Point(649, 67);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(36, 44);
+            this.button_clear.TabIndex = 49;
+            this.button_clear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // Form_ProductsInOrdersReport
             // 

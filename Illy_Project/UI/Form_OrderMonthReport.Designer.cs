@@ -129,7 +129,7 @@
             this.button_Print.BackColor = System.Drawing.SystemColors.Control;
             this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
             this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(573, 188);
+            this.button_Print.Location = new System.Drawing.Point(513, 350);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(91, 88);
             this.button_Print.TabIndex = 55;
@@ -141,7 +141,7 @@
             this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Home.Location = new System.Drawing.Point(730, 5);
+            this.button_Home.Location = new System.Drawing.Point(546, 5);
             this.button_Home.Name = "button_Home";
             this.button_Home.Size = new System.Drawing.Size(58, 42);
             this.button_Home.TabIndex = 56;
@@ -153,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(626, 450);
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_Print);
             this.Controls.Add(this.label1);

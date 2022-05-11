@@ -265,6 +265,17 @@
       <DependentUpon>DB_IllyProject.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\return icon.png" />
+    <None Include="Resources\product icon.png" />
+    <None Include="Resources\product icon1.bmp" />
+    <None Include="Resources\product icon.bmp" />
+    <None Include="Resources\order icon1.png" />
+    <None Include="Resources\order icon.png" />
+    <None Include="Resources\client icon.png" />
+    <None Include="Resources\clients icon2.png" />
+    <None Include="Resources\clients icon1.png" />
+    <None Include="Resources\clients icon.png" />
+    <None Include="Resources\clear-icon.jpg" />
     <None Include="Resources\חזרה.png" />
     <None Include="Resources\כפתור בית.png" />
     <None Include="Resources\תמונה4.png" />

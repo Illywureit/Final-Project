@@ -51,12 +51,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage_Reports.SuspendLayout();
             this.tabPage_Manage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
             this.groupBox_Info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,6 +173,10 @@
             // tabPage_Manage
             // 
             this.tabPage_Manage.BackColor = System.Drawing.Color.LightCyan;
+            this.tabPage_Manage.Controls.Add(this.pictureBox6);
+            this.tabPage_Manage.Controls.Add(this.pictureBox5);
+            this.tabPage_Manage.Controls.Add(this.pictureBox4);
+            this.tabPage_Manage.Controls.Add(this.pictureBox3);
             this.tabPage_Manage.Controls.Add(this.button_Return);
             this.tabPage_Manage.Controls.Add(this.button_Orders);
             this.tabPage_Manage.Controls.Add(this.button_Products);
@@ -180,11 +192,12 @@
             // 
             this.button_Return.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button_Return.Location = new System.Drawing.Point(142, 23);
+            this.button_Return.Location = new System.Drawing.Point(173, 34);
             this.button_Return.Name = "button_Return";
-            this.button_Return.Size = new System.Drawing.Size(108, 55);
+            this.button_Return.Size = new System.Drawing.Size(147, 55);
             this.button_Return.TabIndex = 4;
-            this.button_Return.Text = "Return products";
+            this.button_Return.Text = "Return         products";
+            this.button_Return.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_Return.UseVisualStyleBackColor = false;
             this.button_Return.Click += new System.EventHandler(this.button_Return_Click);
             // 
@@ -192,11 +205,12 @@
             // 
             this.button_Orders.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_Orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button_Orders.Location = new System.Drawing.Point(21, 23);
+            this.button_Orders.Location = new System.Drawing.Point(14, 33);
             this.button_Orders.Name = "button_Orders";
-            this.button_Orders.Size = new System.Drawing.Size(108, 55);
+            this.button_Orders.Size = new System.Drawing.Size(146, 55);
             this.button_Orders.TabIndex = 3;
             this.button_Orders.Text = "Orders";
+            this.button_Orders.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_Orders.UseVisualStyleBackColor = false;
             this.button_Orders.Click += new System.EventHandler(this.button_Orders_Click);
             // 
@@ -204,11 +218,13 @@
             // 
             this.button_Products.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_Products.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button_Products.Location = new System.Drawing.Point(142, 84);
+            this.button_Products.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_Products.Location = new System.Drawing.Point(173, 95);
             this.button_Products.Name = "button_Products";
-            this.button_Products.Size = new System.Drawing.Size(108, 55);
+            this.button_Products.Size = new System.Drawing.Size(147, 55);
             this.button_Products.TabIndex = 2;
             this.button_Products.Text = "Products";
+            this.button_Products.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_Products.UseVisualStyleBackColor = false;
             this.button_Products.Click += new System.EventHandler(this.button_Products_Click);
             // 
@@ -216,11 +232,13 @@
             // 
             this.button_Client.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button_Client.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button_Client.Location = new System.Drawing.Point(21, 84);
+            this.button_Client.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button_Client.Location = new System.Drawing.Point(14, 95);
             this.button_Client.Name = "button_Client";
-            this.button_Client.Size = new System.Drawing.Size(108, 55);
+            this.button_Client.Size = new System.Drawing.Size(146, 55);
             this.button_Client.TabIndex = 1;
             this.button_Client.Text = "Clients";
+            this.button_Client.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button_Client.UseVisualStyleBackColor = false;
             this.button_Client.Click += new System.EventHandler(this.button_Client_Click);
             // 
@@ -229,7 +247,7 @@
             this.tabControl_main.Controls.Add(this.tabPage_Manage);
             this.tabControl_main.Controls.Add(this.tabPage_Reports);
             this.tabControl_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabControl_main.Location = new System.Drawing.Point(319, 93);
+            this.tabControl_main.Location = new System.Drawing.Point(337, 93);
             this.tabControl_main.Name = "tabControl_main";
             this.tabControl_main.SelectedIndex = 0;
             this.tabControl_main.Size = new System.Drawing.Size(465, 246);
@@ -331,6 +349,50 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox6.Image = global::Illy_Project.Properties.Resources.return_icon;
+            this.pictureBox6.Location = new System.Drawing.Point(270, 47);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 38);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 8;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox5.Image = global::Illy_Project.Properties.Resources.product_icon2;
+            this.pictureBox5.Location = new System.Drawing.Point(271, 110);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(44, 34);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox4.Image = global::Illy_Project.Properties.Resources.order_icon1;
+            this.pictureBox4.Location = new System.Drawing.Point(103, 49);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox3.Image = global::Illy_Project.Properties.Resources.client_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(106, 112);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -360,6 +422,10 @@
             this.groupBox_Info.ResumeLayout(false);
             this.groupBox_Info.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -392,5 +458,9 @@
         private System.Windows.Forms.Button button_ClientReport;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

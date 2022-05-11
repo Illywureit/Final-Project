@@ -206,12 +206,13 @@
             // 
             // button_clear
             // 
+            this.button_clear.BackgroundImage = global::Illy_Project.Properties.Resources.clear_icon;
+            this.button_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(675, 355);
+            this.button_clear.Location = new System.Drawing.Point(675, 46);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(34, 70);
+            this.button_clear.Size = new System.Drawing.Size(32, 40);
             this.button_clear.TabIndex = 47;
-            this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.button_clear_Click_1);
             // 
@@ -244,7 +245,7 @@
             this.button_Print.BackColor = System.Drawing.SystemColors.Control;
             this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
             this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(715, 355);
+            this.button_Print.Location = new System.Drawing.Point(675, 355);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(73, 70);
             this.button_Print.TabIndex = 49;
@@ -256,7 +257,7 @@
             this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Home.Location = new System.Drawing.Point(730, 44);
+            this.button_Home.Location = new System.Drawing.Point(730, 12);
             this.button_Home.Name = "button_Home";
             this.button_Home.Size = new System.Drawing.Size(58, 42);
             this.button_Home.TabIndex = 50;

@@ -44,6 +44,7 @@ namespace Illy_Project.UI
             label_chosenCity.Text = "";
             comboBox_Returned.Text = "";
             textBox_Id.Text = "";
+            comboBox_Returned.Text = "All";
             dateTimePicker_Date.Checked = false;
             dateTimePicker_From.Checked = false;
             dateTimePicker_To.Checked = false;

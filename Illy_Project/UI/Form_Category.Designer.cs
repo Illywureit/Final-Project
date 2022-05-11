@@ -43,7 +43,7 @@ namespace Illy_Project.UI
             // button_delete
             // 
             this.button_delete.BackColor = System.Drawing.Color.LightCoral;
-            this.button_delete.Location = new System.Drawing.Point(186, 158);
+            this.button_delete.Location = new System.Drawing.Point(215, 287);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(87, 27);
             this.button_delete.TabIndex = 37;
@@ -53,7 +53,7 @@ namespace Illy_Project.UI
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(185, 123);
+            this.button_clear.Location = new System.Drawing.Point(215, 254);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(87, 27);
             this.button_clear.TabIndex = 36;
@@ -65,17 +65,17 @@ namespace Illy_Project.UI
             // 
             this.ID.AutoSize = true;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(62, 31);
+            this.ID.Location = new System.Drawing.Point(214, 71);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(26, 20);
+            this.ID.Size = new System.Drawing.Size(27, 20);
             this.ID.TabIndex = 35;
-            this.ID.Text = "ID";
+            this.ID.Text = "Id:";
             // 
             // label_id
             // 
             this.label_id.AutoSize = true;
             this.label_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_id.Location = new System.Drawing.Point(205, 31);
+            this.label_id.Location = new System.Drawing.Point(294, 71);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(18, 20);
             this.label_id.TabIndex = 34;
@@ -84,7 +84,7 @@ namespace Illy_Project.UI
             // listBox_Categories
             // 
             this.listBox_Categories.FormattingEnabled = true;
-            this.listBox_Categories.Location = new System.Drawing.Point(389, 12);
+            this.listBox_Categories.Location = new System.Drawing.Point(12, 12);
             this.listBox_Categories.Name = "listBox_Categories";
             this.listBox_Categories.Size = new System.Drawing.Size(180, 303);
             this.listBox_Categories.TabIndex = 33;
@@ -94,7 +94,7 @@ namespace Illy_Project.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(66, 123);
+            this.save_button.Location = new System.Drawing.Point(308, 254);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(114, 61);
             this.save_button.TabIndex = 32;
@@ -106,7 +106,7 @@ namespace Illy_Project.UI
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name.Location = new System.Drawing.Point(62, 70);
+            this.name.Location = new System.Drawing.Point(214, 111);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(55, 20);
             this.name.TabIndex = 31;
@@ -114,7 +114,7 @@ namespace Illy_Project.UI
             // 
             // textBox_Name
             // 
-            this.textBox_Name.Location = new System.Drawing.Point(210, 73);
+            this.textBox_Name.Location = new System.Drawing.Point(298, 113);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(116, 20);
             this.textBox_Name.TabIndex = 30;
@@ -126,7 +126,7 @@ namespace Illy_Project.UI
             this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Home.Location = new System.Drawing.Point(738, 3);
+            this.button_Home.Location = new System.Drawing.Point(364, 12);
             this.button_Home.Name = "button_Home";
             this.button_Home.Size = new System.Drawing.Size(58, 42);
             this.button_Home.TabIndex = 38;
@@ -138,7 +138,7 @@ namespace Illy_Project.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(432, 324);
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_clear);

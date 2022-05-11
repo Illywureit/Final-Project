@@ -118,10 +118,10 @@ namespace Illy_Project.UI
             // 
             // button_clear
             // 
-            this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(623, 397);
+            this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_clear.Location = new System.Drawing.Point(632, 393);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(89, 37);
+            this.button_clear.Size = new System.Drawing.Size(75, 23);
             this.button_clear.TabIndex = 14;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@ namespace Illy_Project.UI
             // 
             this.save_button.BackColor = System.Drawing.Color.DimGray;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.save_button.Location = new System.Drawing.Point(522, 397);
+            this.save_button.Location = new System.Drawing.Point(713, 393);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(95, 41);
+            this.save_button.Size = new System.Drawing.Size(97, 54);
             this.save_button.TabIndex = 13;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = false;
@@ -155,14 +155,14 @@ namespace Illy_Project.UI
             this.Order_items.Location = new System.Drawing.Point(4, 25);
             this.Order_items.Name = "Order_items";
             this.Order_items.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Order_items.Size = new System.Drawing.Size(761, 362);
+            this.Order_items.Size = new System.Drawing.Size(809, 362);
             this.Order_items.TabIndex = 2;
             this.Order_items.Text = "Order items";
             // 
             // button_Plus
             // 
             this.button_Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Plus.Location = new System.Drawing.Point(719, 52);
+            this.button_Plus.Location = new System.Drawing.Point(766, 52);
             this.button_Plus.Name = "button_Plus";
             this.button_Plus.Size = new System.Drawing.Size(32, 31);
             this.button_Plus.TabIndex = 53;
@@ -173,7 +173,7 @@ namespace Illy_Project.UI
             // button_Minus
             // 
             this.button_Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Minus.Location = new System.Drawing.Point(719, 88);
+            this.button_Minus.Location = new System.Drawing.Point(766, 88);
             this.button_Minus.Name = "button_Minus";
             this.button_Minus.Size = new System.Drawing.Size(32, 31);
             this.button_Minus.TabIndex = 52;
@@ -185,7 +185,7 @@ namespace Illy_Project.UI
             // 
             this.listBox_ProductsInOrderCount.FormattingEnabled = true;
             this.listBox_ProductsInOrderCount.ItemHeight = 16;
-            this.listBox_ProductsInOrderCount.Location = new System.Drawing.Point(688, 52);
+            this.listBox_ProductsInOrderCount.Location = new System.Drawing.Point(735, 52);
             this.listBox_ProductsInOrderCount.Name = "listBox_ProductsInOrderCount";
             this.listBox_ProductsInOrderCount.Size = new System.Drawing.Size(25, 244);
             this.listBox_ProductsInOrderCount.TabIndex = 50;
@@ -285,7 +285,7 @@ namespace Illy_Project.UI
             // 
             this.ProductsInOrder.AutoSize = true;
             this.ProductsInOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ProductsInOrder.Location = new System.Drawing.Point(512, 29);
+            this.ProductsInOrder.Location = new System.Drawing.Point(559, 29);
             this.ProductsInOrder.Name = "ProductsInOrder";
             this.ProductsInOrder.Size = new System.Drawing.Size(147, 20);
             this.ProductsInOrder.TabIndex = 48;
@@ -410,7 +410,7 @@ namespace Illy_Project.UI
             // 
             this.listBox_ProductsInOrder.FormattingEnabled = true;
             this.listBox_ProductsInOrder.ItemHeight = 16;
-            this.listBox_ProductsInOrder.Location = new System.Drawing.Point(490, 52);
+            this.listBox_ProductsInOrder.Location = new System.Drawing.Point(537, 52);
             this.listBox_ProductsInOrder.Name = "listBox_ProductsInOrder";
             this.listBox_ProductsInOrder.Size = new System.Drawing.Size(198, 244);
             this.listBox_ProductsInOrder.TabIndex = 1;
@@ -423,7 +423,7 @@ namespace Illy_Project.UI
             this.listBox_PotentialsProducts.ItemHeight = 16;
             this.listBox_PotentialsProducts.Location = new System.Drawing.Point(261, 52);
             this.listBox_PotentialsProducts.Name = "listBox_PotentialsProducts";
-            this.listBox_PotentialsProducts.Size = new System.Drawing.Size(223, 244);
+            this.listBox_PotentialsProducts.Size = new System.Drawing.Size(270, 244);
             this.listBox_PotentialsProducts.TabIndex = 0;
             this.listBox_PotentialsProducts.Click += new System.EventHandler(this.ListBox_Products_Click);
             this.listBox_PotentialsProducts.DoubleClick += new System.EventHandler(this.listBox_PotentialsProducts_DoubleClick);
@@ -608,7 +608,7 @@ namespace Illy_Project.UI
             this.listBox_Clients.ItemHeight = 16;
             this.listBox_Clients.Location = new System.Drawing.Point(277, 20);
             this.listBox_Clients.Name = "listBox_Clients";
-            this.listBox_Clients.Size = new System.Drawing.Size(181, 260);
+            this.listBox_Clients.Size = new System.Drawing.Size(181, 276);
             this.listBox_Clients.TabIndex = 26;
             this.listBox_Clients.DoubleClick += new System.EventHandler(this.listBox_Clients_DoubleClick);
             // 
@@ -764,9 +764,9 @@ namespace Illy_Project.UI
             // 
             this.listBox_Orders.FormattingEnabled = true;
             this.listBox_Orders.ItemHeight = 16;
-            this.listBox_Orders.Location = new System.Drawing.Point(233, 18);
+            this.listBox_Orders.Location = new System.Drawing.Point(257, 18);
             this.listBox_Orders.Name = "listBox_Orders";
-            this.listBox_Orders.Size = new System.Drawing.Size(231, 260);
+            this.listBox_Orders.Size = new System.Drawing.Size(231, 324);
             this.listBox_Orders.TabIndex = 1;
             this.listBox_Orders.DoubleClick += new System.EventHandler(this.ListBox_Orders_DoubleClick);
             // 
@@ -906,16 +906,16 @@ namespace Illy_Project.UI
             this.tabControl1.Location = new System.Drawing.Point(-3, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(769, 391);
+            this.tabControl1.Size = new System.Drawing.Size(817, 391);
             this.tabControl1.TabIndex = 0;
             // 
             // button_Delete
             // 
             this.button_Delete.BackColor = System.Drawing.Color.LightCoral;
-            this.button_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Delete.Location = new System.Drawing.Point(428, 397);
+            this.button_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Delete.Location = new System.Drawing.Point(632, 421);
             this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(88, 37);
+            this.button_Delete.Size = new System.Drawing.Size(75, 26);
             this.button_Delete.TabIndex = 15;
             this.button_Delete.Text = "Delete";
             this.button_Delete.UseVisualStyleBackColor = false;
@@ -926,7 +926,7 @@ namespace Illy_Project.UI
             this.button_Home.BackgroundImage = global::Illy_Project.Properties.Resources.Back;
             this.button_Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_Home.Location = new System.Drawing.Point(768, 12);
+            this.button_Home.Location = new System.Drawing.Point(820, 12);
             this.button_Home.Name = "button_Home";
             this.button_Home.Size = new System.Drawing.Size(58, 42);
             this.button_Home.TabIndex = 16;
@@ -938,7 +938,7 @@ namespace Illy_Project.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(831, 450);
+            this.ClientSize = new System.Drawing.Size(890, 450);
             this.Controls.Add(this.button_Home);
             this.Controls.Add(this.button_Delete);
             this.Controls.Add(this.button_clear);

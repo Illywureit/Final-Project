@@ -190,12 +190,13 @@
             // 
             // button_clear
             // 
+            this.button_clear.BackgroundImage = global::Illy_Project.Properties.Resources.clear_icon;
+            this.button_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button_clear.Location = new System.Drawing.Point(711, 189);
+            this.button_clear.Location = new System.Drawing.Point(716, 53);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(89, 37);
+            this.button_clear.Size = new System.Drawing.Size(34, 47);
             this.button_clear.TabIndex = 50;
-            this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
@@ -228,7 +229,7 @@
             this.button_Print.BackColor = System.Drawing.SystemColors.Control;
             this.button_Print.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Print.BackgroundImage")));
             this.button_Print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Print.Location = new System.Drawing.Point(719, 228);
+            this.button_Print.Location = new System.Drawing.Point(716, 368);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(73, 70);
             this.button_Print.TabIndex = 52;
